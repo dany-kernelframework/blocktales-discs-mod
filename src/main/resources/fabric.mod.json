@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "discs",
+	"version": "${version}",
+	"name": "bt discs",
+	"description": "custom discs from the game blocktales",
+	"authors": [
+		"dany/kernelframework: mod developer",
+		"shaman: textures",
+		"z9xomer: textures"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/discs/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.kf.Discs"
+		],
+		"client": [
+			"com.kf.client.DiscsClient"
+		]
+	},
+	"mixins": [
+		"discs.mixins.json",
+		{
+			"config": "discs.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

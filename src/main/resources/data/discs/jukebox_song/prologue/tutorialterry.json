@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.prologue.tutorialterry",
+  "description": {
+    "text": "Campyfire - Tutorial Terry"
+  },
+  "length_in_seconds": 95,
+  "comparator_output": 1
+}

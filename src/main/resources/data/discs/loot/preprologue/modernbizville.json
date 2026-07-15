@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/trial_chambers/reward",
+  "entries": [
+    {
+      "disc": "discs:preprologue/modernbizville",
+      "chance": 0.125
+    }
+  ]
+}

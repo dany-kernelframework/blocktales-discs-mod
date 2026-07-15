@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/slime",
+  "entries": [
+    {
+      "disc": "discs:prologue/weakbattle",
+      "chance": 0.075
+    }
+  ]
+}

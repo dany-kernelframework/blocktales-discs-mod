@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/village/village_plains_house",
+  "entries": [
+    {
+      "disc": "discs:prologue/theironcafe",
+      "chance": 0.125
+    }
+  ]
+}

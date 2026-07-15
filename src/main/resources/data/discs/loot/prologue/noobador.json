@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/piglin_brute",
+  "entries": [
+    {
+      "disc": "discs:prologue/noobador",
+      "chance": 0.175
+    }
+  ]
+}

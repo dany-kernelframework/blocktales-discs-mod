@@ -1,0 +1,99 @@
+package com.kf;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
+import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.entries.AlternativesEntry;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+
+import java.io.BufferedReader;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class DiscLoot {
+
+    private static final Map<String, List<LootEntry>> LOOT = new HashMap<>();
+
+    public static void register() {
+        loadLootFiles();
+
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+            String tableId = key.identifier().toString();
+            List<LootEntry> entries = LOOT.get(tableId);
+
+            if (entries != null && !entries.isEmpty()) {
+                injectSafeChancePool(tableBuilder, entries);
+            }
+        });
+    }
+
+    private static void loadLootFiles() {
+        FabricLoader.getInstance().getModContainer(Discs.MOD_ID).ifPresent(container -> {
+            var path = container.findPath("data/" + Discs.MOD_ID + "/loot");
+            if (path.isEmpty()) return;
+
+            try (var files = Files.walk(path.get())) {
+                files.filter(f -> f.toString().endsWith(".json")).forEach(file -> {
+                    try (BufferedReader reader = Files.newBufferedReader(file)) {
+                        JsonObject json = JsonParser.parseReader(reader).getAsJsonObject();
+                        String lootTable = json.get("loot_table").getAsString();
+
+                        if (!lootTable.contains(":")) {
+                            lootTable = "minecraft:" + lootTable;
+                        }
+
+                        List<LootEntry> list = LOOT.computeIfAbsent(lootTable, k -> new ArrayList<>());
+
+                        json.getAsJsonArray("entries").forEach(element -> {
+                            JsonObject obj = element.getAsJsonObject();
+                            list.add(new LootEntry(
+                                    obj.get("disc").getAsString(),
+                                    obj.get("chance").getAsFloat()
+                            ));
+                        });
+                    } catch (Exception e) {
+                        System.err.println("[Discs] Failed loading loot file: " + file);
+                    }
+                });
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    private static void injectSafeChancePool(net.minecraft.world.level.storage.loot.LootTable.Builder table, List<LootEntry> entries) {
+        List<LootPoolEntryContainer.Builder<?>> itemEntries = new ArrayList<>();
+
+        for (LootEntry entry : entries) {
+            Item disc = Discs.REGISTERED_DISCS.get(entry.disc());
+
+            if (disc == null) {
+                System.err.println("[Discs] Unknown disc in loot JSON: " + entry.disc());
+                continue;
+            }
+
+            itemEntries.add(LootItem.lootTableItem(disc)
+                    .when(LootItemRandomChanceCondition.randomChance(entry.chance())));
+        }
+
+        if (!itemEntries.isEmpty()) {
+            LootPoolEntryContainer.Builder<?>[] entriesArray = itemEntries.toArray(new LootPoolEntryContainer.Builder<?>[0]);
+
+            table.pool(LootPool.lootPool()
+                    .setRolls(ConstantValue.exactly(1))
+                    .add(AlternativesEntry.alternatives(entriesArray))
+                    .build());
+        }
+    }
+
+    private record LootEntry(String disc, float chance) {}
+}

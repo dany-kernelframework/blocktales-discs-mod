@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/village/village_cartographer",
+  "entries": [
+    {
+      "disc": "discs:prologue/bizvillelibrary",
+      "chance": 0.075
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/trial_chambers/reward_ominous",
+  "entries": [
+    {
+      "disc": "discs:preprologue/mysteriousfigure",
+      "chance": 0.1
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/zombie",
+  "entries": [
+    {
+      "disc": "discs:prologue/redandbluenoobs",
+      "chance": 0.075
+    }
+  ]
+}

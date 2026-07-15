@@ -1,0 +1,746 @@
+{
+  "music.preprologue.modernbizville": {
+    "sounds": [
+      {
+        "name": "discs:music/preprologue/modernbizville",
+        "stream": true
+      }
+    ]
+  },
+  "music.preprologue.mysteriousfigure": {
+    "sounds": [
+      {
+        "name": "discs:music/preprologue/mysteriousfigure",
+        "stream": true
+      }
+    ]
+  },
+  "music.prologue.tutorialterry": {
+    "sounds": [
+      {
+        "name": "discs:music/prologue/tutorialterry",
+        "stream": true
+      }
+    ]
+  },
+  "music.prologue.bizville": {
+    "sounds": [
+      {
+        "name": "discs:music/prologue/bizville",
+        "stream": true
+      }
+    ]
+  },
+  "music.prologue.bizvillelibrary": {
+    "sounds": [
+      {
+        "name": "discs:music/prologue/bizvillelibrary",
+        "stream": true
+      }
+    ]
+  },
+  "music.prologue.theironcafe": {
+    "sounds": [
+      {
+        "name": "discs:music/prologue/theironcafe",
+        "stream": true
+      }
+    ]
+  },
+  "music.prologue.bizvillearcade": {
+    "sounds": [
+      {
+        "name": "discs:music/prologue/bizvillearcade",
+        "stream": true
+      }
+    ]
+  },
+  "music.prologue.bizvillemeadows": {
+    "sounds": [
+      {
+        "name": "discs:music/prologue/bizvillemeadows",
+        "stream": true
+      }
+    ]
+  },
+  "music.prologue.robloxhq": {
+    "sounds": [
+      {
+        "name": "discs:music/prologue/robloxhq",
+        "stream": true
+      }
+    ]
+  },
+  "music.prologue.weakbattle": {
+    "sounds": [
+      {
+        "name": "discs:music/prologue/weakbattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.prologue.redandbluenoobs": {
+    "sounds": [
+      {
+        "name": "discs:music/prologue/redandbluenoobs",
+        "stream": true
+      }
+    ]
+  },
+  "music.prologue.noobador": {
+    "sounds": [
+      {
+        "name": "discs:music/prologue/noobador",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.caves": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/caves",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.icycaves": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/icycaves",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.supremeant": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/supremeant",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.roadtown": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/roadtown",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.penguinland": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/penguinland",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.mtblackrock": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/mtblackrock",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.mobilebattle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/mobilebattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.snowythicket": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/snowythicket",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.blackrockcastle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/blackrockcastle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.sentientstatue": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/sentientstatue",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.cruelking": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/cruelking",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.thepit": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/thepit",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.inthecards": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/inthecards",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo1.nirvana": {
+    "sounds": [
+      {
+        "name": "discs:music/demo1/nirvana",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.plainstown": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/plainstown",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.junglebattle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/junglebattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.anthill": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/anthill",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.turitopulis": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/turitopulis",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.hotelturitopulis": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/hotelturitopulis",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.mudroads": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/mudroads",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.ruggedrainforest": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/ruggedrainforest",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.komododragon": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/komododragon",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.bigfoot": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/bigfoot",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.suprememosquito": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/suprememosquito",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.sacredhollow": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/sacredhollow",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.griefer": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/griefer",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.bubonicplant": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/bubonicplant",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo2.panacea": {
+    "sounds": [
+      {
+        "name": "discs:music/demo2/panacea",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.bizvillerailways": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/bizvillerailways",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.trainbattle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/trainbattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.greenandpurplenoobs": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/greenandpurplenoobs",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.cemetery": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/cemetery",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.spookybattle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/spookybattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.crypt": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/crypt",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.telamonsmanor": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/telamonsmanor",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.turkey": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/turkey",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.catacombs": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/catacombs",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.slasher": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/slasher",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.weirdbattle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/weirdbattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.funkybattle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/funkybattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.greed": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/greed",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.solitude": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/solitude",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.fear": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/fear",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.hatred": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/hatred",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo3.redemption": {
+    "sounds": [
+      {
+        "name": "discs:music/demo3/redemption",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.bizvilledocks": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/bizvilledocks",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.scorcheddunes": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/scorcheddunes",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.desertbattle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/desertbattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.ancienttomb": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/ancienttomb",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.thegreatfloccinaucinihilipilification": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/thegreatfloccinaucinihilipilification",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.piratecamp": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/piratecamp",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.vermillionvillage": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/vermillionvillage",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.thetempleoftheredsun": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/thetempleoftheredsun",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.templeguardian": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/templeguardian",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.captaintrotter": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/captaintrotter",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.theancients": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/theancients",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.remorse": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/remorse",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.finnmccool": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/finnmccool",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo4.finnmccool-nonai": {
+    "sounds": [
+      {
+        "name": "discs:music/demo4/finnmccool-nonai",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.townontheheights": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/townontheheights",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.heightsinn": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/heightsinn",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.theheights": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/theheights",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.heightsbattle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/heightsbattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.wizardstower": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/wizardstower",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.opticusthemagnificent": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/opticusthemagnificent",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.trinity": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/trinity",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.marchingband": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/marchingband",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.mutant": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/mutant",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.redcliff": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/redcliff",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.redcliffbattle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/redcliffbattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.reginald": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/reginald",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.splinteredskies": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/splinteredskies",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.splinteredbattle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/splinteredbattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.splinteredcourt": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/splinteredcourt",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.astralisles": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/astralisles",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.astralbattle": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/astralbattle",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.trinitycouncil": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/trinitycouncil",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.seventhsanctum": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/seventhsanctum",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.frostmaw": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/frostmaw",
+        "stream": true
+      }
+    ]
+  },
+  "music.demo5.debriefing": {
+    "sounds": [
+      {
+        "name": "discs:music/demo5/debriefing",
+        "stream": true
+      }
+    ]
+  },
+  "music.thefunny.fatal": {
+    "sounds": [
+      {
+        "name": "discs:music/thefunny/fatal",
+        "stream": true
+      }
+    ]
+  }
+}

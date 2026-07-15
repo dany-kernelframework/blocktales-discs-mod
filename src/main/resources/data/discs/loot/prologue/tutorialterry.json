@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/cod",
+  "entries": [
+    {
+      "disc": "discs:prologue/tutorialterry",
+      "chance": 0.1
+    }
+  ]
+}

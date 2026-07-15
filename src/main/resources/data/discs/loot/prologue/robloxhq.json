@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/woodland_mansion",
+  "entries": [
+    {
+      "disc": "discs:prologue/robloxhq",
+      "chance": 0.125
+    }
+  ]
+}

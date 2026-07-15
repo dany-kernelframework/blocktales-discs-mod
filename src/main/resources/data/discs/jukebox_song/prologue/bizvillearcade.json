@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.prologue.bizvillearcade",
+  "description": {
+    "text": "Campyfire - Bizville Arcade"
+  },
+  "length_in_seconds": 84,
+  "comparator_output": 1
+}

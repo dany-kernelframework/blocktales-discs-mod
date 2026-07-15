@@ -1,0 +1,9 @@
+{
+  "sound_event": "discs:music.prologue.weakbattle",
+  "description": {
+    "text": "wheel_able - Weak Battle"
+  },
+  "length_in_seconds": 119,
+  "comparator_output": 1
+}
+
