@@ -27,6 +27,12 @@ public class DiscLoot {
         loadLootFiles();
 
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+            // only inject into vanilla's own built-in loot tables, never into a
+            // datapack override someone else already customized
+            if (!source.isBuiltin()) {
+                return;
+            }
+
             String tableId = key.identifier().toString();
             List<LootEntry> entries = LOOT.get(tableId);
 
@@ -51,7 +57,7 @@ public class DiscLoot {
                             lootTable = "minecraft:" + lootTable;
                         }
 
-                        List<LootEntry> list = LOOT.computeIfAbsent(lootTable, k -> new ArrayList<>());
+                        List<LootEntry> list = LOOT.computeIfAbsent(lootTable, _ -> new ArrayList<>());
 
                         json.getAsJsonArray("entries").forEach(element -> {
                             JsonObject obj = element.getAsJsonObject();
@@ -74,7 +80,7 @@ public class DiscLoot {
         List<LootPoolEntryContainer.Builder<?>> itemEntries = new ArrayList<>();
 
         for (LootEntry entry : entries) {
-            Item disc = Discs.REGISTERED_DISCS.get(entry.disc());
+            Item disc = resolveDisc(entry.disc());
 
             if (disc == null) {
                 System.err.println("[Discs] Unknown disc in loot JSON: " + entry.disc());
@@ -95,5 +101,12 @@ public class DiscLoot {
         }
     }
 
+    // REGISTERED_DISCS contains the namespace discs:chapter/trackName
+    // STOP FUCKING TELLING ME IT FUCKING DOESNT EXIST IN LOOT.json FUCK YOUUUUUUUUUUUUUUUUUUUUUUUUUU
+    // and adds the namespace if it's missing so it perfectly matches the code
+    private static Item resolveDisc(String discId) {
+        String fullId = discId.contains(":") ? discId : Discs.MOD_ID + ":" + discId;
+        return Discs.REGISTERED_DISCS.get(fullId);
+    }
     private record LootEntry(String disc, float chance) {}
 }

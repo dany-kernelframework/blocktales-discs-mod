@@ -66,6 +66,7 @@ public class Discs implements ModInitializer {
 			try (var files = Files.walk(itemAssets)) {
 				files.filter(Files::isRegularFile)
 						.filter(file -> file.toString().endsWith(".json"))
+						.sorted() // i found you
 						.forEach(file -> {
 							Path relativePath = itemAssets.relativize(file);
 
@@ -94,6 +95,7 @@ public class Discs implements ModInitializer {
 		ModCommands.register();
 
 		DiscLoot.register();
+		DiscLyrics.register();
 
 		System.out.println("btdiscs correctly loaded yay");
 	}
