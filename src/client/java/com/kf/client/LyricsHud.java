@@ -61,7 +61,7 @@ public class LyricsHud implements HudElement {
         int y = screenHeight - Y_OFFSET_ABOVE_HOTBAR;
 
         int alphaInt = (int) (alpha * 255.0f);
-        alphaInt = Math.max(0, Math.min(255, alphaInt)); // bounded if anything breaks
+        alphaInt = Math.max(0, Math.min(255, alphaInt)); // bounded if anything breaks aaaaa
         int color = (alphaInt << 24) | 0x00FFFFFF;
 
         graphics.text(client.font, line, x, y, color);
