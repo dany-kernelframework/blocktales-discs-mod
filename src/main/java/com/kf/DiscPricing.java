@@ -17,8 +17,8 @@ public class DiscPricing {
     );
 
     private static final Map<String, String> BOSS_GRADIENTS = Map.of(
-            "prologue/noobador", "<#FFC000>M<#F7A30C>u<#F08719>s<#E86A25>i<#E14E32>c <#E3552F>D<#EC791F>i<#F69C10>s<#FFC000>c"
-
+            "prologue/noobador", "<#FFC000>M<#F7A30C>u<#F08719>s<#E86A25>i<#E14E32>c <#E3552F>D<#EC791F>i<#F69C10>s<#FFC000>c",
+            "demo4/theancients", "<#AB8000>M<#BC6604>u<#CD4D08>s<#DD330C>i<#EE1A10>c <#EA200F>D<#D5400A>i<#C06005>s<#AB8000>c"
 
     );
 

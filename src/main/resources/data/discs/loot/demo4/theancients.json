@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/desert_pyramid",
+  "entries": [
+    {
+      "disc": "discs:demo4/theancients",
+      "chance": 0.01
+    }
+  ]
+}

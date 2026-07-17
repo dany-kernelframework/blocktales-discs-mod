@@ -21,6 +21,7 @@ public class LyricsTracker {
     // Fading logic tracking
     private static long ticksSinceLineChanged;
     private static boolean currentLineIsLast;
+    private static long ticksUntilNextLine;
 
     public static void onJukeboxSongStarted(BlockPos pos, JukeboxSong song) {
         String combinedKey = resolveLyricsKey(song);
@@ -36,7 +37,10 @@ public class LyricsTracker {
         trackedKey = combinedKey;
         ticksSinceStart = 0;
         ticksSinceLineChanged = 0;
-        currentLine = lineAt(combinedKey, 0);
+        ticksUntilNextLine = -1;
+        currentLineIsLast = false;
+
+        updateLineState();
     }
 
     public static void onJukeboxSongStopped(BlockPos pos) {
@@ -51,6 +55,7 @@ public class LyricsTracker {
         currentLine = null;
         ticksSinceLineChanged = 0;
         currentLineIsLast = false;
+        ticksUntilNextLine = -1;
     }
 
     public static void tick() {
@@ -64,14 +69,45 @@ public class LyricsTracker {
         }
 
         ticksSinceStart++;
-        String newLine = lineAt(trackedKey, ticksSinceStart);
+        updateLineState();
+    }
 
-        if (!java.util.Objects.equals(newLine, currentLine)) {
-            currentLine = newLine;
+    private static void updateLineState() {
+        if (trackedKey == null) return;
+
+        List<DiscLyrics.LyricLine> lines = DiscLyrics.get(trackedKey);
+        if (lines.isEmpty()) {
+            currentLineIsLast = false;
+            currentLine = null;
+            ticksUntilNextLine = -1;
+            return;
+        }
+
+        float elapsedSeconds = ticksSinceStart / 20.0f;
+
+        String newResult = null;
+        boolean isLast = false;
+        long nextLineTicks = -1;
+
+        for (int i = 0; i < lines.size(); i++) {
+            DiscLyrics.LyricLine line = lines.get(i);
+            if (line.time() > elapsedSeconds) {
+                nextLineTicks = (long) (line.time() * 20.0f);
+                break;
+            }
+            newResult = line.text();
+            isLast = (i == lines.size() - 1);
+        }
+
+        if (!java.util.Objects.equals(newResult, currentLine)) {
+            currentLine = newResult;
             ticksSinceLineChanged = 0;
         } else {
             ticksSinceLineChanged++;
         }
+
+        currentLineIsLast = isLast;
+        ticksUntilNextLine = nextLineTicks != -1 ? (nextLineTicks - ticksSinceStart) : -1;
     }
 
     private static @Nullable String resolveLyricsKey(JukeboxSong song) {
@@ -94,43 +130,9 @@ public class LyricsTracker {
         return hasLyrics ? combinedKey : null;
     }
 
-    private static @Nullable String lineAt(String combinedKey, long ticksSinceSongStarted) {
-        List<DiscLyrics.LyricLine> lines = DiscLyrics.get(combinedKey);
-        if (lines.isEmpty()) {
-            currentLineIsLast = false;
-            return null;
-        }
-
-        float elapsedSeconds = ticksSinceSongStarted / 20.0f;
-
-        String result = null;
-        boolean isLast = false;
-        for (int i = 0; i < lines.size(); i++) {
-            DiscLyrics.LyricLine line = lines.get(i);
-            if (line.time() > elapsedSeconds) {
-                break;
-            }
-            result = line.text();
-            isLast = (i == lines.size() - 1);
-        }
-
-        currentLineIsLast = isLast;
-        return result;
-    }
-
-    public static @Nullable String getCurrentLine() {
-        return currentLine;
-    }
-
-    public static long getTicksSinceLineChanged() {
-        return ticksSinceLineChanged;
-    }
-
-    public static boolean isCurrentLineLast() {
-        return currentLineIsLast;
-    }
-
-    public static @Nullable BlockPos getTrackedPos() {
-        return trackedPos;
-    }
-}
+    public static @Nullable String getCurrentLine() { return currentLine; }
+    public static long getTicksSinceLineChanged() { return ticksSinceLineChanged; }
+    public static boolean isCurrentLineLast() { return currentLineIsLast; }
+    public static long getTicksUntilNextLine() { return ticksUntilNextLine; }
+    public static @Nullable BlockPos getTrackedPos() { return trackedPos; }
+} //quite unorthodox to put a bunch of statics here but it's the best way i figured

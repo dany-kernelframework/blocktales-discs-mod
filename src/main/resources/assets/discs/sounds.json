@@ -734,13 +734,5 @@
         "stream": true
       }
     ]
-  },
-  "music.thefunny.fatal": {
-    "sounds": [
-      {
-        "name": "discs:music/thefunny/fatal",
-        "stream": true
-      }
-    ]
   }
 }

@@ -9,13 +9,15 @@ import org.jspecify.annotations.Nullable;
 
 public class LyricsHud implements HudElement {
 
-    private static final int Y_OFFSET_ABOVE_HOTBAR = 60; //should be right above armor points and under now playing - <songname>
+    private static final int Y_OFFSET_ABOVE_HOTBAR = 60; // right above armor points (survival mode)
+    private static final float FADE_TICKS = 10.0f;
 
     @Override
     public void extractRenderState(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker) {
         @Nullable String line = LyricsTracker.getCurrentLine();
 
-        if (line == null) {
+        // ignores empty spaces (i think?????) so i can put nothing if its.. well, nothing
+        if (line == null || line.trim().isEmpty()) {
             return;
         }
 
@@ -38,17 +40,30 @@ public class LyricsHud implements HudElement {
             }
         }
 
-        // --- Final Lyric Fading Logic ---
-        if (LyricsTracker.isCurrentLineLast()) {
-            long age = LyricsTracker.getTicksSinceLineChanged();
+        long age = LyricsTracker.getTicksSinceLineChanged();
+        float fadeInAlpha = Math.min(1.0f, age / FADE_TICKS);
 
+        if (LyricsTracker.isCurrentLineLast()) {
             float holdTicks = 160.0f;
-            float fadeTicks = 40.0f;
+            float endFadeTicks = 40.0f;
 
             if (age > holdTicks) {
-                alpha *= 1.0f - ((age - holdTicks) / fadeTicks);
+                float endFadeAlpha = 1.0f - ((age - holdTicks) / endFadeTicks);
+                alpha *= Math.max(0.0f, endFadeAlpha);
+            } else {
+                alpha *= fadeInAlpha;
             }
+        } else {
+            long untilNext = LyricsTracker.getTicksUntilNextLine();
+            float fadeOutAlpha = 1.0f;
+
+            if (untilNext >= 0 && untilNext < FADE_TICKS) {
+                fadeOutAlpha = untilNext / FADE_TICKS;
+            }
+
+            alpha *= Math.min(fadeInAlpha, fadeOutAlpha);
         }
+
         if (alpha <= 0.0f) {
             return;
         }
