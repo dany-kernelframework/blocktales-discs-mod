@@ -42,7 +42,7 @@
         {
           "type": "minecraft:tag",
           "name": "discs:all_discs",
-          "weight": 10,
+          "weight": 5,
           "expand": true
         }
       ],

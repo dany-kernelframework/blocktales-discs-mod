@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo1.thepit",
+  "description": {
+    "text": "Daiorg - The Pit"
+  },
+  "length_in_seconds": 128,
+  "comparator_output": 1
+}

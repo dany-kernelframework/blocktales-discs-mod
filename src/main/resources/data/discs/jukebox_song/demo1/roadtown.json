@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo1.roadtown",
+  "description": {
+    "text": "wheel_able - Roadtown"
+  },
+  "length_in_seconds": 155,
+  "comparator_output": 1
+}

@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo1.snowythicket",
+  "description": {
+    "text": "wheel_able - Snowy Thicket"
+  },
+  "length_in_seconds": 66,
+  "comparator_output": 6
+}

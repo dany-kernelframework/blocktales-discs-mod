@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo1.caves",
+  "description": {
+    "text": "wheel_able - Caves"
+  },
+  "length_in_seconds": 43,
+  "comparator_output": 1
+}

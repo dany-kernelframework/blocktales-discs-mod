@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo1.icycaves",
+  "description": {
+    "text": "wheel_able - Icy Caves"
+  },
+  "length_in_seconds": 43,
+  "comparator_output": 1
+}
