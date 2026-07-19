@@ -59,7 +59,8 @@
     },
     {
       "time": 96.1,
-      "text": "This is mutiny"
+      "text": "This is mutiny",
+      "color": FFA500
     },
     {
       "time": 101.2,
@@ -71,7 +72,8 @@
     },
     {
       "time": 111.6,
-      "text": "'Cause I'm your captain now"
+      "text": "'Cause I'm your captain now",
+      "color": FFA500
     },
     {
       "time": 118.4,
@@ -115,35 +117,43 @@
     },
     {
       "time": 173.3,
-      "text": "This is mutiny"
+      "text": "This is mutiny",
+      "color": FFA500
     },
     {
       "time": 176.3,
-      "text": "(This is a mutiny)"
+      "text": "(This is a mutiny)",
+      "color": FFA500
     },
     {
       "time": 178.5,
-      "text": "Burned from inside out"
+      "text": "Burned from inside out",
+      "color": FFA500
     },
     {
       "time": 181.4,
-      "text": "(You're burning inside out)"
+      "text": "(You're burning inside out)",
+      "color": FFA500
     },
     {
       "time": 184.2,
-      "text": "There's no need for kings"
+      "text": "There's no need for kings",
+      "color": FFA500
     },
     {
       "time": 187.0,
-      "text": "(There's never been a need for kings)"
+      "text": "(There's never been a need for kings)",
+      "color": FFA500
     },
     {
       "time": 189.5,
-      "text": "'Cause I'm your captain now"
+      "text": "'Cause I'm your captain now",
+      "color": CC5500
     },
     {
       "time": 192.5,
-      "text": "(I am your captain now)"
+      "text": "(I am your captain now)",
+      "color": FFA500
     },
     {
       "time": 196.0,

@@ -77,7 +77,10 @@ public class LyricsHud implements HudElement {
 
         int alphaInt = (int) (alpha * 255.0f);
         alphaInt = Math.max(0, Math.min(255, alphaInt)); // bounded if anything breaks aaaaa
-        int color = (alphaInt << 24) | 0x00FFFFFF;
+
+        Integer configuredRgb = LyricsTracker.getCurrentLineColor();
+        int rgb = configuredRgb != null ? configuredRgb : 0xFFFFFF;
+        int color = (alphaInt << 24) | (rgb & 0x00FFFFFF);
 
         graphics.text(client.font, line, x, y, color);
     }

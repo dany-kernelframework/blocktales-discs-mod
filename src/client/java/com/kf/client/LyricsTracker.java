@@ -17,8 +17,8 @@ public class LyricsTracker {
     private static @Nullable String trackedKey;
     private static long ticksSinceStart;
     private static @Nullable String currentLine;
+    private static @Nullable Integer currentLineColor; // is 0xRRGGBB, null is default color
 
-    // Fading logic tracking
     private static long ticksSinceLineChanged;
     private static boolean currentLineIsLast;
     private static long ticksUntilNextLine;
@@ -53,6 +53,7 @@ public class LyricsTracker {
         trackedPos = null;
         trackedKey = null;
         currentLine = null;
+        currentLineColor = null;
         ticksSinceLineChanged = 0;
         currentLineIsLast = false;
         ticksUntilNextLine = -1;
@@ -79,6 +80,7 @@ public class LyricsTracker {
         if (lines.isEmpty()) {
             currentLineIsLast = false;
             currentLine = null;
+            currentLineColor = null;
             ticksUntilNextLine = -1;
             return;
         }
@@ -86,6 +88,7 @@ public class LyricsTracker {
         float elapsedSeconds = ticksSinceStart / 20.0f;
 
         String newResult = null;
+        Integer newColor = null;
         boolean isLast = false;
         long nextLineTicks = -1;
 
@@ -96,11 +99,13 @@ public class LyricsTracker {
                 break;
             }
             newResult = line.text();
+            newColor = line.color();
             isLast = (i == lines.size() - 1);
         }
 
         if (!java.util.Objects.equals(newResult, currentLine)) {
             currentLine = newResult;
+            currentLineColor = newColor;
             ticksSinceLineChanged = 0;
         } else {
             ticksSinceLineChanged++;
@@ -131,6 +136,7 @@ public class LyricsTracker {
     }
 
     public static @Nullable String getCurrentLine() { return currentLine; }
+    public static @Nullable Integer getCurrentLineColor() { return currentLineColor; }
     public static long getTicksSinceLineChanged() { return ticksSinceLineChanged; }
     public static boolean isCurrentLineLast() { return currentLineIsLast; }
     public static long getTicksUntilNextLine() { return ticksUntilNextLine; }
