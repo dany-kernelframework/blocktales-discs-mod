@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/abandoned_mineshaft",
+  "entries": [
+    {
+      "disc": "discs:demo1/icycaves",
+      "chance": 0.075
+    }
+  ]
+}

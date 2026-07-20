@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/iron_golem",
+  "entries": [
+    {
+      "disc": "discs:demo1/sentientstatue",
+      "chance": 0.1
+    }
+  ]
+}

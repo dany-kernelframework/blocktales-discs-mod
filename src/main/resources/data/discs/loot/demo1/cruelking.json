@@ -2,7 +2,7 @@
   "loot_table": "minecraft:entities/piglin_brute",
   "entries": [
     {
-      "disc": "discs:prologue/noobador",
+      "disc": "discs:demo1/cruelking",
       "chance": 0.0875
     }
   ]

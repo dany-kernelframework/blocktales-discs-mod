@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/igloo_chest",
+  "entries": [
+    {
+      "disc": "discs:demo1/penguinland",
+      "chance": 0.075
+    }
+  ]
+}

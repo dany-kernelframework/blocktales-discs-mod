@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/ancient_city",
+  "entries": [
+    {
+      "disc": "discs:demo1/nirvana",
+      "chance": 0.075
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/ruined_portal",
+  "entries": [
+    {
+      "disc": "discs:demo1/mtblackrock",
+      "chance": 0.075
+    }
+  ]
+}

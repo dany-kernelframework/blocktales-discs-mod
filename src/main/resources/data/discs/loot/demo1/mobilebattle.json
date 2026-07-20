@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/phantom",
+  "entries": [
+    {
+      "disc": "discs:demo1/mobilebattle",
+      "chance": 0.1
+    }
+  ]
+}

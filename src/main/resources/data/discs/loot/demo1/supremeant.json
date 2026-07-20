@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/jungle_temple",
+  "entries": [
+    {
+      "disc": "discs:demo1/supremeant",
+      "chance": 0.15
+    }
+  ]
+}

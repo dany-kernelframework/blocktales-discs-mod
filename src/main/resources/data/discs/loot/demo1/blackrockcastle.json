@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/nether_bridge",
+  "entries": [
+    {
+      "disc": "discs:demo1/blackrockcastle",
+      "chance": 0.075
+    }
+  ]
+}

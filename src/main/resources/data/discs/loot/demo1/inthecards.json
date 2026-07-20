@@ -2,7 +2,7 @@
   "loot_table": "minecraft:chests/trial_chambers/reward",
   "entries": [
     {
-      "disc": "discs:preprologue/modernbizville",
+      "disc": "discs:demo1/inthecards",
       "chance": 0.075
     }
   ]

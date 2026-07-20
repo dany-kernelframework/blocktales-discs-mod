@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/village/village_snowy_house",
+  "entries": [
+    {
+      "disc": "discs:demo1/roadtown",
+      "chance": 0.075
+    }
+  ]
+}
