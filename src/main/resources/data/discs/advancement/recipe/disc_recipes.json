@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_template_disc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:materials/template"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_template_disc"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "discs:materials/template",
+
+      "discs:prologue/tutorialterry"
+
+    ]
+  }
+}

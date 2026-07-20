@@ -39,11 +39,13 @@ public class Discs implements ModInitializer {
 	public static final String MOD_ID = "discs";
 
 	public static final Map<String, List<Item>> discsPerChapter = new LinkedHashMap<>(16);
+	public static final List<Item> modMaterials = new ArrayList<>(); // non music stuff
 	public static final Map<Item, Integer> discPrices = new HashMap<>(128);
 	public static final Set<Item> bossDiscs = new HashSet<>(32);
 	public static final Map<String, Item> REGISTERED_DISCS = new HashMap<>(128);
 
 	public static Item tabIcon = null;
+	public static Item templateDisc = null; // used for recipe
 
 	static {
 		String[] chapters = {"preprologue", "prologue", "demo1", "demo2", "demo3", "demo4", "demo5", "demo6", "demo7"};
@@ -66,26 +68,32 @@ public class Discs implements ModInitializer {
 			try (var files = Files.walk(itemAssets)) {
 				files.filter(Files::isRegularFile)
 						.filter(file -> file.toString().endsWith(".json"))
-						.sorted() // i found you
+						.sorted() // I found you
 						.forEach(file -> {
 							Path relativePath = itemAssets.relativize(file);
 
 							if (relativePath.getNameCount() >= 2) {
-								String chapterDir = relativePath.getName(0).toString();
-								String trackName = relativePath.getFileName().toString().replace(".json", "");
-								registerDisc(trackName, chapterDir);
+								String folderDir = relativePath.getName(0).toString();
+								String itemName = relativePath.getFileName().toString().replace(".json", "");
+								if (folderDir.equals("materials")) {
+									registerMaterial(itemName, folderDir);
+								} else {
+									registerDisc(itemName, folderDir);
+								}
 							}
 						});
 			} catch (Exception e) {
-				System.err.println("[Discs] Failed to scan for disc files: " + e.getMessage());
+				System.err.println("[Discs] Failed to scan for item files: " + e.getMessage());
 			}
 		});
 
 		CreativeModeTab mainTab = FabricCreativeModeTab.builder()
 				.title(Component.translatable("itemGroup.discs.main_tab"))
 				.icon(() -> new ItemStack(tabIcon != null ? tabIcon : Items.JUKEBOX))
-				.displayItems((_, output) ->
-						discsPerChapter.values().forEach(chapterList -> chapterList.forEach(output::accept)))
+				.displayItems((_, output) -> {
+					modMaterials.forEach(output::accept);
+					discsPerChapter.values().forEach(chapterList -> chapterList.forEach(output::accept));
+				})
 				.build();
 
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY, mainTab);
@@ -97,7 +105,21 @@ public class Discs implements ModInitializer {
 		DiscLoot.register();
 		DiscLyrics.register();
 
-		System.out.println("btdiscs correctly loaded yay");
+	} //yo hollup why ts feature lowk fire
+
+	private static void registerMaterial(String itemName, String folder) {
+		String registryPath = folder + "/" + itemName;
+		ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, registryPath));
+
+		Item materialItem = new Item(new Item.Properties().setId(itemKey));
+
+		Registry.register(BuiltInRegistries.ITEM, itemKey, materialItem);
+
+		modMaterials.add(materialItem);
+
+		if (itemName.equals("template_disc")) {
+			templateDisc = materialItem;
+		}
 	}
 
 	private static void registerDisc(String trackName, String chapter) {
@@ -159,7 +181,7 @@ public class Discs implements ModInitializer {
 				continue;
 			}
 
-			// Expected format: "FFFFFF>Text"
+			// "FFFFFF>Text"
 			if (part.length() >= 7 && part.charAt(6) == '>') {
 				String hex = part.substring(0, 6);
 				String text = part.substring(7);

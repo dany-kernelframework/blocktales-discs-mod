@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "iii",
+    "iri",
+    "hhh"
+  ],
+  "key": {
+    "i": [
+      "minecraft:iron_ingot"
+    ],
+    "r": [
+      "minecraft:honeycomb"
+    ],
+    "h": [
+      "minecraft:coal"
+    ]
+  },
+  "result": {
+    "id": "discs:materials/template",
+    "count": 1
+  }
+}

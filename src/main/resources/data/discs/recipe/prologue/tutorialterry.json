@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aea",
+    "ede",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/template"
+    ],
+    "a": [
+      "minecraft:gunpowder"
+    ],
+    "e": [
+      "minecraft:salmon"
+    ]
+  },
+  "result": {
+    "id": "discs:prologue/tutorialterry",
+    "count": 1
+  }
+}
