@@ -39,13 +39,13 @@ public class Discs implements ModInitializer {
 	public static final String MOD_ID = "discs";
 
 	public static final Map<String, List<Item>> discsPerChapter = new LinkedHashMap<>(16);
-	public static final List<Item> modMaterials = new ArrayList<>(); // non music stuff
+	public static final List<Item> modMaterials = new ArrayList<>();
 	public static final Map<Item, Integer> discPrices = new HashMap<>(128);
 	public static final Set<Item> bossDiscs = new HashSet<>(32);
 	public static final Map<String, Item> REGISTERED_DISCS = new HashMap<>(128);
 
 	public static Item tabIcon = null;
-	public static Item templateDisc = null; // used for recipe
+	public static Item templateDisc = null;
 
 	static {
 		String[] chapters = {"preprologue", "prologue", "demo1", "demo2", "demo3", "demo4", "demo5", "demo6", "demo7"};
@@ -68,7 +68,7 @@ public class Discs implements ModInitializer {
 			try (var files = Files.walk(itemAssets)) {
 				files.filter(Files::isRegularFile)
 						.filter(file -> file.toString().endsWith(".json"))
-						.sorted() // I found you
+						.sorted()
 						.forEach(file -> {
 							Path relativePath = itemAssets.relativize(file);
 
@@ -83,7 +83,7 @@ public class Discs implements ModInitializer {
 							}
 						});
 			} catch (Exception e) {
-				System.err.println("[Discs] Failed to scan for item files: " + e.getMessage());
+				System.err.println("[Discs] failed to scan for item files: " + e.getMessage());
 			}
 		});
 
@@ -105,7 +105,7 @@ public class Discs implements ModInitializer {
 		DiscLoot.register();
 		DiscLyrics.register();
 
-	} //yo hollup why ts feature lowk fire
+	} // just realized this doesnt show on github :(
 
 	private static void registerMaterial(String itemName, String folder) {
 		String registryPath = folder + "/" + itemName;
@@ -117,9 +117,11 @@ public class Discs implements ModInitializer {
 
 		modMaterials.add(materialItem);
 
-		if (itemName.equals("template_disc")) {
+		if (itemName.equals("template")) {
 			templateDisc = materialItem;
 		}
+
+		discPrices.put(materialItem, DiscPricing.getPrice(folder, itemName));
 	}
 
 	private static void registerDisc(String trackName, String chapter) {
@@ -155,7 +157,9 @@ public class Discs implements ModInitializer {
 
 		Registry.register(BuiltInRegistries.ITEM, discKey, vinyl);
 
-		if (tabIcon == null) {
+		if ("demo4".equals(chapter) && "theancients".equals(trackName)) {
+			tabIcon = vinyl;
+		} else if (tabIcon == null) {
 			tabIcon = vinyl;
 		}
 
@@ -181,7 +185,6 @@ public class Discs implements ModInitializer {
 				continue;
 			}
 
-			// "FFFFFF>Text"
 			if (part.length() >= 7 && part.charAt(6) == '>') {
 				String hex = part.substring(0, 6);
 				String text = part.substring(7);
