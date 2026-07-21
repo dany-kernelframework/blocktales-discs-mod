@@ -38,6 +38,10 @@ import java.util.Set;
 public class Discs implements ModInitializer {
 	public static final String MOD_ID = "discs";
 
+	public static final String[] CHAPTER_ORDER = {
+			"preprologue", "prologue", "demo1", "demo2", "demo3", "demo4", "demo5", "demo6", "demo7"
+	};
+
 	public static final Map<String, List<Item>> discsPerChapter = new LinkedHashMap<>(16);
 	public static final List<Item> modMaterials = new ArrayList<>();
 	public static final Map<Item, Integer> discPrices = new HashMap<>(128);
@@ -48,8 +52,7 @@ public class Discs implements ModInitializer {
 	public static Item templateDisc = null;
 
 	static {
-		String[] chapters = {"preprologue", "prologue", "demo1", "demo2", "demo3", "demo4", "demo5", "demo6", "demo7"};
-		for (String chapter : chapters) {
+		for (String chapter : CHAPTER_ORDER) {
 			discsPerChapter.put(chapter, new ArrayList<>(16));
 		}
 	}
@@ -64,6 +67,7 @@ public class Discs implements ModInitializer {
 			Path itemAssets = mod.findPath("assets/" + MOD_ID + "/items").orElse(null);
 
 			if (itemAssets == null) return;
+			Map<String, List<String>> discoveredItems = new HashMap<>();
 
 			try (var files = Files.walk(itemAssets)) {
 				files.filter(Files::isRegularFile)
@@ -75,37 +79,65 @@ public class Discs implements ModInitializer {
 							if (relativePath.getNameCount() >= 2) {
 								String folderDir = relativePath.getName(0).toString();
 								String itemName = relativePath.getFileName().toString().replace(".json", "");
-								if (folderDir.equals("materials")) {
-									registerMaterial(itemName, folderDir);
-								} else {
-									registerDisc(itemName, folderDir);
-								}
+
+								discoveredItems.computeIfAbsent(folderDir, _ -> new ArrayList<>()).add(itemName);
 							}
 						});
 			} catch (Exception e) {
 				System.err.println("[Discs] failed to scan for item files: " + e.getMessage());
 			}
-		});
+			if (discoveredItems.containsKey("materials")) {
+				for (String itemName : discoveredItems.get("materials")) {
+					registerMaterial(itemName, "materials");
+				}
+			}
+
+			for (String chapter : CHAPTER_ORDER) {
+				if (discoveredItems.containsKey(chapter)) {
+					for (String trackName : discoveredItems.get(chapter)) {
+						registerDisc(trackName, chapter);
+					}
+				}
+			}
+			for (String folder : discoveredItems.keySet()) {
+				if (!folder.equals("materials") && !List.of(CHAPTER_ORDER).contains(folder)) {
+					for (String trackName : discoveredItems.get(folder)) {
+						registerDisc(trackName, folder);
+					}
+				}
+			}
+		}); //files.walk is evil
 
 		CreativeModeTab mainTab = FabricCreativeModeTab.builder()
 				.title(Component.translatable("itemGroup.discs.main_tab"))
 				.icon(() -> new ItemStack(tabIcon != null ? tabIcon : Items.JUKEBOX))
 				.displayItems((_, output) -> {
 					modMaterials.forEach(output::accept);
-					discsPerChapter.values().forEach(chapterList -> chapterList.forEach(output::accept));
+
+					for (String chapter : CHAPTER_ORDER) {
+						List<Item> chapterDiscs = discsPerChapter.get(chapter);
+						if (chapterDiscs != null) {
+							chapterDiscs.forEach(output::accept);
+						}
+					}
+
+					discsPerChapter.forEach((chapter, discs) -> {
+						if (!List.of(CHAPTER_ORDER).contains(chapter)) {
+							discs.forEach(output::accept);
+						}
+					});
 				})
 				.build();
 
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY, mainTab);
 
-		ModEntities.register();
+		ModEntities.register(); //haha yall cant see this
 		FabricDefaultAttributeRegistry.register(ModEntities.DISC_TRADER, WanderingTrader.createMobAttributes());
 		ModCommands.register();
 
 		DiscLoot.register();
 		DiscLyrics.register();
-
-	} // just realized this doesnt show on github :(
+	}
 
 	private static void registerMaterial(String itemName, String folder) {
 		String registryPath = folder + "/" + itemName;
@@ -203,3 +235,5 @@ public class Discs implements ModInitializer {
 		return component;
 	}
 }
+
+//im too tired to add comments. who even understands this????

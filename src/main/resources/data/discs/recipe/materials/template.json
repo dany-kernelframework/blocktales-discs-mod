@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "discsMts",
   "category": "misc",
   "pattern": [
     "iii",

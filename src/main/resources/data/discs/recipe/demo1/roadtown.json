@@ -1,25 +1,28 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "discspp",
+  "group": "discs1",
   "category": "misc",
   "pattern": [
-    "aea",
+    "aia",
     "ede",
-    "aea"
+    "aia"
   ],
   "key": {
     "d": [
       "discs:materials/template"
     ],
     "a": [
-      "minecraft:quartz"
+      "minecraft:spruce_log"
     ],
     "e": [
-      "minecraft:brick"
+      "minecraft:ice"
+    ],
+    "i": [
+      "minecraft:snow_block"
     ]
   },
   "result": {
-    "id": "discs:preprologue/modernbizville",
+    "id": "discs:demo1/roadtown",
     "count": 1
   }
 }

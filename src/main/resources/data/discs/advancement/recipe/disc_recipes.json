@@ -33,7 +33,22 @@
       "discs:prologue/robloxhq",
       "discs:prologue/weakbattle",
       "discs:prologue/redandbluenoobs",
-      "discs:prologue/noobador"
+      "discs:prologue/noobador",
+
+      "discs:demo1/caves",
+      "discs:demo1/icycaves",
+      "discs:demo1/supremeant",
+      "discs:demo1/roadtown",
+      "discs:demo1/penguinland",
+      "discs:demo1/mtblackrock",
+      "discs:demo1/mobilebattle",
+      "discs:demo1/snowythicket",
+      "discs:demo1/blackrockcastle",
+      "discs:demo1/sentientstatue",
+      "discs:demo1/cruelking",
+      "discs:demo1/thepit",
+      "discs:demo1/inthecards",
+      "discs:demo1/nirvana"
     ]
   }
 }

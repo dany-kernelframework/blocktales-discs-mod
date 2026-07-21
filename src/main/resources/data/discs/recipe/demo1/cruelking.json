@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs1",
+  "category": "misc",
+  "pattern": [
+    "ipi",
+    "sds",
+    "ipi"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/template"
+    ],
+    "s": [
+      "minecraft:diamond_sword"
+    ],
+    "i": [
+      "minecraft:ice"
+    ],
+    "p": [
+      "minecraft:packed_ice"
+    ]
+  },
+  "result": {
+    "id": "discs:demo1/cruelking",
+    "count": 1
+  }
+}

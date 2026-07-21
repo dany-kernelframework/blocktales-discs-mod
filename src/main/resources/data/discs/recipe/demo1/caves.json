@@ -1,25 +1,25 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "discspp",
+  "group": "discs1",
   "category": "misc",
   "pattern": [
-    "aea",
-    "ede",
-    "aea"
+    "aaa",
+    " d ",
+    "aaa"
   ],
   "key": {
     "d": [
       "discs:materials/template"
     ],
     "a": [
-      "minecraft:quartz"
+      "minecraft:cobblestone"
     ],
     "e": [
-      "minecraft:brick"
+      ""
     ]
   },
   "result": {
-    "id": "discs:preprologue/modernbizville",
+    "id": "discs:demo1/caves",
     "count": 1
   }
 }

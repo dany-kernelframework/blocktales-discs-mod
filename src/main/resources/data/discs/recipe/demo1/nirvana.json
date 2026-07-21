@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "discspp",
+  "group": "discs1",
   "category": "misc",
   "pattern": [
     "aea",
@@ -12,14 +12,14 @@
       "discs:materials/template"
     ],
     "a": [
-      "minecraft:quartz"
+      "minecraft:candle"
     ],
     "e": [
-      "minecraft:brick"
+      "minecraft:soul_torch"
     ]
   },
   "result": {
-    "id": "discs:preprologue/modernbizville",
+    "id": "discs:demo1/nirvana",
     "count": 1
   }
 }
