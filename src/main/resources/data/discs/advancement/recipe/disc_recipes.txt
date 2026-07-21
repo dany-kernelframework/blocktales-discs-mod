@@ -6,7 +6,7 @@
       "conditions": {
         "items": [
           {
-            "items": "discs:materials/template_disc"
+            "items": "discs:materials/template"
           }
         ]
       }
