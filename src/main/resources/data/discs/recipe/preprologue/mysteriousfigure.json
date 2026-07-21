@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aea",
+    "ede",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/template"
+    ],
+    "a": [
+      "minecraft:clock"
+    ],
+    "e": [
+      "minecraft:blue_candle"
+    ]
+  },
+  "result": {
+    "id": "discs:preprologue/mysteriousfigure",
+    "count": 1
+  }
+}

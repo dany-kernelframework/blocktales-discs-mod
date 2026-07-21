@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aea",
+    "ede",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/template"
+    ],
+    "a": [
+      "minecraft:quartz"
+    ],
+    "e": [
+      "minecraft:brick"
+    ]
+  },
+  "result": {
+    "id": "discs:preprologue/modernbizville",
+    "count": 1
+  }
+}

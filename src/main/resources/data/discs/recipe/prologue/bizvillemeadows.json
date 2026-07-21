@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aea",
+    "ede",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/template"
+    ],
+    "a": [
+      "minecraft:wheat_seeds"
+    ],
+    "e": [
+      "minecraft:grass_block"
+    ]
+  },
+  "result": {
+    "id": "discs:prologue/bizvillemeadows",
+    "count": 1
+  }
+}

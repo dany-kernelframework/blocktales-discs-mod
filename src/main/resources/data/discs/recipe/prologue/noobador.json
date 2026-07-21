@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    "rdb",
+    " l "
+  ],
+  "key": {
+    "d": [
+      "discs:materials/template"
+    ],
+    "c": [
+      "minecraft:copper_helmet"
+    ],
+    "r": [
+      "minecraft:red_dye"
+    ],
+    "b": [
+      "minecraft:blue_dye"
+    ],
+    "l": [
+      "minecraft:clay_ball"
+    ]
+  },
+  "result": {
+    "id": "discs:prologue/noobador",
+    "count": 1
+  }
+}

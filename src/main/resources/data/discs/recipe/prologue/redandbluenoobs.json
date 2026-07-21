@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aea",
+    "ede",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/template"
+    ],
+    "a": [
+      "minecraft:red_dye"
+    ],
+    "e": [
+      "minecraft:blue_dye"
+    ]
+  },
+  "result": {
+    "id": "discs:prologue/redandbluenoobs",
+    "count": 1
+  }
+}

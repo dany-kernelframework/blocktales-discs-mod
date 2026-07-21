@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ae",
+    "ede",
+    " ea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/template"
+    ],
+    "a": [
+      "minecraft:jukebox"
+    ],
+    "e": [
+      "minecraft:blackstone"
+    ]
+  },
+  "result": {
+    "id": "discs:prologue/theironcafe",
+    "count": 1
+  }
+}
