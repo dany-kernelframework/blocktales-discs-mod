@@ -23,6 +23,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.JukeboxSong;
 import net.minecraft.world.item.Rarity;
 import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -48,8 +49,8 @@ public class Discs implements ModInitializer {
 	public static final Set<Item> bossDiscs = new HashSet<>(32);
 	public static final Map<String, Item> REGISTERED_DISCS = new HashMap<>(128);
 
-	public static Item tabIcon = null;
-	public static Item templateDisc = null;
+	public static @Nullable Item tabIcon = null;
+	public static @Nullable Item templateDisc = null;
 
 	static {
 		for (String chapter : CHAPTER_ORDER) {
@@ -88,7 +89,7 @@ public class Discs implements ModInitializer {
 			}
 			if (discoveredItems.containsKey("materials")) {
 				for (String itemName : discoveredItems.get("materials")) {
-					registerMaterial(itemName, "materials");
+					registerMaterial(itemName);
 				}
 			}
 
@@ -106,7 +107,7 @@ public class Discs implements ModInitializer {
 					}
 				}
 			}
-		}); //files.walk is evil
+		});
 
 		CreativeModeTab mainTab = FabricCreativeModeTab.builder()
 				.title(Component.translatable("itemGroup.discs.main_tab"))
@@ -129,18 +130,18 @@ public class Discs implements ModInitializer {
 				})
 				.build();
 
-		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY, mainTab);
+		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY.identifier(), mainTab);
 
-		ModEntities.register(); //haha yall cant see this
-		FabricDefaultAttributeRegistry.register(ModEntities.DISC_TRADER, WanderingTrader.createMobAttributes());
+		ModEntities.register();
+		FabricDefaultAttributeRegistry.register(ModEntities.DISC_TRADER, WanderingTrader.createMobAttributes()); // please stop being bitchy i tried to fix you for the last hour
 		ModCommands.register();
 
 		DiscLoot.register();
 		DiscLyrics.register();
 	}
 
-	private static void registerMaterial(String itemName, String folder) {
-		String registryPath = folder + "/" + itemName;
+	private static void registerMaterial(String itemName) {
+		String registryPath = "materials/" + itemName;
 		ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, registryPath));
 
 		Item materialItem = new Item(new Item.Properties().setId(itemKey));
@@ -153,7 +154,7 @@ public class Discs implements ModInitializer {
 			templateDisc = materialItem;
 		}
 
-		discPrices.put(materialItem, DiscPricing.getPrice(folder, itemName));
+		discPrices.put(materialItem, DiscPricing.getPrice("materials", itemName));
 	}
 
 	private static void registerDisc(String trackName, String chapter) {
@@ -235,5 +236,3 @@ public class Discs implements ModInitializer {
 		return component;
 	}
 }
-
-//im too tired to add comments. who even understands this????

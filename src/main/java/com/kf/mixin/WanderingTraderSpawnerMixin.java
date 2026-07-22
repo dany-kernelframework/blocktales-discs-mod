@@ -24,11 +24,11 @@ public class WanderingTraderSpawnerMixin {
                     target = "Lnet/minecraft/world/entity/EntityType;spawn(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/EntitySpawnReason;)Lnet/minecraft/world/entity/Entity;"
             )
     )
-    private Entity spawnDiscTraderInstead(EntityType<?> entityType, ServerLevel level, BlockPos pos, EntitySpawnReason reason) {
+    private Entity spawnDiscTraderInstead(EntityType<?> entityType, ServerLevel level, BlockPos spawnPos, EntitySpawnReason spawnReason) {
         if (level.getRandom().nextFloat() < DISC_TRADER_SPAWN_CHANCE) {
-            return ModEntities.DISC_TRADER.spawn(level, pos, reason);
+            return ModEntities.DISC_TRADER.spawn(level, spawnPos, spawnReason);
         }
-        // fall back to whatever this call was originally spawning (EntityType.WANDERING_TRADER)
-        return entityType.spawn(level, pos, reason);
+        //fb
+        return entityType.spawn(level, spawnPos, spawnReason);
     }
 }

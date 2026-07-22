@@ -25,10 +25,7 @@ public class DiscLoot {
 
     public static void register() {
         loadLootFiles();
-
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            // only inject into vanilla's own built-in loot tables, never into a
-            // datapack override someone else already customized
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, _) -> {
             if (!source.isBuiltin()) {
                 return;
             }
@@ -67,11 +64,12 @@ public class DiscLoot {
                             ));
                         });
                     } catch (Exception e) {
-                        System.err.println("[Discs] Failed loading loot file: " + file);
+                        System.err.println("[Discs] failed loading loot file: " + file);
                     }
                 });
             } catch (Exception e) {
-                e.printStackTrace();
+                // here too
+                System.err.println("[Discs] error walking loot directory: " + e.getMessage());
             }
         });
     }
@@ -83,7 +81,7 @@ public class DiscLoot {
             Item disc = resolveDisc(entry.disc());
 
             if (disc == null) {
-                System.err.println("[Discs] Unknown disc in loot JSON: " + entry.disc());
+                System.err.println("[Discs] unknown disc in loot JSON: " + entry.disc());
                 continue;
             }
 
@@ -101,9 +99,6 @@ public class DiscLoot {
         }
     }
 
-    // REGISTERED_DISCS contains the namespace discs:chapter/trackName
-    // STOP FUCKING TELLING ME IT FUCKING DOESNT EXIST IN LOOT.json FUCK YOUUUUUUUUUUUUUUUUUUUUUUUUUU
-    // and adds the namespace if it's missing so it perfectly matches the code
     private static Item resolveDisc(String discId) {
         String fullId = discId.contains(":") ? discId : Discs.MOD_ID + ":" + discId;
         return Discs.REGISTERED_DISCS.get(fullId);

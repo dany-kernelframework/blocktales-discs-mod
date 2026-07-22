@@ -5,18 +5,18 @@ import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.core.BlockPos;
-import org.jspecify.annotations.Nullable;
+import org.jspecify.annotations.NullMarked;
 
+@NullMarked
 public class LyricsHud implements HudElement {
 
-    private static final int Y_OFFSET_ABOVE_HOTBAR = 60; // right above armor points (survival mode)
+    private static final int Y_OFFSET_ABOVE_HOTBAR = 60;
     private static final float FADE_TICKS = 10.0f;
 
     @Override
     public void extractRenderState(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker) {
-        @Nullable String line = LyricsTracker.getCurrentLine();
+        var line = LyricsTracker.getCurrentLine();
 
-        // ignores empty spaces (i think?????) so i can put nothing if its.. well, nothing
         if (line == null || line.trim().isEmpty()) {
             return;
         }
@@ -33,7 +33,6 @@ public class LyricsHud implements HudElement {
             if (distSq > maxDist * maxDist) {
                 return;
             }
-            // hmhm yes i understand math (i dont i just pray ts actually works)
             double dist = Math.sqrt(distSq);
             if (dist > fadeStartDist) {
                 alpha *= (float) (1.0 - ((dist - fadeStartDist) / (maxDist - fadeStartDist)));
@@ -76,7 +75,8 @@ public class LyricsHud implements HudElement {
         int y = screenHeight - Y_OFFSET_ABOVE_HOTBAR;
 
         int alphaInt = (int) (alpha * 255.0f);
-        alphaInt = Math.max(0, Math.min(255, alphaInt)); // bounded if anything breaks aaaaa
+        // java 21 stuff i did not knew existed
+        alphaInt = Math.clamp(alphaInt, 0, 255);
 
         Integer configuredRgb = LyricsTracker.getCurrentLineColor();
         int rgb = configuredRgb != null ? configuredRgb : 0xFFFFFF;

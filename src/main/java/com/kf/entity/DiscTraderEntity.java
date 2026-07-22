@@ -40,46 +40,37 @@ public class DiscTraderEntity extends WanderingTrader {
 
         Discs.discsPerChapter.values().forEach(chapterDiscs -> {
             for (Item disc : chapterDiscs) {
-                if (disc != null) {
-                    if (Discs.bossDiscs.contains(disc)) {
-                        bossDiscs.add(disc);
-                    } else {
-                        normalDiscs.add(disc);
-                    }
+                if (Discs.bossDiscs.contains(disc)) {
+                    bossDiscs.add(disc);
+                } else {
+                    normalDiscs.add(disc);
                 }
             }
         });
 
         int tradeCount = 1 + this.random.nextInt(5);
-        int maxRoll = boss + template + normal;
 
         for (int i = 0; i < tradeCount; i++) {
-            if (normalDiscs.isEmpty() && bossDiscs.isEmpty() && !templateAvailable) {
+            int currentBossWeight = bossDiscs.isEmpty() ? 0 : boss;
+            int currentTemplateWeight = templateAvailable ? template : 0;
+            int currentNormalWeight = normalDiscs.isEmpty() ? 0 : normal;
+
+            int totalWeight = currentBossWeight + currentTemplateWeight + currentNormalWeight;
+            if (totalWeight == 0) {
                 break;
             }
 
-            int roll = this.random.nextInt(maxRoll);
-            Item chosenItem = null;
+            int roll = this.random.nextInt(totalWeight);
+            Item chosenItem;
 
-            if (roll < boss && !bossDiscs.isEmpty()) {
+            if (roll < currentBossWeight) {
                 chosenItem = bossDiscs.remove(this.random.nextInt(bossDiscs.size()));
-            } else if (roll < boss + template && templateAvailable) {
+            } else if (roll < currentBossWeight + currentTemplateWeight) {
                 chosenItem = Discs.templateDisc;
                 templateAvailable = false;
-            } else if (!normalDiscs.isEmpty()) {
+            } else {
                 chosenItem = normalDiscs.remove(this.random.nextInt(normalDiscs.size()));
             }
-
-            if (chosenItem == null) {
-                if (!normalDiscs.isEmpty()) {
-                    chosenItem = normalDiscs.remove(this.random.nextInt(normalDiscs.size()));
-                } else if (!bossDiscs.isEmpty()) {
-                    chosenItem = bossDiscs.remove(this.random.nextInt(bossDiscs.size()));
-                } else if (templateAvailable) {
-                    chosenItem = Discs.templateDisc;
-                    templateAvailable = false;
-                }
-            } //holy fucking boring logic I'm about to have a headache
 
             if (chosenItem != null) {
                 int price = Discs.discPrices.getOrDefault(chosenItem, 5);

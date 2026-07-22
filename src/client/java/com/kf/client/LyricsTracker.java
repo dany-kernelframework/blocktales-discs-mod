@@ -17,7 +17,7 @@ public class LyricsTracker {
     private static @Nullable String trackedKey;
     private static long ticksSinceStart;
     private static @Nullable String currentLine;
-    private static @Nullable Integer currentLineColor; // is 0xRRGGBB, null is default color
+    private static @Nullable Integer currentLineColor;
 
     private static long ticksSinceLineChanged;
     private static boolean currentLineIsLast;
@@ -27,7 +27,7 @@ public class LyricsTracker {
         String combinedKey = resolveLyricsKey(song);
 
         if (combinedKey == null) {
-            if (pos.equals(trackedPos)) {
+            if (java.util.Objects.equals(trackedPos, pos)) {
                 clear();
             }
             return;
@@ -44,7 +44,7 @@ public class LyricsTracker {
     }
 
     public static void onJukeboxSongStopped(BlockPos pos) {
-        if (pos.equals(trackedPos)) { //its MIGHT be null so no FUCK you
+        if (java.util.Objects.equals(trackedPos, pos)) {
             clear();
         }
     }
@@ -141,4 +141,4 @@ public class LyricsTracker {
     public static boolean isCurrentLineLast() { return currentLineIsLast; }
     public static long getTicksUntilNextLine() { return ticksUntilNextLine; }
     public static @Nullable BlockPos getTrackedPos() { return trackedPos; }
-} //quite unorthodox to put a bunch of statics here but it's the best way i figured
+}// again, quite unorthodox but it is what it is

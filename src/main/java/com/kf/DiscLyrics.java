@@ -14,15 +14,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * loads lyric timing data from data/discs/lyrics/z.json (used the same scanning pattern as discloot)
- * only sounds that have a matching file here will show lyric, everything else plays normally
- * keyed: "<chapter>/<trackName>".
- *
- * each line's "color" is optional and can be a hex RGB string, with or without a #
- * (e.g. AA6767 or #AA6161). lines without one just use the default white/null
- *
- **/
 public class DiscLyrics {
 
     private static final Map<String, List<LyricLine>> LYRICS = new HashMap<>();
@@ -35,7 +26,8 @@ public class DiscLyrics {
             try (var files = Files.walk(path.get())) {
                 files.filter(f -> f.toString().endsWith(".json")).forEach(DiscLyrics::loadFile);
             } catch (Exception e) {
-                e.printStackTrace();
+                // it was telling me to put proper logging gang
+                System.err.println("[Discs] error walking lyrics directory: " + e.getMessage());
             }
         });
     }
@@ -57,7 +49,7 @@ public class DiscLyrics {
 
             LYRICS.put(track, Collections.unmodifiableList(lines));
         } catch (Exception e) {
-            System.err.println("[Discs] Failed loading lyrics file: " + file + " (" + e.getMessage() + ")");
+            System.err.println("[Discs] failed loading lyrics file: " + file + " (" + e.getMessage() + ")");
         }
     }
 
@@ -69,17 +61,9 @@ public class DiscLyrics {
         try {
             return Integer.parseInt(hex, 16) & 0xFFFFFF;
         } catch (NumberFormatException e) {
-            System.err.println("[Discs] invalid lyric color '" + hex + "' in " + file + " — using default white"); //fallback
+            System.err.println("[Discs] invalid lyric color '" + hex + "' in " + file + " — using default white");
             return null;
         }
-    }
-
-    public static boolean hasLyrics(String chapter, String trackName) {
-        return LYRICS.containsKey(chapter + "/" + trackName);
-    }
-
-    public static List<LyricLine> get(String chapter, String trackName) {
-        return LYRICS.getOrDefault(chapter + "/" + trackName, List.of());
     }
 
     public static boolean hasLyrics(String combinedKey) {
@@ -90,6 +74,5 @@ public class DiscLyrics {
         return LYRICS.getOrDefault(combinedKey, List.of());
     }
 
-    // color is a 0xRRGGBB value (no alpha ) use null to use white aka null (see lyricshud)
     public record LyricLine(float time, String text, @Nullable Integer color) {}
 }

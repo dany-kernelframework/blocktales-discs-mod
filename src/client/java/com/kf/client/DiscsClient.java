@@ -13,8 +13,8 @@ public class DiscsClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		EntityRenderers.register(ModEntities.DISC_TRADER, DiscTraderRenderer::new);
+		ClientTickEvents.END_CLIENT_TICK.register(_ -> LyricsTracker.tick());
 
-		ClientTickEvents.END_CLIENT_TICK.register(client -> LyricsTracker.tick());
 		HudElementRegistry.attachElementAfter(
 				VanillaHudElements.HOTBAR,
 				Identifier.fromNamespaceAndPath(Discs.MOD_ID, "lyrics"),
