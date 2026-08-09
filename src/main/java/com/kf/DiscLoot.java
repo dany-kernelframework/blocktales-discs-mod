@@ -25,6 +25,7 @@ public class DiscLoot {
 
     public static void register() {
         loadLootFiles();
+
         LootTableEvents.MODIFY.register((key, tableBuilder, source, _) -> {
             if (!source.isBuiltin()) {
                 return;
@@ -64,12 +65,11 @@ public class DiscLoot {
                             ));
                         });
                     } catch (Exception e) {
-                        System.err.println("[Discs] failed loading loot file: " + file);
+                        System.err.println("[Discs] Failed loading loot file: " + file);
                     }
                 });
             } catch (Exception e) {
-                // here too
-                System.err.println("[Discs] error walking loot directory: " + e.getMessage());
+                System.err.println("[Discs] Error walking loot directory: " + e.getMessage());
             }
         });
     }
@@ -103,5 +103,6 @@ public class DiscLoot {
         String fullId = discId.contains(":") ? discId : Discs.MOD_ID + ":" + discId;
         return Discs.REGISTERED_DISCS.get(fullId);
     }
+
     private record LootEntry(String disc, float chance) {}
 }

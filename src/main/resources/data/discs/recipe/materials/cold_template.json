@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discsMts",
+  "category": "misc",
+  "pattern": [
+    "cic",
+    "iri",
+    "hch"
+  ],
+  "key": {
+    "i": [
+      "minecraft:iron_ingot"
+    ],
+    "r": [
+      "minecraft:honeycomb"
+    ],
+    "h": [
+      "minecraft:coal"
+    ],
+    "c": [
+      "ice"
+    ]
+  },
+  "result": {
+    "id": "discs:materials/cold_template",
+    "count": 1
+  }
+}

@@ -4,21 +4,18 @@ import java.util.Map;
 
 public class DiscPricing {
 
-    private static final Map<String, Integer> BASE_PRICE = Map.of(
-            "preprologue", 2,
-            "prologue", 4,
-            "demo1", 5,
-            "demo2", 6,
-            "demo3", 7,
-            "demo4", 8,
-            "demo5", 9,
-            "demo6", 10,
-            "demo7", 11
-    );
+    private static final int TEMPLATE_PRICE = 15;
 
-    // special category for "kinda" discs
-    private static final Map<String, Integer> SPECIAL_PRICES = Map.of(
-            "materials/template", 15
+    private static final Map<String, Integer> BASE_PRICE = Map.ofEntries(
+            Map.entry("preprologue", 2),
+            Map.entry("prologue", 4),
+            Map.entry("demo1", 5),
+            Map.entry("demo2", 6),
+            Map.entry("demo3", 7),
+            Map.entry("demo4", 8),
+            Map.entry("demo5", 9),
+            Map.entry("demo6", 10),
+            Map.entry("demo7", 11)
     );
 
     private static final Map<String, String> BOSS_GRADIENTS = Map.of(
@@ -30,12 +27,13 @@ public class DiscPricing {
     public static int getPrice(String chapter, String trackName) {
         String fullPath = chapter + "/" + trackName;
 
-        if (SPECIAL_PRICES.containsKey(fullPath)) {
-            return SPECIAL_PRICES.get(fullPath);
+        if ("materials".equals(chapter) && trackName.endsWith("template")) {
+            return TEMPLATE_PRICE;
         }
 
+        boolean boss = BOSS_GRADIENTS.containsKey(fullPath);
         int base = BASE_PRICE.getOrDefault(chapter, 5);
-        return isBoss(chapter, trackName) ? base + 1 : base;
+        return boss ? base + 1 : base;
     }
 
     public static boolean isBoss(String chapter, String trackName) {

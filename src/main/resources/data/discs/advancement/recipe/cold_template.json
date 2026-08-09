@@ -6,7 +6,7 @@
       "conditions": {
         "items": [
           {
-            "items": "discs:materials/template"
+            "items": "discs:materials/cold_template"
           }
         ]
       }
@@ -19,21 +19,7 @@
   ],
   "rewards": {
     "recipes": [
-      "discs:materials/template",
-
-      "discs:preprologue/modernbizville",
-      "discs:preprologue/mysteriousfigure",
-
-      "discs:prologue/tutorialterry",
-      "discs:prologue/bizville",
-      "discs:prologue/bizvillelibrary",
-      "discs:prologue/theironcafe",
-      "discs:prologue/bizvillearcade",
-      "discs:prologue/bizvillemeadows",
-      "discs:prologue/robloxhq",
-      "discs:prologue/weakbattle",
-      "discs:prologue/redandbluenoobs",
-      "discs:prologue/noobador",
+      "discs:materials/cold_template",
 
       "discs:demo1/caves",
       "discs:demo1/icycaves",

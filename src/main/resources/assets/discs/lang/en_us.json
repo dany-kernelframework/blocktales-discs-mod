@@ -2,5 +2,8 @@
   "itemGroup.discs.main_tab": "Block Tales Discs",
   "tag.item.discs.all_discs": "Block Tales Discs",
   "entity.discs.disc_trader": "Disc Trader",
-  "item.discs.materials.template": "Template Disc"
+
+  "item.discs.materials.modern_template": "Modern Template Disc",
+  "item.discs.materials.old_template": "Old Template Disc",
+  "item.discs.materials.cold_template": "Cold Template Disc"
 }

@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "discs:item/materials/template"
+    "model": "discs:item/materials/cold_template"
   }
 }

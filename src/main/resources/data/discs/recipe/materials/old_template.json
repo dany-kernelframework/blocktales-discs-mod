@@ -9,7 +9,7 @@
   ],
   "key": {
     "i": [
-      "minecraft:iron_ingot"
+      "minecraft:cobblestone"
     ],
     "r": [
       "minecraft:honeycomb"
@@ -19,7 +19,7 @@
     ]
   },
   "result": {
-    "id": "discs:materials/template",
+    "id": "discs:materials/old_template",
     "count": 1
   }
 }

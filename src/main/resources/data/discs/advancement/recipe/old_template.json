@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_template_disc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:materials/old_template"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_template_disc"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "discs:materials/old_template",
+
+      "discs:prologue/tutorialterry",
+      "discs:prologue/bizville",
+      "discs:prologue/bizvillelibrary",
+      "discs:prologue/theironcafe",
+      "discs:prologue/bizvillearcade",
+      "discs:prologue/bizvillemeadows",
+      "discs:prologue/robloxhq",
+      "discs:prologue/weakbattle",
+      "discs:prologue/redandbluenoobs",
+      "discs:prologue/noobador"
+    ]
+  }
+}

@@ -1,3 +1,7 @@
+// well this is pretty rebundant now
+
+
+
 {
   "parent": "minecraft:recipes/root",
   "criteria": {

@@ -43,14 +43,18 @@ public class Discs implements ModInitializer {
 			"preprologue", "prologue", "demo1", "demo2", "demo3", "demo4", "demo5", "demo6", "demo7"
 	};
 
+	public static final Set<String> CHAPTER_SET = Set.of(CHAPTER_ORDER);
+
 	public static final Map<String, List<Item>> discsPerChapter = new LinkedHashMap<>(16);
 	public static final List<Item> modMaterials = new ArrayList<>();
+
+	public static final List<Item> TEMPLATES = new ArrayList<>();
+
 	public static final Map<Item, Integer> discPrices = new HashMap<>(128);
 	public static final Set<Item> bossDiscs = new HashSet<>(32);
 	public static final Map<String, Item> REGISTERED_DISCS = new HashMap<>(128);
 
-	public static @Nullable Item tabIcon = null;
-	public static @Nullable Item templateDisc = null;
+	public static @Nullable Item tabIcon;
 
 	static {
 		for (String chapter : CHAPTER_ORDER) {
@@ -87,6 +91,7 @@ public class Discs implements ModInitializer {
 			} catch (Exception e) {
 				System.err.println("[Discs] failed to scan for item files: " + e.getMessage());
 			}
+
 			if (discoveredItems.containsKey("materials")) {
 				for (String itemName : discoveredItems.get("materials")) {
 					registerMaterial(itemName);
@@ -101,7 +106,7 @@ public class Discs implements ModInitializer {
 				}
 			}
 			for (String folder : discoveredItems.keySet()) {
-				if (!folder.equals("materials") && !List.of(CHAPTER_ORDER).contains(folder)) {
+				if (!folder.equals("materials") && !CHAPTER_SET.contains(folder)) {
 					for (String trackName : discoveredItems.get(folder)) {
 						registerDisc(trackName, folder);
 					}
@@ -111,29 +116,21 @@ public class Discs implements ModInitializer {
 
 		CreativeModeTab mainTab = FabricCreativeModeTab.builder()
 				.title(Component.translatable("itemGroup.discs.main_tab"))
-				.icon(() -> new ItemStack(tabIcon != null ? tabIcon : Items.JUKEBOX))
+				.icon(() -> {
+					Item iconItem = tabIcon;
+					return new ItemStack(iconItem != null ? iconItem : Items.JUKEBOX);
+				})
 				.displayItems((_, output) -> {
 					modMaterials.forEach(output::accept);
 
-					for (String chapter : CHAPTER_ORDER) {
-						List<Item> chapterDiscs = discsPerChapter.get(chapter);
-						if (chapterDiscs != null) {
-							chapterDiscs.forEach(output::accept);
-						}
-					}
-
-					discsPerChapter.forEach((chapter, discs) -> {
-						if (!List.of(CHAPTER_ORDER).contains(chapter)) {
-							discs.forEach(output::accept);
-						}
-					});
+					discsPerChapter.values().forEach(discs -> discs.forEach(output::accept));
 				})
 				.build();
 
-		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY.identifier(), mainTab);
+		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY, mainTab);
 
 		ModEntities.register();
-		FabricDefaultAttributeRegistry.register(ModEntities.DISC_TRADER, WanderingTrader.createMobAttributes()); // please stop being bitchy i tried to fix you for the last hour
+		FabricDefaultAttributeRegistry.register(ModEntities.DISC_TRADER, WanderingTrader.createMobAttributes()); // Im so SICK and TIRED of you.
 		ModCommands.register();
 
 		DiscLoot.register();
@@ -147,11 +144,11 @@ public class Discs implements ModInitializer {
 		Item materialItem = new Item(new Item.Properties().setId(itemKey));
 
 		Registry.register(BuiltInRegistries.ITEM, itemKey, materialItem);
-
 		modMaterials.add(materialItem);
 
-		if (itemName.equals("template")) {
-			templateDisc = materialItem;
+		// if the file name ends with "template" it becomes a template (just because i dont want to hardcode it btw)
+		if (itemName.endsWith("template")) {
+			TEMPLATES.add(materialItem);
 		}
 
 		discPrices.put(materialItem, DiscPricing.getPrice("materials", itemName));
@@ -161,13 +158,24 @@ public class Discs implements ModInitializer {
 		String registryPath = chapter + "/" + trackName;
 
 		Identifier audioId = Identifier.fromNamespaceAndPath(MOD_ID, "music." + chapter + "." + trackName);
+		ResourceKey<SoundEvent> soundKey = ResourceKey.create(Registries.SOUND_EVENT, audioId);
 		SoundEvent audioEvent = SoundEvent.createVariableRangeEvent(audioId);
-		Registry.register(BuiltInRegistries.SOUND_EVENT, audioId, audioEvent);
+		Registry.register(BuiltInRegistries.SOUND_EVENT, soundKey, audioEvent);
 
 		ResourceKey<Item> discKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, registryPath));
 		ResourceKey<JukeboxSong> songData = ResourceKey.create(Registries.JUKEBOX_SONG, Identifier.fromNamespaceAndPath(MOD_ID, registryPath));
 
 		boolean isBoss = DiscPricing.isBoss(chapter, trackName);
+
+		// kinda better birdflop
+		Component resolvedName = Component.literal("Music Disc");
+		if (isBoss) {
+			String birdflopString = DiscPricing.getBossGradient(chapter, trackName);
+			if (birdflopString != null) {
+				resolvedName = parseBirdflop(birdflopString);
+			}
+		}
+		final Component cachedName = resolvedName;
 
 		Item vinyl = new Item(
 				new Item.Properties()
@@ -178,21 +186,13 @@ public class Discs implements ModInitializer {
 		) {
 			@Override
 			public Component getName(ItemStack stack) {
-				if (isBoss) {
-					String birdflopString = DiscPricing.getBossGradient(chapter, trackName);
-					if (birdflopString != null) {
-						return parseBirdflop(birdflopString);
-					}
-				}
-				return Component.literal("Music Disc");
+				return cachedName;
 			}
 		};
 
 		Registry.register(BuiltInRegistries.ITEM, discKey, vinyl);
 
-		if ("demo4".equals(chapter) && "theancients".equals(trackName)) {
-			tabIcon = vinyl;
-		} else if (tabIcon == null) {
+		if (tabIcon == null || ("demo4".equals(chapter) && "theancients".equals(trackName))) {
 			tabIcon = vinyl;
 		}
 

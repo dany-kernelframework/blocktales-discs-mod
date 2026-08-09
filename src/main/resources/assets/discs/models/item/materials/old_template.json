@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "discs:item/materials/template"
+    "layer0": "discs:item/materials/old_template"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discsMts",
+  "category": "misc",
+  "pattern": [
+    "iii",
+    "iri",
+    "hhh"
+  ],
+  "key": {
+    "i": [
+      "minecraft:iron_ingot"
+    ],
+    "r": [
+      "minecraft:honeycomb"
+    ],
+    "h": [
+      "minecraft:coal"
+    ]
+  },
+  "result": {
+    "id": "discs:materials/modern_template",
+    "count": 1
+  }
+}

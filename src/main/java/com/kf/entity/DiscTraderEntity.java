@@ -19,9 +19,10 @@ import java.util.List;
 @NullMarked
 public class DiscTraderEntity extends WanderingTrader {
 
-    private static final int boss = 10;
-    private static final int template = 20;
-    private static final int normal = 70;
+// calcs in category and not per item
+    private static final double boss = 10.0;
+    private static final double template = 20.0;
+    private static final double normal = 70.0;
 
     public DiscTraderEntity(EntityType<? extends WanderingTrader> type, Level level) {
         super(type, level);
@@ -36,7 +37,7 @@ public class DiscTraderEntity extends WanderingTrader {
 
         List<Item> normalDiscs = new ArrayList<>();
         List<Item> bossDiscs = new ArrayList<>();
-        boolean templateAvailable = (Discs.templateDisc != null);
+        List<Item> templateItems = new ArrayList<>(Discs.TEMPLATES);
 
         Discs.discsPerChapter.values().forEach(chapterDiscs -> {
             for (Item disc : chapterDiscs) {
@@ -48,41 +49,53 @@ public class DiscTraderEntity extends WanderingTrader {
             }
         });
 
+        List<WeightedItem> pool = new ArrayList<>(bossDiscs.size() + templateItems.size() + normalDiscs.size());
+        addWeighted(pool, bossDiscs, boss);
+        addWeighted(pool, templateItems, template);
+        addWeighted(pool, normalDiscs, normal);
+
         int tradeCount = 1 + this.random.nextInt(5);
 
-        for (int i = 0; i < tradeCount; i++) {
-            int currentBossWeight = bossDiscs.isEmpty() ? 0 : boss;
-            int currentTemplateWeight = templateAvailable ? template : 0;
-            int currentNormalWeight = normalDiscs.isEmpty() ? 0 : normal;
+        for (int i = 0; i < tradeCount && !pool.isEmpty(); i++) {
+            Item chosenItem = drawWithoutReplacement(pool);
+            int price = Discs.discPrices.getOrDefault(chosenItem, 5);
 
-            int totalWeight = currentBossWeight + currentTemplateWeight + currentNormalWeight;
-            if (totalWeight == 0) {
-                break;
-            }
-
-            int roll = this.random.nextInt(totalWeight);
-            Item chosenItem;
-
-            if (roll < currentBossWeight) {
-                chosenItem = bossDiscs.remove(this.random.nextInt(bossDiscs.size()));
-            } else if (roll < currentBossWeight + currentTemplateWeight) {
-                chosenItem = Discs.templateDisc;
-                templateAvailable = false;
-            } else {
-                chosenItem = normalDiscs.remove(this.random.nextInt(normalDiscs.size()));
-            }
-
-            if (chosenItem != null) {
-                int price = Discs.discPrices.getOrDefault(chosenItem, 5);
-
-                offers.add(new MerchantOffer(
-                        new ItemCost(Items.EMERALD, price),
-                        new ItemStack(chosenItem),
-                        1,
-                        2,
-                        0.0f
-                ));
-            }
+            offers.add(new MerchantOffer(
+                    new ItemCost(Items.EMERALD, price),
+                    new ItemStack(chosenItem),
+                    1,
+                    2,
+                    0.0f
+            ));
         }
     }
+
+    private static void addWeighted(List<WeightedItem> pool, List<Item> items, double categoryWeight) {
+        if (items.isEmpty()) return;
+        double perItemWeight = categoryWeight / items.size();
+        for (Item item : items) {
+            pool.add(new WeightedItem(item, perItemWeight));
+        }
+    }
+
+    private Item drawWithoutReplacement(List<WeightedItem> pool) {
+        double totalWeight = 0.0;
+        for (WeightedItem entry : pool) {
+            totalWeight += entry.weight();
+        }
+
+        double roll = this.random.nextDouble() * totalWeight;
+        double cumulative = 0.0;
+
+        for (int i = 0; i < pool.size(); i++) {
+            cumulative += pool.get(i).weight();
+            if (roll < cumulative) {
+                return pool.remove(i).item();
+            }
+        }
+
+        return pool.removeLast().item();
+    }
+
+    private record WeightedItem(Item item, double weight) {}
 }
