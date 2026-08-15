@@ -20,9 +20,9 @@ import java.util.List;
 public class DiscTraderEntity extends WanderingTrader {
 
 // calcs in category and not per item
-    private static final double boss = 10.0;
-    private static final double template = 20.0;
-    private static final double normal = 70.0;
+    private static final double boss = 15.0;
+    private static final double template = 5.0;
+    private static final double normal = 80.0;
 
     public DiscTraderEntity(EntityType<? extends WanderingTrader> type, Level level) {
         super(type, level);

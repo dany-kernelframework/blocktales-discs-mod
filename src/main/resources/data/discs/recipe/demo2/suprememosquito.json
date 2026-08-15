@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs2",
+  "category": "misc",
+  "pattern": [
+    "aea",
+    "cdc",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/toxic_template"
+    ],
+    "a": [
+      "minecraft:phantom_membrane"
+    ],
+    "e": [
+      "minecraft:jungle_log"
+    ],
+    "c": [
+      "minecraft:mangrove_log"
+    ]
+  },
+  "result": {
+    "id": "discs:demo2/suprememosquito",
+    "count": 1
+  }
+}

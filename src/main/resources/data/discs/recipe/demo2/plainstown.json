@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs2",
+  "category": "misc",
+  "pattern": [
+    "aea",
+    "ede",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/toxic_template"
+    ],
+    "a": [
+      "minecraft:acacia_planks"
+    ],
+    "e": [
+      "minecraft:acacia_log"
+    ]
+  },
+  "result": {
+    "id": "discs:demo2/plainstown",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/cave_spider",
+  "entries": [
+    {
+      "disc": "discs:demo2/komododragon",
+      "chance": 0.01
+    }
+  ]
+}

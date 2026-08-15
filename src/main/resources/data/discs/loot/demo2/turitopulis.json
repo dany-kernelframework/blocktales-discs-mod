@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/village/village_savanna_house",
+  "entries": [
+    {
+      "disc": "discs:demo2/turitopulis",
+      "chance": 0.075
+    }
+  ]
+}

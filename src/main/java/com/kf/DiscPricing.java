@@ -21,6 +21,8 @@ public class DiscPricing {
     private static final Map<String, String> BOSS_GRADIENTS = Map.of(
             "prologue/noobador", "<#FFC000>M<#F7A30C>u<#F08719>s<#E86A25>i<#E14E32>c <#E3552F>D<#EC791F>i<#F69C10>s<#FFC000>c",
             "demo1/cruelking", "<#DCCAFF>M<#E3D5FF>u<#EADFFF>s<#F1EAFF>i<#F8F4FF>c <#F6F2FF>D<#EEE5FF>i<#E5D7FF>s<#DCCAFF>c",
+            "demo2/bubonicplant", "<#A47215>M<#926219>u<#80521D>s<#6E4121>i<#5C3125>c <#613524>D<#774A1F>i<#8E5E1A>s<#A47215>c",
+            "demo2/suprememosquito", "<#946B73>M<#8C7372>u<#847B70>s<#7B846F>i<#738C6D>c <#758A6E>D<#808070>i<#8A7571>s<#946B73>c",
             "demo4/theancients", "<#AB8000>M<#BC6604>u<#CD4D08>s<#DD330C>i<#EE1A10>c <#EA200F>D<#D5400A>i<#C06005>s<#AB8000>c"
     );
 

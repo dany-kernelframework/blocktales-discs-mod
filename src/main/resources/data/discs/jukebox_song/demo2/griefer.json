@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo2.griefer",
+  "description": {
+    "text": "Campyfire - Griefer"
+  },
+  "length_in_seconds": 97,
+  "comparator_output": 1
+}

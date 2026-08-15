@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/husk",
+  "entries": [
+    {
+      "disc": "discs:demo2/junglebattle",
+      "chance": 0.1
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/ravager",
+  "entries": [
+    {
+      "disc": "discs:demo2/bigfoot",
+      "chance": 0.25
+    }
+  ]
+}

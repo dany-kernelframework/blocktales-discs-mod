@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/jungle_temple",
+  "entries": [
+    {
+      "disc": "discs:demo2/mudroads",
+      "chance": 0.0825
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs2",
+  "category": "misc",
+  "pattern": [
+    "aea",
+    "cdc",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/toxic_template"
+    ],
+    "a": [
+      "minecraft:jungle_log"
+    ],
+    "e": [
+      "minecraft:melon_slice"
+    ],
+    "c": [
+      "minecraft:apple"
+    ]
+  },
+  "result": {
+    "id": "discs:demo2/turitopulis",
+    "count": 1
+  }
+}

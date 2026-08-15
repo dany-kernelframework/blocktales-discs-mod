@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/elder_guardian",
+  "entries": [
+    {
+      "disc": "discs:demo2/panacea",
+      "chance": 0.125
+    }
+  ]
+}

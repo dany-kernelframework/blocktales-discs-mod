@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discsMts",
+  "category": "misc",
+  "pattern": [
+    "cic",
+    "iri",
+    "hch"
+  ],
+  "key": {
+    "i": [
+      "minecraft:copper_ingot"
+    ],
+    "r": [
+      "minecraft:honeycomb"
+    ],
+    "h": [
+      "minecraft:coal"
+    ],
+    "c": [
+      "minecraft:poisonous_potato"
+    ]
+  },
+  "result": {
+    "id": "discs:materials/toxic_template",
+    "count": 1
+  }
+}

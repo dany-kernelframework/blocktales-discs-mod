@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_template_disc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:materials/toxic_template"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_template_disc"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "discs:materials/toxic_template",
+
+      "discs:demo2/plainstown",
+      "discs:demo2/junglebattle",
+      "discs:demo2/anthill",
+      "discs:demo2/turitopulis",
+      "discs:demo2/hotelturitopulis",
+      "discs:demo2/mudroads",
+      "discs:demo2/ruggedrainforest",
+      "discs:demo2/komododragon",
+      "discs:demo2/bigfoot",
+      "discs:demo2/suprememosquito",
+      "discs:demo2/sacredhollow",
+      "discs:demo2/griefer",
+      "discs:demo2/bubonicplant",
+      "discs:demo2/panacea"
+    ]
+  }
+}

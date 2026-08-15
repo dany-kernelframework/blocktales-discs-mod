@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo2.bigfoot",
+  "description": {
+    "text": "Campyfire - Bigfoot"
+  },
+  "length_in_seconds": 128,
+  "comparator_output": 5
+}

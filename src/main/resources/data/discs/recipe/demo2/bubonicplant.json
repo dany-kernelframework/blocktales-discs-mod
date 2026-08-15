@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs2",
+  "category": "misc",
+  "pattern": [
+    "aea",
+    "ede",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/toxic_template"
+    ],
+    "a": [
+      "minecraft:golden_sword"
+    ],
+    "e": [
+      "minecraft:vine"
+    ]
+  },
+  "result": {
+    "id": "discs:demo2/bubonicplant",
+    "count": 1
+  }
+}

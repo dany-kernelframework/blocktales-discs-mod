@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:blocks/rooted_dirt",
+  "entries": [
+    {
+      "disc": "discs:demo2/anthill",
+      "chance": 0.075
+    }
+  ]
+}

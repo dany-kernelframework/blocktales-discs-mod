@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/wither_skeleton",
+  "entries": [
+    {
+      "disc": "discs:demo2/griefer",
+      "chance": 0.0825
+    }
+  ]
+}

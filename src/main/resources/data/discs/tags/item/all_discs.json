@@ -30,6 +30,21 @@
     "discs:demo1/inthecards",
     "discs:demo1/nirvana",
 
+    "discs:demo2/plainstown",
+    "discs:demo2/junglebattle",
+    "discs:demo2/anthill",
+    "discs:demo2/turitopulis",
+    "discs:demo2/hotelturitopulis",
+    "discs:demo2/mudroads",
+    "discs:demo2/ruggedrainforest",
+    "discs:demo2/komododragon",
+    "discs:demo2/bigfoot",
+    "discs:demo2/suprememosquito",
+    "discs:demo2/sacredhollow",
+    "discs:demo2/griefer",
+    "discs:demo2/bubonicplant",
+    "discs:demo2/panacea",
+
     "discs:demo4/theancients"
   ]
 }

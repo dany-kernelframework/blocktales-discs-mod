@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:jungle_leaves",
+  "entries": [
+    {
+      "disc": "discs:demo2/ruggedrainforest",
+      "chance": 0.0025
+    }
+  ]
+}

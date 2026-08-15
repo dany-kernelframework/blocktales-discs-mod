@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs2",
+  "category": "misc",
+  "pattern": [
+    "aea",
+    "cdc",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/toxic_template"
+    ],
+    "a": [
+      "minecraft:mossy_cobblestone"
+    ],
+    "e": [
+      "minecraft:vine"
+    ],
+    "c": [
+      "minecraft:jungle_planks"
+    ]
+  },
+  "result": {
+    "id": "discs:demo2/sacredhollow",
+    "count": 1
+  }
+}
