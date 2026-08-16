@@ -1,7 +1,4 @@
-// HEAVY wip
-
 {
-
   "track": "demo2/bubonicplant",
   "lines": [
     {
@@ -9,331 +6,359 @@
       "text": "Got this place jumpin'"
     },
     {
-      "time": 2.0,
+      "time": 1.0,
       "text": "I'm on the bass bumpin'"
     },
     {
-      "time": 4.0,
+      "time": 2.0,
       "text": "Now I've taken somethin'"
     },
     {
+      "time": 3.0,
+      "text": "But I don't wanna-want it"
+    },
+    {
+      "time": 4.0,
+      "text": "Got this place jumpin'"
+    },
+    {
+      "time": 5.0,
+      "text": "I'm on the bass bumpin'"
+    },
+    {
       "time": 6.0,
+      "text": "Now I've taken somethin'"
+    },
+    {
+      "time": 7.0,
       "text": "But I don't wanna-want it"
     },
     {
       "time": 8.0,
-      "text": "Got this place jumpin'"
-    },
-    {
-      "time": 10.0,
-      "text": "I'm on the bass bumpin'"
-    },
-    {
-      "time": 12.0,
-      "text": "Now I've taken somethin'"
-    },
-    {
-      "time": 14.0,
-      "text": "But I don't wanna-want it"
+      "text": "♫"
     },
     {
       "time": 16.0,
       "text": "Got this place jumpin'"
     },
     {
-      "time": 18.0,
+      "time": 17.0,
       "text": "I'm on the bass bumpin'"
     },
     {
-      "time": 20.0,
+      "time": 18.0,
       "text": "Now I've taken somethin'"
     },
     {
+      "time": 19.0,
+      "text": "But I don't wanna-want it"
+    },
+    {
+      "time": 20.0,
+      "text": "Got this place jumpin'"
+    },
+    {
+      "time": 21.0,
+      "text": "I'm on the bass bumpin'"
+    },
+    {
       "time": 22.0,
+      "text": "Now I've taken somethin'"
+    },
+    {
+      "time": 23.0,
       "text": "But I don't wanna-want it"
     },
     {
       "time": 24.0,
-      "text": "Got this place jumpin'"
-    },
-    {
-      "time": 26.0,
-      "text": "I'm on the bass bumpin'"
-    },
-    {
-      "time": 28.0,
-      "text": "Now I've taken somethin'"
-    },
-    {
-      "time": 30.0,
-      "text": "But I don't wanna-want it"
+      "text": "♫"
     },
     {
       "time": 32.0,
       "text": "Got this place jumpin'"
     },
     {
-      "time": 34.0,
+      "time": 33.0,
       "text": "I'm on the bass bumpin'"
     },
     {
-      "time": 36.0,
+      "time": 34.0,
       "text": "Now I've taken somethin'"
     },
     {
+      "time": 35.0,
+      "text": "But I don't wanna-want it"
+    },
+    {
+      "time": 36.0,
+      "text": "Got this place jumpin'"
+    },
+    {
+      "time": 37.0,
+      "text": "I'm on the bass bumpin'"
+    },
+    {
       "time": 38.0,
+      "text": "Now I've taken somethin'"
+    },
+    {
+      "time": 39.0,
       "text": "But I don't wanna-want it"
     },
     {
       "time": 40.0,
-      "text": "Got this place jumpin'"
-    },
-    {
-      "time": 42.0,
-      "text": "I'm on the bass bumpin'"
-    },
-    {
-      "time": 44.0,
-      "text": "Now I've taken somethin'"
-    },
-    {
-      "time": 46.0,
-      "text": "But I don't wanna-want it"
+      "text": "♫"
     },
     {
       "time": 48.0,
       "text": "Got this place jumpin'"
     },
     {
-      "time": 50.0,
+      "time": 49.0,
       "text": "I'm on the bass bumpin'"
     },
     {
-      "time": 52.0,
+      "time": 50.0,
       "text": "Now I've taken somethin'"
     },
     {
+      "time": 51.0,
+      "text": "But I don't wanna-want it"
+    },
+    {
+      "time": 52.0,
+      "text": "Got this place jumpin'"
+    },
+    {
+      "time": 53.0,
+      "text": "I'm on the bass bumpin'"
+    },
+    {
       "time": 54.0,
+      "text": "Now I've taken somethin'"
+    },
+    {
+      "time": 55.0,
       "text": "But I don't wanna-want it"
     },
     {
       "time": 56.0,
-      "text": "Got this place jumpin'"
-    },
-    {
-      "time": 58.0,
-      "text": "I'm on the bass bumpin'"
-    },
-    {
-      "time": 60.0,
-      "text": "Now I've taken somethin'"
-    },
-    {
-      "time": 62.0,
-      "text": "But I don't wanna-want it"
+      "text": "♫"
     },
     {
       "time": 64.0,
       "text": "Got this place jumpin'"
     },
     {
-      "time": 66.0,
+      "time": 65.0,
       "text": "I'm on the bass bumpin'"
     },
     {
-      "time": 68.0,
+      "time": 66.0,
       "text": "Now I've taken somethin'"
     },
     {
+      "time": 67.0,
+      "text": "But I don't wanna-want it"
+    },
+    {
+      "time": 68.0,
+      "text": "Got this place jumpin'"
+    },
+    {
+      "time": 69.0,
+      "text": "I'm on the bass bumpin'"
+    },
+    {
       "time": 70.0,
+      "text": "Now I've taken somethin'"
+    },
+    {
+      "time": 71.0,
       "text": "But I don't wanna-want it"
     },
     {
       "time": 72.0,
-      "text": "Got this place jumpin'"
-    },
-    {
-      "time": 74.0,
-      "text": "I'm on the bass bumpin'"
-    },
-    {
-      "time": 76.0,
-      "text": "Now I've taken somethin'"
-    },
-    {
-      "time": 78.0,
-      "text": "But I don't wanna-want it"
+      "text": "♫"
     },
     {
       "time": 80.0,
       "text": "Got this place jumpin'"
     },
     {
-      "time": 82.0,
+      "time": 81.0,
       "text": "I'm on the bass bumpin'"
     },
     {
-      "time": 84.0,
+      "time": 82.0,
       "text": "Now I've taken somethin'"
     },
     {
+      "time": 83.0,
+      "text": "But I don't wanna-want it"
+    },
+    {
+      "time": 84.0,
+      "text": "Got this place jumpin'"
+    },
+    {
+      "time": 85.0,
+      "text": "I'm on the bass bumpin'"
+    },
+    {
       "time": 86.0,
+      "text": "Now I've taken somethin'"
+    },
+    {
+      "time": 87.0,
       "text": "But I don't wanna-want it"
     },
     {
       "time": 88.0,
-      "text": "Got this place jumpin'"
-    },
-    {
-      "time": 90.0,
-      "text": "I'm on the bass bumpin'"
-    },
-    {
-      "time": 92.0,
-      "text": "Now I've taken somethin'"
-    },
-    {
-      "time": 94.0,
-      "text": "But I don't wanna-want it"
+      "text": "♫"
     },
     {
       "time": 96.0,
       "text": "Got this place jumpin'"
     },
     {
-      "time": 98.0,
+      "time": 97.0,
       "text": "I'm on the bass bumpin'"
     },
     {
-      "time": 100.0,
+      "time": 98.0,
       "text": "Now I've taken somethin'"
     },
     {
+      "time": 99.0,
+      "text": "But I don't wanna-want it"
+    },
+    {
+      "time": 100.0,
+      "text": "Got this place jumpin'"
+    },
+    {
+      "time": 101.0,
+      "text": "I'm on the bass bumpin'"
+    },
+    {
       "time": 102.0,
+      "text": "Now I've taken somethin'"
+    },
+    {
+      "time": 103.0,
       "text": "But I don't wanna-want it"
     },
     {
       "time": 104.0,
-      "text": "Got this place jumpin'"
-    },
-    {
-      "time": 106.0,
-      "text": "I'm on the bass bumpin'"
-    },
-    {
-      "time": 108.0,
-      "text": "Now I've taken somethin'"
-    },
-    {
-      "time": 110.0,
-      "text": "But I don't wanna-want it"
+      "text": "♫"
     },
     {
       "time": 112.0,
       "text": "Got this place jumpin'"
     },
     {
-      "time": 114.0,
+      "time": 113.0,
       "text": "I'm on the bass bumpin'"
     },
     {
-      "time": 116.0,
+      "time": 114.0,
       "text": "Now I've taken somethin'"
     },
     {
+      "time": 115.0,
+      "text": "But I don't wanna-want it"
+    },
+    {
+      "time": 116.0,
+      "text": "Got this place jumpin'"
+    },
+    {
+      "time": 117.0,
+      "text": "I'm on the bass bumpin'"
+    },
+    {
       "time": 118.0,
+      "text": "Now I've taken somethin'"
+    },
+    {
+      "time": 119.0,
       "text": "But I don't wanna-want it"
     },
     {
       "time": 120.0,
-      "text": "Got this place jumpin'"
-    },
-    {
-      "time": 122.0,
-      "text": "I'm on the bass bumpin'"
-    },
-    {
-      "time": 124.0,
-      "text": "Now I've taken somethin'"
-    },
-    {
-      "time": 126.0,
-      "text": "But I don't wanna-want it"
+      "text": "♫"
     },
     {
       "time": 128.0,
       "text": "Got this place jumpin'"
     },
     {
-      "time": 130.0,
+      "time": 129.0,
       "text": "I'm on the bass bumpin'"
     },
     {
-      "time": 132.0,
+      "time": 130.0,
       "text": "Now I've taken somethin'"
     },
     {
+      "time": 131.0,
+      "text": "But I don't wanna-want it"
+    },
+    {
+      "time": 132.0,
+      "text": "Got this place jumpin'"
+    },
+    {
+      "time": 133.0,
+      "text": "I'm on the bass bumpin'"
+    },
+    {
       "time": 134.0,
+      "text": "Now I've taken somethin'"
+    },
+    {
+      "time": 135.0,
       "text": "But I don't wanna-want it"
     },
     {
       "time": 136.0,
-      "text": "Got this place jumpin'"
-    },
-    {
-      "time": 138.0,
-      "text": "I'm on the bass bumpin'"
-    },
-    {
-      "time": 140.0,
-      "text": "Now I've taken somethin'"
-    },
-    {
-      "time": 142.0,
-      "text": "But I don't wanna-want it"
+      "text": "♫"
     },
     {
       "time": 144.0,
       "text": "Got this place jumpin'"
     },
     {
-      "time": 146.0,
+      "time": 145.0,
       "text": "I'm on the bass bumpin'"
     },
     {
-      "time": 148.0,
+      "time": 146.0,
       "text": "Now I've taken somethin'"
     },
     {
+      "time": 147.0,
+      "text": "But I don't wanna-want it"
+    },
+    {
+      "time": 148.0,
+      "text": "Got this place jumpin'"
+    },
+    {
+      "time": 149.0,
+      "text": "I'm on the bass bumpin'"
+    },
+    {
       "time": 150.0,
+      "text": "Now I've taken somethin'"
+    },
+    {
+      "time": 151.0,
       "text": "But I don't wanna-want it"
     },
     {
       "time": 152.0,
-      "text": "Got this place jumpin'"
-    },
-    {
-      "time": 154.0,
-      "text": "I'm on the bass bumpin'"
-    },
-    {
-      "time": 156.0,
-      "text": "Now I've taken somethin'"
-    },
-    {
-      "time": 158.0,
-      "text": "But I don't wanna-want it"
-    },
-    {
-      "time": 160.0,
-      "text": "Got this place jumpin'"
-    },
-    {
-      "time": 162.0,
-      "text": "I'm on the bass bumpin'"
-    },
-    {
-      "time": 164.0,
       "text": "♫"
     }
   ]
