@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo3.trainbattle",
+  "description": {
+    "text": "wheel_able - Train Battle"
+  },
+  "length_in_seconds": 141,
+  "comparator_output": 1
+}

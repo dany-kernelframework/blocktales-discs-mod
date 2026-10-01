@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_template_disc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:materials/ghost_template"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_template_disc"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "discs:materials/ghost_template",
+
+      "discs:demo3/bizvillerailways",
+      "discs:demo3/trainbattle",
+      "discs:demo3/greenandpurplenoobs",
+      "discs:demo3/cemetery",
+      "discs:demo3/spookybattle",
+      "discs:demo3/crypt",
+      "discs:demo3/telamonsmanor",
+      "discs:demo3/turkey",
+      "discs:demo3/catacombs",
+      "discs:demo3/slasher",
+      "discs:demo3/weirdbattle",
+      "discs:demo3/funkybattle",
+      "discs:demo3/greed",
+      "discs:demo3/solitude",
+      "discs:demo3/fear",
+      "discs:demo3/hatred",
+      "discs:demo3/redemption"
+    ]
+  }
+}

@@ -4,25 +4,25 @@
   "category": "misc",
   "pattern": [
     "cic",
-    "iri",
+    "idi",
     "hch"
   ],
   "key": {
     "i": [
       "minecraft:iron_ingot"
     ],
-    "r": [
-      "minecraft:honeycomb"
-    ],
     "h": [
       "minecraft:coal"
     ],
     "c": [
       "ice"
+    ],
+    "d": [
+      "discs:materials/cold_template"
     ]
   },
   "result": {
     "id": "discs:materials/cold_template",
-    "count": 1
+    "count": 2
   }
 }

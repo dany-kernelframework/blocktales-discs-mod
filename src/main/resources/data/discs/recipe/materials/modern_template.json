@@ -4,22 +4,22 @@
   "category": "misc",
   "pattern": [
     "iii",
-    "iri",
+    "idi",
     "hhh"
   ],
   "key": {
     "i": [
       "minecraft:iron_ingot"
     ],
-    "r": [
-      "minecraft:honeycomb"
-    ],
     "h": [
       "minecraft:coal"
+    ],
+    "d": [
+      "discs:materials/modern_template"
     ]
   },
   "result": {
     "id": "discs:materials/modern_template",
-    "count": 1
+    "count": 2
   }
 }

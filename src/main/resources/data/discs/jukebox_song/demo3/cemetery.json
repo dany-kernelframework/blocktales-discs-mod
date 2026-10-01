@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo3.cemetery",
+  "description": {
+    "text": "wheel_able - Cemetery"
+  },
+  "length_in_seconds": 144,
+  "comparator_output": 1
+}

@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo3.greed",
+  "description": {
+    "text": "Campyfire - Greed"
+  },
+  "length_in_seconds": 144,
+  "comparator_output": 2
+}

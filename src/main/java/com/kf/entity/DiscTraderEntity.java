@@ -12,6 +12,7 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.item.trading.MerchantOffers;
 import net.minecraft.world.level.Level;
 import org.jspecify.annotations.NullMarked;
+import org.jspecify.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +20,15 @@ import java.util.List;
 @NullMarked
 public class DiscTraderEntity extends WanderingTrader {
 
-// calcs in category and not per item
-    private static final double boss = 15.0;
-    private static final double template = 5.0;
-    private static final double normal = 80.0;
+    // how likely each category is for a single trade slot
+    // these are relative, they don't need to add up to 100
+    // lower = rarer, these are per category, not per disc
+    private static final double boss = 5.0;
+    private static final double template = 3.0;
+    private static final double normal = 92.0;
+
+    private static final int maxBossPerTrader = 1;
+    private static final int maxTemplatePerTrader = 1;
 
     public DiscTraderEntity(EntityType<? extends WanderingTrader> type, Level level) {
         super(type, level);
@@ -49,20 +55,28 @@ public class DiscTraderEntity extends WanderingTrader {
             }
         });
 
-        List<WeightedItem> pool = new ArrayList<>(bossDiscs.size() + templateItems.size() + normalDiscs.size());
-        addWeighted(pool, bossDiscs, boss);
-        addWeighted(pool, templateItems, template);
-        addWeighted(pool, normalDiscs, normal);
+        List<Category> categories = List.of(
+                new Category(boss, maxBossPerTrader, bossDiscs),
+                new Category(template, maxTemplatePerTrader, templateItems),
+                new Category(normal, Integer.MAX_VALUE, normalDiscs)
+        );
 
         int tradeCount = 1 + this.random.nextInt(5);
 
-        for (int i = 0; i < tradeCount && !pool.isEmpty(); i++) {
-            Item chosenItem = drawWithoutReplacement(pool);
-            int price = Discs.discPrices.getOrDefault(chosenItem, 5);
+        for (int i = 0; i < tradeCount; i++) {
+            Category category = pickCategory(categories);
+            if (category == null) {
+                break; // nothing left to sell
+            }
+
+            Item item = category.items.remove(this.random.nextInt(category.items.size()));
+            category.picked++;
+
+            int price = Discs.discPrices.getOrDefault(item, 5);
 
             offers.add(new MerchantOffer(
                     new ItemCost(Items.EMERALD, price),
-                    new ItemStack(chosenItem),
+                    new ItemStack(item),
                     1,
                     2,
                     0.0f
@@ -70,32 +84,51 @@ public class DiscTraderEntity extends WanderingTrader {
         }
     }
 
-    private static void addWeighted(List<WeightedItem> pool, List<Item> items, double categoryWeight) {
-        if (items.isEmpty()) return;
-        double perItemWeight = categoryWeight / items.size();
-        for (Item item : items) {
-            pool.add(new WeightedItem(item, perItemWeight));
-        }
-    }
-
-    private Item drawWithoutReplacement(List<WeightedItem> pool) {
+    private @Nullable Category pickCategory(List<Category> categories) {
         double totalWeight = 0.0;
-        for (WeightedItem entry : pool) {
-            totalWeight += entry.weight();
-        }
-
-        double roll = this.random.nextDouble() * totalWeight;
-        double cumulative = 0.0;
-
-        for (int i = 0; i < pool.size(); i++) {
-            cumulative += pool.get(i).weight();
-            if (roll < cumulative) {
-                return pool.remove(i).item();
+        for (Category c : categories) {
+            if (c.canPick()) {
+                totalWeight += c.weight;
             }
         }
 
-        return pool.removeLast().item();
+        if (totalWeight <= 0.0) {
+            return null;
+        }
+
+        double roll = this.random.nextDouble() * totalWeight;
+        double running = 0.0;
+        Category lastValid = null;
+
+        for (Category c : categories) {
+            if (!c.canPick()) continue;
+
+            running += c.weight;
+            lastValid = c;
+            if (roll < running) {
+                return c;
+            }
+        }
+
+        return lastValid;
     }
 
-    private record WeightedItem(Item item, double weight) {}
+    private static class Category {
+        final double weight;
+        final int maxPicks;
+        final List<Item> items;
+        int picked = 0;
+
+        Category(double weight, int maxPicks, List<Item> items) {
+            this.weight = weight;
+            this.maxPicks = maxPicks;
+            this.items = items;
+        }
+
+        boolean canPick() {
+            return picked < maxPicks && !items.isEmpty();
+        }
+    }
 }
+
+// im going insane pleasehelp

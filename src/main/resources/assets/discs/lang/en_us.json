@@ -6,5 +6,7 @@
   "item.discs.materials.modern_template": "Modern Template Disc",
   "item.discs.materials.old_template": "Old Template Disc",
   "item.discs.materials.cold_template": "Cold Template Disc",
-  "item.discs.materials.toxic_template": "Toxic Template Disc"
+  "item.discs.materials.toxic_template": "Toxic Template Disc",
+  "item.discs.materials.ghost_template": "Ghostly Template Disc"
+
 }

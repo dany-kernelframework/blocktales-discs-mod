@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo3.catacombs",
+  "description": {
+    "text": "wheel_able - Catacombs"
+  },
+  "length_in_seconds": 175,
+  "comparator_output": 1
+}

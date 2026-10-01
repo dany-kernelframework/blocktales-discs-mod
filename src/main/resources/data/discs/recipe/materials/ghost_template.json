@@ -9,20 +9,20 @@
   ],
   "key": {
     "i": [
-      "minecraft:copper_ingot"
+      "minecraft:soul_sand"
     ],
     "r": [
-      "discs:materials/toxic_template"
+      "discs:materials/ghost_template"
     ],
     "h": [
-      "minecraft:coal"
+      "minecraft:charcoal"
     ],
     "c": [
-      "minecraft:poisonous_potato"
+      "minecraft:soul_torch"
     ]
   },
   "result": {
-    "id": "discs:materials/toxic_template",
+    "id": "discs:materials/ghost_template",
     "count": 2
   }
 }
