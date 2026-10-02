@@ -2,8 +2,8 @@
   "loot_table": "minecraft:chests/trial_chambers/reward_ominous",
   "entries": [
     {
-      "disc": "discs:preprologue/mysteriousfigure",
-      "chance": 1
+      "disc": "discs:demo3/hatred",
+      "chance": 1.488
     }
   ]
 }

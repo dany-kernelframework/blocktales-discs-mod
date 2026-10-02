@@ -59,9 +59,14 @@ public class DiscLoot {
 
                         json.getAsJsonArray("entries").forEach(element -> {
                             JsonObject obj = element.getAsJsonObject();
+
+                            // translates the json to minecraft (from % to 0-1)
+                            float chancePercent = obj.get("chance").getAsFloat();
+                            float finalChance = chancePercent / 100.0f;
+
                             list.add(new LootEntry(
                                     obj.get("disc").getAsString(),
-                                    obj.get("chance").getAsFloat()
+                                    finalChance
                             ));
                         });
                     } catch (Exception e) {
@@ -86,7 +91,8 @@ public class DiscLoot {
             }
 
             itemEntries.add(LootItem.lootTableItem(disc)
-                    .when(LootItemRandomChanceCondition.randomChance(entry.chance())));
+                    .when(LootItemRandomChanceCondition.randomChance(entry.chance()))
+                    .when(DiscCooldownCondition.cooldown()));
         }
 
         if (!itemEntries.isEmpty()) {

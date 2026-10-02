@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/ghast",
+  "entries": [
+    {
+      "disc": "discs:demo3/weirdbattle",
+      "chance": 3
+    }
+  ]
+}

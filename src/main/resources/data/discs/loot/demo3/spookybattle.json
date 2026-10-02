@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/skeleton",
+  "entries": [
+    {
+      "disc": "discs:demo3/spookybattle",
+      "chance": 2.5
+    }
+  ]
+}

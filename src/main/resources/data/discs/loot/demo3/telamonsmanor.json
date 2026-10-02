@@ -2,7 +2,7 @@
   "loot_table": "minecraft:chests/woodland_mansion",
   "entries": [
     {
-      "disc": "discs:prologue/robloxhq",
+      "disc": "discs:demo3/telamonsmanor",
       "chance": 7.5
     }
   ]

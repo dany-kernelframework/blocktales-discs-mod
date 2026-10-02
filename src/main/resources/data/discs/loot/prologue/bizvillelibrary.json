@@ -3,7 +3,7 @@
   "entries": [
     {
       "disc": "discs:prologue/bizvillelibrary",
-      "chance": 0.075
+      "chance": 5
     }
   ]
 }

@@ -2,7 +2,7 @@
   "loot_table": "minecraft:chests/simple_dungeon",
   "entries": [
     {
-      "disc": "discs:demo1/caves",
+      "disc": "discs:demo3/crypt",
       "chance": 5
     }
   ]

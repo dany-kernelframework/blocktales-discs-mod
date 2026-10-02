@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/bogged",
+  "entries": [
+    {
+      "disc": "discs:demo3/greenandpurplenoobs",
+      "chance": 2.5
+    }
+  ]
+}

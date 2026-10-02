@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/ancient_city_ice_box",
+  "entries": [
+    {
+      "disc": "discs:demo3/solitude",
+      "chance": 5.5
+    }
+  ]
+}

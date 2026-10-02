@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/turkey",
+  "entries": [
+    {
+      "disc": "discs:demo3/turkey",
+      "chance": 0.1
+    }
+  ]
+}

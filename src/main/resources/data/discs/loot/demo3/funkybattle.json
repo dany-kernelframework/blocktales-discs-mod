@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/bee",
+  "entries": [
+    {
+      "disc": "discs:demo3/funkybattle",
+      "chance": 1.25
+    }
+  ]
+}

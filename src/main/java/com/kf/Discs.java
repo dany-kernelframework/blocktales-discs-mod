@@ -130,7 +130,8 @@ public class Discs implements ModInitializer {
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY, mainTab);
 
 		ModEntities.register();
-		FabricDefaultAttributeRegistry.register(ModEntities.DISC_TRADER, WanderingTrader.createMobAttributes()); // Im so SICK and TIRED of you.
+		FabricDefaultAttributeRegistry.register(ModEntities.DISC_TRADER, WanderingTrader.createMobAttributes()); // now that i go back to this i think it's just intelliJ being a chud and not recognizing fabric so i can ignore it, albeit being VERY painful to see that theres a GIANT fuckiNG YELLOW warning in my code
+		DiscCooldownCondition.register();
 		ModCommands.register();
 
 		DiscLoot.register();

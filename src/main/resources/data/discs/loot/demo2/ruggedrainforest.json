@@ -3,7 +3,7 @@
   "entries": [
     {
       "disc": "discs:demo2/ruggedrainforest",
-      "chance": 0.0025
+      "chance": 0.1
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
-  "loot_table": "minecraft:chests/trial_chambers/reward_ominous",
+  "loot_table": "minecraft:chests/simple_dungeon",
   "entries": [
     {
       "disc": "discs:demo1/thepit",
-      "chance": 0.05
+      "chance": 1.75
     }
   ]
 }

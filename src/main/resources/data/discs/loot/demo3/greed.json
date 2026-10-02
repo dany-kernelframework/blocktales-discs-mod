@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/bastion_treasure",
+  "entries": [
+    {
+      "disc": "discs:demo3/greed",
+      "chance": 5
+    }
+  ]
+}

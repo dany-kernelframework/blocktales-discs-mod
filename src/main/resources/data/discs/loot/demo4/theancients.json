@@ -3,7 +3,7 @@
   "entries": [
     {
       "disc": "discs:demo4/theancients",
-      "chance": 0.01
+      "chance": 100
     }
   ]
 }

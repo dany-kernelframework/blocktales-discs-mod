@@ -2,8 +2,8 @@
   "loot_table": "minecraft:entities/cave_spider",
   "entries": [
     {
-      "disc": "discs:demo2/komododragon",
-      "chance": 1.75
+      "disc": "discs:demo3/trainbattle",
+      "chance": 2.5
     }
   ]
 }

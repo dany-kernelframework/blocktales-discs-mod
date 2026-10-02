@@ -2,7 +2,7 @@
   "loot_table": "minecraft:chests/ancient_city",
   "entries": [
     {
-      "disc": "discs:demo1/nirvana",
+      "disc": "discs:demo3/fear",
       "chance": 5
     }
   ]

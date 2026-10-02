@@ -1,9 +1,9 @@
 {
-  "loot_table": "minecraft:blocks/rooted_dirt",
+  "loot_table": "minecraft:chests/abandoned_mineshaft",
   "entries": [
     {
-      "disc": "discs:demo2/anthill",
-      "chance": 0.075
+      "disc": "discs:demo3/bizvillerailways",
+      "chance": 5
     }
   ]
 }
