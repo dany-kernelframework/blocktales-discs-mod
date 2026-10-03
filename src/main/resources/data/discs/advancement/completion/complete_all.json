@@ -1,0 +1,773 @@
+{
+  "parent": "discs:completion/root",
+  "display": {
+    "icon": {
+      "id": "discs:demo4/theancients",
+      "count": 1
+    },
+    "title": "Turn the Volume UP!",
+    "description": "Collect every single music disc.",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "preprologue_modernbizville": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:preprologue/modernbizville"
+          }
+        ]
+      }
+    },
+    "preprologue_mysteriousfigure": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:preprologue/mysteriousfigure"
+          }
+        ]
+      }
+    },
+    "prologue_tutorialterry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/tutorialterry"
+          }
+        ]
+      }
+    },
+    "prologue_bizville": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/bizville"
+          }
+        ]
+      }
+    },
+    "prologue_bizvillelibrary": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/bizvillelibrary"
+          }
+        ]
+      }
+    },
+    "prologue_theironcafe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/theironcafe"
+          }
+        ]
+      }
+    },
+    "prologue_bizvillearcade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/bizvillearcade"
+          }
+        ]
+      }
+    },
+    "prologue_bizvillemeadows": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/bizvillemeadows"
+          }
+        ]
+      }
+    },
+    "prologue_robloxhq": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/robloxhq"
+          }
+        ]
+      }
+    },
+    "prologue_weakbattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/weakbattle"
+          }
+        ]
+      }
+    },
+    "prologue_redandbluenoobs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/redandbluenoobs"
+          }
+        ]
+      }
+    },
+    "prologue_noobador": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/noobador"
+          }
+        ]
+      }
+    },
+    "demo1_caves": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/caves"
+          }
+        ]
+      }
+    },
+    "demo1_icycaves": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/icycaves"
+          }
+        ]
+      }
+    },
+    "demo1_supremeant": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/supremeant"
+          }
+        ]
+      }
+    },
+    "demo1_roadtown": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/roadtown"
+          }
+        ]
+      }
+    },
+    "demo1_penguinland": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/penguinland"
+          }
+        ]
+      }
+    },
+    "demo1_mtblackrock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/mtblackrock"
+          }
+        ]
+      }
+    },
+    "demo1_mobilebattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/mobilebattle"
+          }
+        ]
+      }
+    },
+    "demo1_snowythicket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/snowythicket"
+          }
+        ]
+      }
+    },
+    "demo1_blackrockcastle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/blackrockcastle"
+          }
+        ]
+      }
+    },
+    "demo1_sentientstatue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/sentientstatue"
+          }
+        ]
+      }
+    },
+    "demo1_cruelking": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/cruelking"
+          }
+        ]
+      }
+    },
+    "demo1_thepit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/thepit"
+          }
+        ]
+      }
+    },
+    "demo1_inthecards": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/inthecards"
+          }
+        ]
+      }
+    },
+    "demo1_nirvana": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/nirvana"
+          }
+        ]
+      }
+    },
+    "demo2_plainstown": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/plainstown"
+          }
+        ]
+      }
+    },
+    "demo2_junglebattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/junglebattle"
+          }
+        ]
+      }
+    },
+    "demo2_anthill": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/anthill"
+          }
+        ]
+      }
+    },
+    "demo2_turitopulis": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/turitopulis"
+          }
+        ]
+      }
+    },
+    "demo2_hotelturitopulis": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/hotelturitopulis"
+          }
+        ]
+      }
+    },
+    "demo2_mudroads": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/mudroads"
+          }
+        ]
+      }
+    },
+    "demo2_ruggedrainforest": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/ruggedrainforest"
+          }
+        ]
+      }
+    },
+    "demo2_komododragon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/komododragon"
+          }
+        ]
+      }
+    },
+    "demo2_bigfoot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/bigfoot"
+          }
+        ]
+      }
+    },
+    "demo2_suprememosquito": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/suprememosquito"
+          }
+        ]
+      }
+    },
+    "demo2_sacredhollow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/sacredhollow"
+          }
+        ]
+      }
+    },
+    "demo2_griefer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/griefer"
+          }
+        ]
+      }
+    },
+    "demo2_bubonicplant": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/bubonicplant"
+          }
+        ]
+      }
+    },
+    "demo2_panacea": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/panacea"
+          }
+        ]
+      }
+    },
+    "demo3_bizvillerailways": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/bizvillerailways"
+          }
+        ]
+      }
+    },
+    "demo3_catacombs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/catacombs"
+          }
+        ]
+      }
+    },
+    "demo3_cemetery": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/cemetery"
+          }
+        ]
+      }
+    },
+    "demo3_crypt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/crypt"
+          }
+        ]
+      }
+    },
+    "demo3_fear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/fear"
+          }
+        ]
+      }
+    },
+    "demo3_funkybattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/funkybattle"
+          }
+        ]
+      }
+    },
+    "demo3_greed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/greed"
+          }
+        ]
+      }
+    },
+    "demo3_greenandpurplenoobs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/greenandpurplenoobs"
+          }
+        ]
+      }
+    },
+    "demo3_hatred": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/hatred"
+          }
+        ]
+      }
+    },
+    "demo3_redemption": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/redemption"
+          }
+        ]
+      }
+    },
+    "demo3_slasher": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/slasher"
+          }
+        ]
+      }
+    },
+    "demo3_solitude": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/solitude"
+          }
+        ]
+      }
+    },
+    "demo3_spookybattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/spookybattle"
+          }
+        ]
+      }
+    },
+    "demo3_telamonsmanor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/telamonsmanor"
+          }
+        ]
+      }
+    },
+    "demo3_trainbattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/trainbattle"
+          }
+        ]
+      }
+    },
+    "demo3_turkey": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/turkey"
+          }
+        ]
+      }
+    },
+    "demo3_weirdbattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/weirdbattle"
+          }
+        ]
+      }
+    },
+    "demo4_theancients": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/theancients"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "preprologue_modernbizville"
+    ],
+    [
+      "preprologue_mysteriousfigure"
+    ],
+    [
+      "prologue_tutorialterry"
+    ],
+    [
+      "prologue_bizville"
+    ],
+    [
+      "prologue_bizvillelibrary"
+    ],
+    [
+      "prologue_theironcafe"
+    ],
+    [
+      "prologue_bizvillearcade"
+    ],
+    [
+      "prologue_bizvillemeadows"
+    ],
+    [
+      "prologue_robloxhq"
+    ],
+    [
+      "prologue_weakbattle"
+    ],
+    [
+      "prologue_redandbluenoobs"
+    ],
+    [
+      "prologue_noobador"
+    ],
+    [
+      "demo1_caves"
+    ],
+    [
+      "demo1_icycaves"
+    ],
+    [
+      "demo1_supremeant"
+    ],
+    [
+      "demo1_roadtown"
+    ],
+    [
+      "demo1_penguinland"
+    ],
+    [
+      "demo1_mtblackrock"
+    ],
+    [
+      "demo1_mobilebattle"
+    ],
+    [
+      "demo1_snowythicket"
+    ],
+    [
+      "demo1_blackrockcastle"
+    ],
+    [
+      "demo1_sentientstatue"
+    ],
+    [
+      "demo1_cruelking"
+    ],
+    [
+      "demo1_thepit"
+    ],
+    [
+      "demo1_inthecards"
+    ],
+    [
+      "demo1_nirvana"
+    ],
+    [
+      "demo2_plainstown"
+    ],
+    [
+      "demo2_junglebattle"
+    ],
+    [
+      "demo2_anthill"
+    ],
+    [
+      "demo2_turitopulis"
+    ],
+    [
+      "demo2_hotelturitopulis"
+    ],
+    [
+      "demo2_mudroads"
+    ],
+    [
+      "demo2_ruggedrainforest"
+    ],
+    [
+      "demo2_komododragon"
+    ],
+    [
+      "demo2_bigfoot"
+    ],
+    [
+      "demo2_suprememosquito"
+    ],
+    [
+      "demo2_sacredhollow"
+    ],
+    [
+      "demo2_griefer"
+    ],
+    [
+      "demo2_bubonicplant"
+    ],
+    [
+      "demo2_panacea"
+    ],
+    [
+      "demo3_bizvillerailways"
+    ],
+    [
+      "demo3_catacombs"
+    ],
+    [
+      "demo3_cemetery"
+    ],
+    [
+      "demo3_crypt"
+    ],
+    [
+      "demo3_fear"
+    ],
+    [
+      "demo3_funkybattle"
+    ],
+    [
+      "demo3_greed"
+    ],
+    [
+      "demo3_greenandpurplenoobs"
+    ],
+    [
+      "demo3_hatred"
+    ],
+    [
+      "demo3_redemption"
+    ],
+    [
+      "demo3_slasher"
+    ],
+    [
+      "demo3_solitude"
+    ],
+    [
+      "demo3_spookybattle"
+    ],
+    [
+      "demo3_telamonsmanor"
+    ],
+    [
+      "demo3_trainbattle"
+    ],
+    [
+      "demo3_turkey"
+    ],
+    [
+      "demo3_weirdbattle"
+    ],
+    [
+      "demo4_theancients"
+    ]
+  ]
+}

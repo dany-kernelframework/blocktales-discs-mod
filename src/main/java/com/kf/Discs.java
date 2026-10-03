@@ -53,6 +53,7 @@ public class Discs implements ModInitializer {
 	public static final Map<Item, Integer> discPrices = new HashMap<>(128);
 	public static final Set<Item> bossDiscs = new HashSet<>(32);
 	public static final Map<String, Item> REGISTERED_DISCS = new HashMap<>(128);
+	public static final Map<String, Item> REGISTERED_MATERIALS = new HashMap<>(16);
 
 	public static @Nullable Item tabIcon;
 
@@ -133,6 +134,7 @@ public class Discs implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.DISC_TRADER, WanderingTrader.createMobAttributes()); // now that i go back to this i think it's just intelliJ being a chud and not recognizing fabric so i can ignore it, albeit being VERY painful to see that theres a GIANT fuckiNG YELLOW warning in my code
 		DiscCooldownCondition.register();
 		ModCommands.register();
+		TixLoot.register();
 
 		DiscLoot.register();
 		DiscLyrics.register();
@@ -146,6 +148,7 @@ public class Discs implements ModInitializer {
 
 		Registry.register(BuiltInRegistries.ITEM, itemKey, materialItem);
 		modMaterials.add(materialItem);
+		REGISTERED_MATERIALS.put(itemName, materialItem);
 
 		// if the file name ends with "template" it becomes a template (just because i dont want to hardcode it btw)
 		if (itemName.endsWith("template")) {

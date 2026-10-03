@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs3",
+  "category": "misc",
+  "pattern": [
+    "lll",
+    "tdt",
+    "tst"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/ghost_template"
+    ],
+    "t": [
+      "minecraft:spruce_log"
+    ],
+    "l": [
+      "minecraft:spruce_leaves"
+    ],
+    "s": [
+      "iron_sword"
+    ]
+  },
+  "result": {
+    "id": "discs:demo3/slasher",
+    "count": 1
+  }
+}

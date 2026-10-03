@@ -41,6 +41,20 @@ public class DiscTraderEntity extends WanderingTrader {
             return;
         }
 
+        Item tixItem = Discs.REGISTERED_MATERIALS.get("tix");
+        if (tixItem != null) {
+            int tixAmount = 1 + this.random.nextInt(15);
+            int emeraldCost = tixAmount * 2;
+
+            offers.add(new MerchantOffer(
+                    new ItemCost(Items.EMERALD, emeraldCost),
+                    new ItemStack(tixItem, tixAmount),
+                    1,
+                    2,
+                    0.0f
+            ));
+        }
+
         List<Item> normalDiscs = new ArrayList<>();
         List<Item> bossDiscs = new ArrayList<>();
         List<Item> templateItems = new ArrayList<>(Discs.TEMPLATES);
@@ -61,6 +75,8 @@ public class DiscTraderEntity extends WanderingTrader {
                 new Category(normal, Integer.MAX_VALUE, normalDiscs)
         );
 
+        Item currency = tixItem != null ? tixItem : Items.EMERALD;
+
         int tradeCount = 1 + this.random.nextInt(5);
 
         for (int i = 0; i < tradeCount; i++) {
@@ -75,7 +91,7 @@ public class DiscTraderEntity extends WanderingTrader {
             int price = Discs.discPrices.getOrDefault(item, 5);
 
             offers.add(new MerchantOffer(
-                    new ItemCost(Items.EMERALD, price),
+                    new ItemCost(currency, price),
                     new ItemStack(item),
                     1,
                     2,
@@ -130,5 +146,3 @@ public class DiscTraderEntity extends WanderingTrader {
         }
     }
 }
-
-// im going insane pleasehelp

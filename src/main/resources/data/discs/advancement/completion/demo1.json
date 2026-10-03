@@ -1,0 +1,201 @@
+{
+  "parent": "discs:completion/root",
+  "display": {
+    "icon": {
+      "id": "discs:demo1/caves",
+      "count": 1
+    },
+    "title": "Dethroned",
+    "description": "Collect every music disc from Demo 1.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "caves": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/caves"
+          }
+        ]
+      }
+    },
+    "icycaves": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/icycaves"
+          }
+        ]
+      }
+    },
+    "supremeant": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/supremeant"
+          }
+        ]
+      }
+    },
+    "roadtown": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/roadtown"
+          }
+        ]
+      }
+    },
+    "penguinland": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/penguinland"
+          }
+        ]
+      }
+    },
+    "mtblackrock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/mtblackrock"
+          }
+        ]
+      }
+    },
+    "mobilebattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/mobilebattle"
+          }
+        ]
+      }
+    },
+    "snowythicket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/snowythicket"
+          }
+        ]
+      }
+    },
+    "blackrockcastle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/blackrockcastle"
+          }
+        ]
+      }
+    },
+    "sentientstatue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/sentientstatue"
+          }
+        ]
+      }
+    },
+    "cruelking": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/cruelking"
+          }
+        ]
+      }
+    },
+    "thepit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/thepit"
+          }
+        ]
+      }
+    },
+    "inthecards": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/inthecards"
+          }
+        ]
+      }
+    },
+    "nirvana": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo1/nirvana"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "caves"
+    ],
+    [
+      "icycaves"
+    ],
+    [
+      "supremeant"
+    ],
+    [
+      "roadtown"
+    ],
+    [
+      "penguinland"
+    ],
+    [
+      "mtblackrock"
+    ],
+    [
+      "mobilebattle"
+    ],
+    [
+      "snowythicket"
+    ],
+    [
+      "blackrockcastle"
+    ],
+    [
+      "sentientstatue"
+    ],
+    [
+      "cruelking"
+    ],
+    [
+      "thepit"
+    ],
+    [
+      "inthecards"
+    ],
+    [
+      "nirvana"
+    ]
+  ]
+}

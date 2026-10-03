@@ -7,15 +7,15 @@ public class DiscPricing {
     private static final int TEMPLATE_PRICE = 15;
 
     private static final Map<String, Integer> BASE_PRICE = Map.ofEntries(
-            Map.entry("preprologue", 2),
-            Map.entry("prologue", 4),
-            Map.entry("demo1", 5),
-            Map.entry("demo2", 6),
-            Map.entry("demo3", 7),
-            Map.entry("demo4", 8),
-            Map.entry("demo5", 9),
-            Map.entry("demo6", 10),
-            Map.entry("demo7", 11)
+            Map.entry("preprologue", 1),
+            Map.entry("prologue", 2),
+            Map.entry("demo1", 3),
+            Map.entry("demo2", 4),
+            Map.entry("demo3", 5),
+            Map.entry("demo4", 6),
+            Map.entry("demo5", 7),
+            Map.entry("demo6", 8),
+            Map.entry("demo7", 9)
     );
 
     private static final Map<String, String> BOSS_GRADIENTS = Map.of(

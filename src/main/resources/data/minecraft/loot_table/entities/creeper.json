@@ -36,13 +36,6 @@
         {
           "type": "minecraft:tag",
           "name": "minecraft:creeper_drop_music_discs",
-          "weight": 100,
-          "expand": true
-        },
-        {
-          "type": "minecraft:tag",
-          "name": "discs:all_discs",
-          "weight": 5,
           "expand": true
         }
       ],
@@ -53,6 +46,29 @@
           "predicate": {
             "type": "#minecraft:skeletons"
           }
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "discs:all_discs",
+          "expand": true
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "attacker",
+          "predicate": {
+            "type": "#minecraft:skeletons"
+          }
+        },
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.1
         }
       ]
     }

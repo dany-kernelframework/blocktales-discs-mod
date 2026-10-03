@@ -1,0 +1,45 @@
+{
+  "parent": "discs:completion/root",
+  "display": {
+    "icon": {
+      "id": "discs:preprologue/modernbizville",
+      "count": 1
+    },
+    "title": "Overture",
+    "description": "Collect every music disc from Preprologue.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "modernbizville": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:preprologue/modernbizville"
+          }
+        ]
+      }
+    },
+    "mysteriousfigure": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:preprologue/mysteriousfigure"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "modernbizville"
+    ],
+    [
+      "mysteriousfigure"
+    ]
+  ]
+}

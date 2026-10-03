@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs3",
+  "category": "misc",
+  "pattern": [
+    "d  ",
+    "  e",
+    "ebe"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/ghost_template"
+    ],
+    "e": [
+      "minecraft:ender_eye"
+    ],
+    "b": [
+      "minecraft:open_eyeblossom"
+    ]
+  },
+  "result": {
+    "id": "discs:demo3/solitude",
+    "count": 1
+  }
+}

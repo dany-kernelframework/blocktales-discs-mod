@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:music_disc_creator",
+      "count": 1
+    },
+    "title": "Block Tales: Discs of Time",
+    "description": "Obtain your first music disc, and start your journey!",
+    "frame": "task",
+    "background": "minecraft:block/jukebox_side",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "has_disc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#discs:all_discs"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_disc"
+    ]
+  ]
+}

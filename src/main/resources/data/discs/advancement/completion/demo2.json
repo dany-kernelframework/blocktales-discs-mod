@@ -1,0 +1,201 @@
+{
+  "parent": "discs:completion/root",
+  "display": {
+    "icon": {
+      "id": "discs:demo2/plainstown",
+      "count": 1
+    },
+    "title": "Overgrown",
+    "description": "Collect every music disc from Demo 2.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "plainstown": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/plainstown"
+          }
+        ]
+      }
+    },
+    "junglebattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/junglebattle"
+          }
+        ]
+      }
+    },
+    "anthill": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/anthill"
+          }
+        ]
+      }
+    },
+    "turitopulis": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/turitopulis"
+          }
+        ]
+      }
+    },
+    "hotelturitopulis": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/hotelturitopulis"
+          }
+        ]
+      }
+    },
+    "mudroads": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/mudroads"
+          }
+        ]
+      }
+    },
+    "ruggedrainforest": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/ruggedrainforest"
+          }
+        ]
+      }
+    },
+    "komododragon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/komododragon"
+          }
+        ]
+      }
+    },
+    "bigfoot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/bigfoot"
+          }
+        ]
+      }
+    },
+    "suprememosquito": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/suprememosquito"
+          }
+        ]
+      }
+    },
+    "sacredhollow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/sacredhollow"
+          }
+        ]
+      }
+    },
+    "griefer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/griefer"
+          }
+        ]
+      }
+    },
+    "bubonicplant": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/bubonicplant"
+          }
+        ]
+      }
+    },
+    "panacea": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo2/panacea"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "plainstown"
+    ],
+    [
+      "junglebattle"
+    ],
+    [
+      "anthill"
+    ],
+    [
+      "turitopulis"
+    ],
+    [
+      "hotelturitopulis"
+    ],
+    [
+      "mudroads"
+    ],
+    [
+      "ruggedrainforest"
+    ],
+    [
+      "komododragon"
+    ],
+    [
+      "bigfoot"
+    ],
+    [
+      "suprememosquito"
+    ],
+    [
+      "sacredhollow"
+    ],
+    [
+      "griefer"
+    ],
+    [
+      "bubonicplant"
+    ],
+    [
+      "panacea"
+    ]
+  ]
+}

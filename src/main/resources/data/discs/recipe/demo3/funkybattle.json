@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs3",
+  "category": "misc",
+  "pattern": [
+    "aea",
+    "ede",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/ghost_template"
+    ],
+    "a": [
+      "minecraft:honeycomb"
+    ],
+    "e": [
+      "minecraft:purple_concrete_powder"
+    ]
+  },
+  "result": {
+    "id": "discs:demo3/funkybattle",
+    "count": 1
+  }
+}

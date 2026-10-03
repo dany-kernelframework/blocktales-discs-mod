@@ -1,0 +1,149 @@
+{
+  "parent": "discs:completion/root",
+  "display": {
+    "icon": {
+      "id": "discs:prologue/tutorialterry",
+      "count": 1
+    },
+    "title": "Terry will be proud",
+    "description": "Collect every music disc from Prologue.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tutorialterry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/tutorialterry"
+          }
+        ]
+      }
+    },
+    "bizville": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/bizville"
+          }
+        ]
+      }
+    },
+    "bizvillelibrary": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/bizvillelibrary"
+          }
+        ]
+      }
+    },
+    "theironcafe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/theironcafe"
+          }
+        ]
+      }
+    },
+    "bizvillearcade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/bizvillearcade"
+          }
+        ]
+      }
+    },
+    "bizvillemeadows": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/bizvillemeadows"
+          }
+        ]
+      }
+    },
+    "robloxhq": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/robloxhq"
+          }
+        ]
+      }
+    },
+    "weakbattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/weakbattle"
+          }
+        ]
+      }
+    },
+    "redandbluenoobs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/redandbluenoobs"
+          }
+        ]
+      }
+    },
+    "noobador": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:prologue/noobador"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tutorialterry"
+    ],
+    [
+      "bizville"
+    ],
+    [
+      "bizvillelibrary"
+    ],
+    [
+      "theironcafe"
+    ],
+    [
+      "bizvillearcade"
+    ],
+    [
+      "bizvillemeadows"
+    ],
+    [
+      "robloxhq"
+    ],
+    [
+      "weakbattle"
+    ],
+    [
+      "redandbluenoobs"
+    ],
+    [
+      "noobador"
+    ]
+  ]
+}

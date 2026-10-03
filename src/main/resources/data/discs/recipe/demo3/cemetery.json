@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs3",
+  "category": "misc",
+  "pattern": [
+    "aea",
+    "ede",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/ghost_template"
+    ],
+    "a": [
+      "minecraft:bone"
+    ],
+    "e": [
+      "minecraft:deepslate_bricks"
+    ]
+  },
+  "result": {
+    "id": "discs:demo3/cemetery",
+    "count": 1
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs3",
+  "category": "misc",
+  "pattern": [
+    "aea",
+    "ede",
+    "asa"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/ghost_template"
+    ],
+    "a": [
+      "minecraft:poisonous_potato"
+    ],
+    "e": [
+      "minecraft:chiseled_stone_bricks"
+    ],
+    "s": [
+      "minecraft:stone_sword"
+    ]
+  },
+  "result": {
+    "id": "discs:demo3/weirdbattle",
+    "count": 1
+  }
+}

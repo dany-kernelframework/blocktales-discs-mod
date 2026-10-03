@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs3",
+  "category": "misc",
+  "pattern": [
+    "aea",
+    "ede",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/ghost_template"
+    ],
+    "a": [
+      "minecraft:soul_sand"
+    ],
+    "e": [
+      "minecraft:soul_campfire"
+    ]
+  },
+  "result": {
+    "id": "discs:demo3/redemption",
+    "count": 1
+  }
+}

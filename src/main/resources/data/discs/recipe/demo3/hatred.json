@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs3",
+  "category": "misc",
+  "pattern": [
+    "aea",
+    "cdc",
+    "aea"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/ghost_template"
+    ],
+    "a": [
+      "minecraft:crimson_hyphae"
+    ],
+    "e": [
+      "minecraft:iron_sword"
+    ],
+    "c": [
+      "minecraft:creaking_heart"
+    ]
+  },
+  "result": {
+    "id": "discs:demo3/hatred",
+    "count": 1
+  }
+}

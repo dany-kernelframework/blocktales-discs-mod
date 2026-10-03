@@ -1,0 +1,240 @@
+{
+  "parent": "discs:completion/root",
+  "display": {
+    "icon": {
+      "id": "discs:demo3/bizvillerailways",
+      "count": 1
+    },
+    "title": "Dead Air",
+    "description": "Collect every music disc from Demo 3.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "bizvillerailways": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/bizvillerailways"
+          }
+        ]
+      }
+    },
+    "catacombs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/catacombs"
+          }
+        ]
+      }
+    },
+    "cemetery": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/cemetery"
+          }
+        ]
+      }
+    },
+    "crypt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/crypt"
+          }
+        ]
+      }
+    },
+    "fear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/fear"
+          }
+        ]
+      }
+    },
+    "funkybattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/funkybattle"
+          }
+        ]
+      }
+    },
+    "greed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/greed"
+          }
+        ]
+      }
+    },
+    "greenandpurplenoobs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/greenandpurplenoobs"
+          }
+        ]
+      }
+    },
+    "hatred": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/hatred"
+          }
+        ]
+      }
+    },
+    "redemption": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/redemption"
+          }
+        ]
+      }
+    },
+    "slasher": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/slasher"
+          }
+        ]
+      }
+    },
+    "solitude": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/solitude"
+          }
+        ]
+      }
+    },
+    "spookybattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/spookybattle"
+          }
+        ]
+      }
+    },
+    "telamonsmanor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/telamonsmanor"
+          }
+        ]
+      }
+    },
+    "trainbattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/trainbattle"
+          }
+        ]
+      }
+    },
+    "turkey": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/turkey"
+          }
+        ]
+      }
+    },
+    "weirdbattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo3/weirdbattle"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bizvillerailways"
+    ],
+    [
+      "catacombs"
+    ],
+    [
+      "cemetery"
+    ],
+    [
+      "crypt"
+    ],
+    [
+      "fear"
+    ],
+    [
+      "funkybattle"
+    ],
+    [
+      "greed"
+    ],
+    [
+      "greenandpurplenoobs"
+    ],
+    [
+      "hatred"
+    ],
+    [
+      "redemption"
+    ],
+    [
+      "slasher"
+    ],
+    [
+      "solitude"
+    ],
+    [
+      "spookybattle"
+    ],
+    [
+      "telamonsmanor"
+    ],
+    [
+      "trainbattle"
+    ],
+    [
+      "turkey"
+    ],
+    [
+      "weirdbattle"
+    ]
+  ]
+}

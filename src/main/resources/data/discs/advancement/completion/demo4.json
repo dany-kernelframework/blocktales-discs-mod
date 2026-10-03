@@ -1,0 +1,32 @@
+{
+  "parent": "discs:completion/root",
+  "display": {
+    "icon": {
+      "id": "discs:demo4/theancients",
+      "count": 1
+    },
+    "title": "Ancient History",
+    "description": "Collect every music disc from Demo 4.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "theancients": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/theancients"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "theancients"
+    ]
+  ]
+}

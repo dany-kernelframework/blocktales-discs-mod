@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs3",
+  "category": "misc",
+  "pattern": [
+    "aea",
+    "ede",
+    "asa"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/ghost_template"
+    ],
+    "a": [
+      "minecraft:jack_o_lantern"
+    ],
+    "e": [
+      "minecraft:soul_lantern"
+    ],
+    "s": [
+      "minecraft:dark_oak_door"
+    ]
+  },
+  "result": {
+    "id": "discs:demo3/telamonsmanor",
+    "count": 1
+  }
+}
