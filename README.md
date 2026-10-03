@@ -1,5 +1,5 @@
 Little project i made for fun.
-Read modrinth page for more infomation: 
+Read modrinth page for more information: 
 
 https://modrinth.com/mod/block-tales-discs
 
