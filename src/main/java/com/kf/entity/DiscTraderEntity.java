@@ -43,7 +43,7 @@ public class DiscTraderEntity extends WanderingTrader {
 
         Item tixItem = Discs.REGISTERED_MATERIALS.get("tix");
         if (tixItem != null) {
-            int tixAmount = 1 + this.random.nextInt(15);
+            int tixAmount = 1 + this.random.nextInt(8);
             int emeraldCost = tixAmount * 2;
 
             offers.add(new MerchantOffer(

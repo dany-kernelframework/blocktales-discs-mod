@@ -1,11 +1,15 @@
 package com.kf.client;
 
+import com.kf.TooltipFrames;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.ItemStack;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,12 +27,12 @@ public class AnimatedDiscText {
 
     private static final Gradient NORMAL_LOOK = Gradient.of(0xAAAAAA);
 
-    private static final long ORIGINAL_STAYS = 4000;
-    private static final long ORIGINAL_SCRAMBLES = 700;
+    private static final long ORIGINAL_STAYS = 12000;
+    private static final long ORIGINAL_SCRAMBLES = 1200;
     private static final long PHRASE_APPEARS = 900;
     private static final long PHRASE_STAYS = 2500;
     private static final long PHRASE_SCRAMBLES = 800;
-    private static final long ORIGINAL_RETURNS = 700;
+    private static final long ORIGINAL_RETURNS = 1400;
 
     private static final long CYCLE_LENGTH = ORIGINAL_STAYS + ORIGINAL_SCRAMBLES + PHRASE_APPEARS
             + PHRASE_STAYS + PHRASE_SCRAMBLES + ORIGINAL_RETURNS;
@@ -49,15 +53,24 @@ public class AnimatedDiscText {
     }
 
     public static void init() {
-        ItemTooltipCallback.EVENT.register((_, _, _, lines) -> lines.replaceAll(AnimatedDiscText::replaceLine));
+        ItemTooltipCallback.EVENT.register((stack, _, _, lines) -> {
+            double speed = pulseSpeed(stack);
+            lines.replaceAll(line -> replaceLine(line, speed));
+        });
     }
 
-    private static Component replaceLine(Component line) {
+    private static double pulseSpeed(ItemStack stack) {
+        Identifier style = stack.get(DataComponents.TOOLTIP_STYLE);
+        TooltipFrames.Frame frame = TooltipFrames.get(style);
+        return frame == null ? 0 : frame.speed();
+    }
+
+    private static Component replaceLine(Component line, double speed) {
         Entry entry = ENTRIES.get(line.getString());
         if (entry == null) {
             return line;
         }
-        return entry.line(System.currentTimeMillis());
+        return entry.line(System.currentTimeMillis(), speed);
     }
 
     public static final class Gradient {
@@ -73,65 +86,47 @@ public class AnimatedDiscText {
             }
             return new Gradient(stops);
         }
-        int colorAt(float position) {
-            if (stops.length == 1) {
-                return stops[0];
-            }
 
-            float scaled = position * (stops.length - 1);
-            int index = Math.min((int) scaled, stops.length - 2);
-            float blend = scaled - index;
-
-            int from = stops[index];
-            int to = stops[index + 1];
-
-            int red = blendChannel((from >> 16) & 0xFF, (to >> 16) & 0xFF, blend);
-            int green = blendChannel((from >> 8) & 0xFF, (to >> 8) & 0xFF, blend);
-            int blue = blendChannel(from & 0xFF, to & 0xFF, blend);
-            return (red << 16) | (green << 8) | blue;
-        }
-
-        private static int blendChannel(int from, int to, float blend) {
-            return Math.round(from + (to - from) * blend);
+        int colorAt(float position, double speed, long nowMs) {
+            return TooltipFrames.slidingColor(stops, position, speed, nowMs);
         }
     }
 
     private record Entry(String original, Gradient phraseLook, List<String> phrases) {
 
-        Component line(long now) {
+        Component line(long now, double speed) {
             long cycleNumber = now / CYCLE_LENGTH;
             long timeIntoCycle = now % CYCLE_LENGTH;
-            long glitchTick = now / GLITCH_TICK;
 
             long seed = cycleNumber * 1000 + original.hashCode();
             String phrase = pickPhrase(cycleNumber);
 
             if (timeIntoCycle < ORIGINAL_STAYS) {
-                return sitting(original, NORMAL_LOOK, glitchTick, seed + 1);
+                return sitting(original, NORMAL_LOOK, now, speed, seed + 1);
             }
             timeIntoCycle -= ORIGINAL_STAYS;
 
             if (timeIntoCycle < ORIGINAL_SCRAMBLES) {
-                return disappearing(original, NORMAL_LOOK, (float) timeIntoCycle / ORIGINAL_SCRAMBLES, glitchTick, seed + 2);
+                return disappearing(original, NORMAL_LOOK, (float) timeIntoCycle / ORIGINAL_SCRAMBLES, now, speed, seed + 2);
             }
             timeIntoCycle -= ORIGINAL_SCRAMBLES;
 
             if (timeIntoCycle < PHRASE_APPEARS) {
-                return appearing(phrase, phraseLook, (float) timeIntoCycle / PHRASE_APPEARS, glitchTick, seed + 3);
+                return appearing(phrase, phraseLook, (float) timeIntoCycle / PHRASE_APPEARS, now, speed, seed + 3);
             }
             timeIntoCycle -= PHRASE_APPEARS;
 
             if (timeIntoCycle < PHRASE_STAYS) {
-                return sitting(phrase, phraseLook, glitchTick, seed + 4);
+                return sitting(phrase, phraseLook, now, speed, seed + 4);
             }
             timeIntoCycle -= PHRASE_STAYS;
 
             if (timeIntoCycle < PHRASE_SCRAMBLES) {
-                return disappearing(phrase, phraseLook, (float) timeIntoCycle / PHRASE_SCRAMBLES, glitchTick, seed + 5);
+                return disappearing(phrase, phraseLook, (float) timeIntoCycle / PHRASE_SCRAMBLES, now, speed, seed + 5);
             }
             timeIntoCycle -= PHRASE_SCRAMBLES;
 
-            return appearing(original, NORMAL_LOOK, (float) timeIntoCycle / ORIGINAL_RETURNS, glitchTick, seed + 6);
+            return appearing(original, NORMAL_LOOK, (float) timeIntoCycle / ORIGINAL_RETURNS, now, speed, seed + 6);
         }
         private String pickPhrase(long cycleNumber) {
             int count = phrases.size();
@@ -163,17 +158,20 @@ public class AnimatedDiscText {
         }
     }
 
-    private static Component sitting(String text, Gradient look, long glitchTick, long seed) {
+    private static Component sitting(String text, Gradient look, long now, double speed, long seed) {
+        long glitchTick = now / GLITCH_TICK;
         boolean glitching = noise(seed * 7 + glitchTick) < GLITCH_BURST_CHANCE;
-        return build(text, look, letter -> glitching && noise(seed * 13 + glitchTick * 57 + letter) < GLITCH_LETTER_CHANCE);
+        return build(text, look, now, speed, letter -> glitching && noise(seed * 13 + glitchTick * 57 + letter) < GLITCH_LETTER_CHANCE);
     }
 
-    private static Component appearing(String text, Gradient look, float progress, long glitchTick, long seed) {
-        return build(text, look, letter -> !hasFlipped(letter, progress, glitchTick, seed));
+    private static Component appearing(String text, Gradient look, float progress, long now, double speed, long seed) {
+        long glitchTick = now / GLITCH_TICK;
+        return build(text, look, now, speed, letter -> !hasFlipped(letter, progress, glitchTick, seed));
     }
 
-    private static Component disappearing(String text, Gradient look, float progress, long glitchTick, long seed) {
-        return build(text, look, letter -> hasFlipped(letter, progress, glitchTick, seed));
+    private static Component disappearing(String text, Gradient look, float progress, long now, double speed, long seed) {
+        long glitchTick = now / GLITCH_TICK;
+        return build(text, look, now, speed, letter -> hasFlipped(letter, progress, glitchTick, seed));
     }
 
     private static boolean hasFlipped(int letter, float progress, long glitchTick, long seed) {
@@ -181,7 +179,7 @@ public class AnimatedDiscText {
         float flicker = (noise(seed * 17 + glitchTick * 101 + letter) - 0.5f) * 2 * FLICKER_AMOUNT;
         return flipMoment + flicker <= progress;
     }
-    private static Component build(String text, Gradient look, IntPredicate isScrambled) {
+    private static Component build(String text, Gradient look, long now, double speed, IntPredicate isScrambled) {
         MutableComponent result = Component.empty();
 
         StringBuilder currentRun = new StringBuilder();
@@ -190,7 +188,7 @@ public class AnimatedDiscText {
 
         for (int i = 0; i < text.length(); i++) {
             float position = text.length() == 1 ? 0f : (float) i / (text.length() - 1);
-            int color = look.colorAt(position);
+            int color = look.colorAt(position, speed, now);
             boolean scrambled = isScrambled.test(i);
 
             boolean runChanged = color != runColor || scrambled != runScrambled;

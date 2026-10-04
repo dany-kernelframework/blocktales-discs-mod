@@ -4,7 +4,8 @@
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
 		"ExampleClientMixin",
-		"LevelEventHandlerMixin"
+		"LevelEventHandlerMixin",
+		"TooltipRenderUtilMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

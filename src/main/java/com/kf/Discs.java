@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -173,23 +174,40 @@ public class Discs implements ModInitializer {
 
 		// kinda better birdflop
 		Component resolvedName = Component.literal("Music Disc");
+		String birdflopString = null;
 		if (isBoss) {
-			String birdflopString = DiscPricing.getBossGradient(chapter, trackName);
+			birdflopString = DiscPricing.getBossGradient(chapter, trackName);
 			if (birdflopString != null) {
 				resolvedName = parseBirdflop(birdflopString);
 			}
 		}
 		final Component cachedName = resolvedName;
 
-		Item vinyl = new Item(
-				new Item.Properties()
-						.setId(discKey)
-						.stacksTo(1)
-						.jukeboxPlayable(songData)
-						.rarity(Rarity.EPIC)
-		) {
+		Item.Properties properties = new Item.Properties()
+				.setId(discKey)
+				.stacksTo(1)
+				.jukeboxPlayable(songData)
+				.rarity(Rarity.EPIC);
+
+		// discs listed in DiscPricing's tooltip styles get a custom tooltip frame
+		String tooltipStyle = DiscPricing.getTooltipStyle(chapter, trackName);
+		if (tooltipStyle != null) {
+			properties = properties.component(DataComponents.TOOLTIP_STYLE, Identifier.fromNamespaceAndPath(MOD_ID, tooltipStyle));
+		}
+
+		// boss discs with a tooltip style get a name that pulses
+		final Identifier styleId = tooltipStyle == null ? null : Identifier.fromNamespaceAndPath(MOD_ID, tooltipStyle);
+		final PulsingName pulsingName = (styleId == null || birdflopString == null) ? null : PulsingName.fromBirdflop(birdflopString);
+
+		Item vinyl = new Item(properties) {
 			@Override
 			public Component getName(ItemStack stack) {
+				if (styleId != null && pulsingName != null) {
+					TooltipFrames.Frame frame = TooltipFrames.get(styleId);
+					if (frame != null) {
+						return pulsingName.at(frame.speed(), System.currentTimeMillis());
+					}
+				}
 				return cachedName;
 			}
 		};
