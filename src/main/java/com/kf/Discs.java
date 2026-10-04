@@ -136,7 +136,7 @@ public class Discs implements ModInitializer {
 		DiscCooldownCondition.register();
 		ModCommands.register();
 		TixLoot.register();
-
+		ModSounds.register();
 		DiscLoot.register();
 		DiscLyrics.register();
 	}

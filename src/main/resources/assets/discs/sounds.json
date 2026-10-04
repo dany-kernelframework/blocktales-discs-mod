@@ -735,5 +735,31 @@
         "stream": true
       }
     ]
+  },
+
+
+
+
+
+
+
+
+  "music.other.advancement": {
+    "sounds": [
+      {
+        "name": "discs:music/other/advancement",
+        "volume": 0.25,
+        "stream": true
+      }
+    ]
+  },
+  "music.other.challenge": {
+    "sounds": [
+      {
+        "name": "discs:music/other/challenge",
+        "volume": 0.25,
+        "stream": true
+      }
+    ]
   }
 }

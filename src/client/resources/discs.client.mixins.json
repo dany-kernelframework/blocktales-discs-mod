@@ -5,7 +5,8 @@
 	"mixins": [
 		"ExampleClientMixin",
 		"LevelEventHandlerMixin",
-		"TooltipRenderUtilMixin"
+		"TooltipRenderUtilMixin",
+		"DiscAdvancementToastMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
