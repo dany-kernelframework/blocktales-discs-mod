@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "discsMts",
+  "category": "misc",
+  "ingredients": [
+    [
+      "discs:materials/band_of_tix"
+    ]
+  ],
+  "result": {
+    "id": "discs:materials/tix",
+    "count": 9
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_tix": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:materials/band_of_tix"
+          },
+          {
+            "items": "discs:materials/tix"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_tix"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "discs:materials/band_of_tix",
+      "discs:materials/tix_rev"
+    ]
+  }
+}

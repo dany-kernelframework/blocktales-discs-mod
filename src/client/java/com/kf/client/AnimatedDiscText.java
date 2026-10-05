@@ -27,20 +27,20 @@ public class AnimatedDiscText {
 
     private static final Gradient NORMAL_LOOK = Gradient.of(0xAAAAAA);
 
-    private static final long ORIGINAL_STAYS = 12000;
-    private static final long ORIGINAL_SCRAMBLES = 1200;
-    private static final long PHRASE_APPEARS = 900;
-    private static final long PHRASE_STAYS = 2500;
-    private static final long PHRASE_SCRAMBLES = 800;
-    private static final long ORIGINAL_RETURNS = 1400;
+    private static final long ORIGINAL_STAYS = 36000;
+    private static final long ORIGINAL_SCRAMBLES = 2400;
+    private static final long PHRASE_APPEARS = 1200;
+    private static final long PHRASE_STAYS = 2600;
+    private static final long PHRASE_SCRAMBLES = 1200;
+    private static final long ORIGINAL_RETURNS = 1800;
 
     private static final long CYCLE_LENGTH = ORIGINAL_STAYS + ORIGINAL_SCRAMBLES + PHRASE_APPEARS
             + PHRASE_STAYS + PHRASE_SCRAMBLES + ORIGINAL_RETURNS;
 
-    private static final long GLITCH_TICK = 70;
-    private static final float GLITCH_BURST_CHANCE = 0.12f;
+    private static final long GLITCH_TICK = 100;
+    private static final float GLITCH_BURST_CHANCE = 0.24f;
     private static final float GLITCH_LETTER_CHANCE = 0.2f;
-    private static final float FLICKER_AMOUNT = 0.1f;
+    private static final float FLICKER_AMOUNT = 0.2f;
 
     private static final Map<String, Entry> ENTRIES = new HashMap<>();
 

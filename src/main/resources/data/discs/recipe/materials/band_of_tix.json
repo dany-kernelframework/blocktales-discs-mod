@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discsMts",
+  "category": "misc",
+  "pattern": [
+    "iii",
+    "iii",
+    "iii"
+  ],
+  "key": {
+    "i": [
+      "discs:materials/tix"
+    ]
+  },
+  "result": {
+    "id": "discs:materials/band_of_tix",
+    "count": 1
+  }
+}

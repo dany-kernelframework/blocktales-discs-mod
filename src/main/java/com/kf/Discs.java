@@ -1,5 +1,7 @@
 package com.kf;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.kf.entity.ModEntities;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
@@ -26,6 +28,7 @@ import net.minecraft.world.item.Rarity;
 import org.jspecify.annotations.NullMarked;
 import org.jspecify.annotations.Nullable;
 
+import java.io.BufferedReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -45,9 +48,12 @@ public class Discs implements ModInitializer {
 	};
 
 	public static final Set<String> CHAPTER_SET = Set.of(CHAPTER_ORDER);
+	public static final Set<String> BIG_STACKS = Set.of("tix", "band_of_tix");
 
 	public static final Map<String, List<Item>> discsPerChapter = new LinkedHashMap<>(16);
 	public static final List<Item> modMaterials = new ArrayList<>();
+
+	public static final List<Item> orderedDiscs = new ArrayList<>();
 
 	public static final List<Item> TEMPLATES = new ArrayList<>();
 
@@ -114,6 +120,47 @@ public class Discs implements ModInitializer {
 					}
 				}
 			}
+
+			modMaterials.sort((a, b) -> {
+				int indexA = getMaterialSortIndex(a);
+				int indexB = getMaterialSortIndex(b);
+				if (indexA != indexB) {
+					return Integer.compare(indexA, indexB);
+				}
+				return BuiltInRegistries.ITEM.getKey(a).getPath().compareTo(BuiltInRegistries.ITEM.getKey(b).getPath());
+			});
+
+			Path tagPath = mod.findPath("data/" + MOD_ID + "/tags/item/all_discs.json").orElse(null);
+			Set<Item> taggedDiscs = new HashSet<>();
+
+			if (tagPath != null && Files.exists(tagPath)) {
+				try (BufferedReader reader = Files.newBufferedReader(tagPath)) {
+					JsonObject json = JsonParser.parseReader(reader).getAsJsonObject();
+					if (json.has("values")) {
+						json.getAsJsonArray("values").forEach(el -> {
+							String id = el.getAsString();
+							if (!id.contains(":")) id = MOD_ID + ":" + id;
+
+							Item disc = REGISTERED_DISCS.get(id);
+							if (disc != null) {
+								orderedDiscs.add(disc);
+								taggedDiscs.add(disc);
+							}
+						});
+					}
+				} catch (Exception e) {
+					System.err.println("[Discs] failed to read all_discs tag for ordering: " + e.getMessage());
+				}
+			}
+
+			for (List<Item> chapterList : discsPerChapter.values()) {
+				for (Item disc : chapterList) {
+					if (!taggedDiscs.contains(disc)) {
+						orderedDiscs.add(disc);
+						taggedDiscs.add(disc);
+					}
+				}
+			}
 		});
 
 		CreativeModeTab mainTab = FabricCreativeModeTab.builder()
@@ -124,15 +171,14 @@ public class Discs implements ModInitializer {
 				})
 				.displayItems((_, output) -> {
 					modMaterials.forEach(output::accept);
-
-					discsPerChapter.values().forEach(discs -> discs.forEach(output::accept));
+					orderedDiscs.forEach(output::accept);
 				})
 				.build();
 
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY, mainTab);
 
 		ModEntities.register();
-		FabricDefaultAttributeRegistry.register(ModEntities.DISC_TRADER, WanderingTrader.createMobAttributes()); // now that i go back to this i think it's just intelliJ being a chud and not recognizing fabric so i can ignore it, albeit being VERY painful to see that theres a GIANT fuckiNG YELLOW warning in my code
+		FabricDefaultAttributeRegistry.register(ModEntities.DISC_TRADER, WanderingTrader.createMobAttributes());
 		DiscCooldownCondition.register();
 		ModCommands.register();
 		TixLoot.register();
@@ -141,17 +187,38 @@ public class Discs implements ModInitializer {
 		DiscLyrics.register();
 	}
 
+	private static int getMaterialSortIndex(Item item) {
+		String path = BuiltInRegistries.ITEM.getKey(item).getPath();
+		String name = path.substring(path.lastIndexOf('/') + 1);
+
+		if (!name.endsWith("template")) {
+			return 100;
+		}
+
+		if (name.contains("modern")) return 1;
+		if (name.contains("old")) return 2;
+		if (name.contains("cold")) return 3;
+		if (name.contains("toxic")) return 4;
+		if (name.contains("ghost")) return 5;
+		// nts: remember to add here when releasing new demos
+		return 50;
+	}
+
 	private static void registerMaterial(String itemName) {
 		String registryPath = "materials/" + itemName;
 		ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, registryPath));
 
-		Item materialItem = new Item(new Item.Properties().setId(itemKey));
+		Item.Properties properties = new Item.Properties().setId(itemKey);
+		if (BIG_STACKS.contains(itemName)) {
+			properties = properties.stacksTo(99);
+		}
+
+		Item materialItem = new Item(properties);
 
 		Registry.register(BuiltInRegistries.ITEM, itemKey, materialItem);
 		modMaterials.add(materialItem);
 		REGISTERED_MATERIALS.put(itemName, materialItem);
 
-		// if the file name ends with "template" it becomes a template (just because i dont want to hardcode it btw)
 		if (itemName.endsWith("template")) {
 			TEMPLATES.add(materialItem);
 		}
@@ -172,7 +239,6 @@ public class Discs implements ModInitializer {
 
 		boolean isBoss = DiscPricing.isBoss(chapter, trackName);
 
-		// kinda better birdflop
 		Component resolvedName = Component.literal("Music Disc");
 		String birdflopString = null;
 		if (isBoss) {
@@ -189,13 +255,11 @@ public class Discs implements ModInitializer {
 				.jukeboxPlayable(songData)
 				.rarity(Rarity.EPIC);
 
-		// discs listed in DiscPricing's tooltip styles get a custom tooltip frame
 		String tooltipStyle = DiscPricing.getTooltipStyle(chapter, trackName);
 		if (tooltipStyle != null) {
 			properties = properties.component(DataComponents.TOOLTIP_STYLE, Identifier.fromNamespaceAndPath(MOD_ID, tooltipStyle));
 		}
 
-		// boss discs with a tooltip style get a name that pulses
 		final Identifier styleId = tooltipStyle == null ? null : Identifier.fromNamespaceAndPath(MOD_ID, tooltipStyle);
 		final PulsingName pulsingName = (styleId == null || birdflopString == null) ? null : PulsingName.fromBirdflop(birdflopString);
 
