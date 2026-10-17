@@ -64,7 +64,10 @@ jar {
 	from("LICENSE") {
 		rename { "${it}_$projectName"}
 	}
+
+	archiveClassifier = "mc${project.minecraft_version}"
 }
+
 
 // configure the maven publication
 publishing {
