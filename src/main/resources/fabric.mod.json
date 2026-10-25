@@ -4,21 +4,22 @@
 	"version": "${version}",
 	"name": "Block Tales Discs",
 	"description": "Your favourite songs from the Block Tales OST in form of a... music disc?",
-	"authors": [
-		"lead:",
-		"@kernelframework: mod developer",
-		"contributors:",
-		"@thegreatshaman: textures",
-		"@z9xomer: textures",
-		"@diskspace.: textures,",
-		"special thanks:",
-		"the blocktales team and their composers: for making this possible"
+	"lead": [
+		"kernelframework"
+	],
+	"contributors": [
+		"z9xomer",
+		"diskspace.",
+		"thegreatshaman"
+	],
+	"special thanks": [
+		"Block Tales and their Music Composers"
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/block-tales-discs",
 		"sources": "https://github.com/dany-kernelframework/blocktales-discs-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/discs/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -38,7 +39,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
-		"minecraft": "~26.1.2",
+		"minecraft": "~26.2",
 		"java": ">=25",
 		"fabric-api": "*"
 	}
