@@ -63,6 +63,7 @@ public class Discs implements ModInitializer {
 	public static final Map<String, Item> REGISTERED_MATERIALS = new HashMap<>(16);
 
 	public static @Nullable Item tabIcon;
+	public static @Nullable CreativeModeTab discsTab;
 
 	static {
 		for (String chapter : CHAPTER_ORDER) {
@@ -174,6 +175,7 @@ public class Discs implements ModInitializer {
 					orderedDiscs.forEach(output::accept);
 				})
 				.build();
+				discsTab = mainTab; // uhhh yes
 
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_KEY, mainTab);
 
