@@ -54,9 +54,22 @@ public abstract class CreativeModeInventoryScreenMixin extends AbstractContainer
     }
 
     @Redirect(
-            method = {"selectTab", "refreshCurrentTabContents"},
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/core/NonNullList;addAll(Ljava/util/Collection;)Z") // it took me hours to find whatever the fuck this is
+            method = "selectTab",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/core/NonNullList;addAll(Ljava/util/Collection;)Z", ordinal = 1) // it took me hours to find whatever the fuck this is
     )
+    private boolean discs$addItemsOnSelectTab(NonNullList<ItemStack> list, Collection<ItemStack> items) {
+        return discs$addItems(list, items);
+    }
+
+    @Redirect(
+            method = "refreshCurrentTabContents",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/core/NonNullList;addAll(Ljava/util/Collection;)Z", ordinal = 0)
+    )
+    private boolean discs$addItemsOnRefresh(NonNullList<ItemStack> list, Collection<ItemStack> items) {
+        return discs$addItems(list, items);
+    }
+    // uhh basically the 3 calls would result in a crash of the game because minecraft is stupid (or i am... maybe both)
+    @Unique
     private boolean discs$addItems(NonNullList<ItemStack> list, Collection<ItemStack> items) {
         if (selectedTab == Discs.discsTab) {
             return list.addAll(DiscTabLayout.build(items));
