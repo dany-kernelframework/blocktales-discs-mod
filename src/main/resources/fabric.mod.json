@@ -4,16 +4,13 @@
 	"version": "${version}",
 	"name": "Block Tales Discs",
 	"description": "Your favourite songs from the Block Tales OST in form of a... music disc?",
-	"lead": [
+	"authors": [
 		"kernelframework"
 	],
 	"contributors": [
 		"z9xomer",
 		"diskspace.",
 		"thegreatshaman"
-	],
-	"special thanks": [
-		"Block Tales and their Music Composers"
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/block-tales-discs",
@@ -42,5 +39,10 @@
 		"minecraft": "~26.1.2",
 		"java": ">=25",
 		"fabric-api": "*"
+	},
+	"custom": {
+		"special thanks": [
+			"Block Tales and their Music Composers"
+		]
 	}
 }
