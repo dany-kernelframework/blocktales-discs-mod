@@ -552,18 +552,18 @@
       }
     ]
   },
-  "music.demo4.finnmccool": {
+  "music.demo4.finnmccool_old": {
     "sounds": [
       {
-        "name": "discs:music/demo4/finnmccool",
+        "name": "discs:music/demo4/finnmccool_old",
         "stream": true
       }
     ]
   },
-  "music.demo4.finnmccool-nonai": {
+  "music.demo4.finnmccool_placeholder": {
     "sounds": [
       {
-        "name": "discs:music/demo4/finnmccool-nonai",
+        "name": "discs:music/demo4/finnmccool_placeholder",
         "stream": true
       }
     ]

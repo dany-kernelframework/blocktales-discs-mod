@@ -78,8 +78,8 @@ this file can be deleted (if in release)
     "discs:demo4/captaintrotter",
     "discs:demo4/theancients",
     "discs:demo4/remorse",
-    "discs:demo4/finnmccool",
-    "discs:demo4/finnmccool-nonai",
+    "discs:demo4/finnmccool_old",
+    "discs:demo4/finnmccool_placeholder",
 
     "discs:demo5/townontheheights",
     "discs:demo5/heightsinn",

@@ -46,7 +46,7 @@ public class AnimatedDiscText {
         });
     }
 
-    private static @Nullable String songDescription(String discPath) {
+    static @Nullable String songDescription(String discPath) {
         Minecraft client = Minecraft.getInstance();
         if (client.level == null) return null;
 
