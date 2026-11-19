@@ -1,0 +1,8 @@
+{
+  "sound_event": "discs:music.demo4.scorcheddunes",
+  "description": {
+    "text": "Campyfire - Scorched Dunes"
+  },
+  "length_in_seconds": 130,
+  "comparator_output": 1
+}

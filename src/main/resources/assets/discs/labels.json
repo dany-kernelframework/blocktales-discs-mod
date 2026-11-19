@@ -1,0 +1,14 @@
+{
+  "header": { "text": "", "color": "#555555", "italic": true },
+  "tags": {
+    "scrapped":    { "text": "This song is scrapped.", "color": "#777777", "italic": true },
+    "removed":     { "text": "This song was removed.", "color": "#777777", "italic": true },
+    "ai":          { "text": "This song is AI generated.", "color": "#777777", "italic": true },
+    "placeholder": { "text": "This song is a placeholder.", "color": "#777777", "italic": true }
+  },
+  "discs": {
+    "demo3/solitude": ["removed", "ai"],
+    "demo4/finnmccool_old": ["removed", "ai"],
+    "demo4/finnmccool_placeholder": ["placeholder"]
+  }
+}
