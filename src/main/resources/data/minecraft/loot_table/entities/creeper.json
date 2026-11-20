@@ -2,7 +2,7 @@
   "type": "minecraft:entity",
   "pools": [
     {
-      "rolls": 1.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
@@ -11,8 +11,8 @@
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 0.0,
-                "max": 2.0
+                "min": 0,
+                "max": 2
               },
               "add": false
             },
@@ -21,8 +21,8 @@
               "enchantment": "minecraft:looting",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 0.0,
-                "max": 1.0
+                "min": 0,
+                "max": 1
               }
             }
           ],
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "rolls": 1.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:tag",
@@ -44,13 +44,13 @@
           "condition": "minecraft:entity_properties",
           "entity": "attacker",
           "predicate": {
-            "type": "#minecraft:skeletons"
+            "minecraft:entity_type": "#minecraft:skeletons"
           }
         }
       ]
     },
     {
-      "rolls": 1.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:tag",
@@ -63,7 +63,7 @@
           "condition": "minecraft:entity_properties",
           "entity": "attacker",
           "predicate": {
-            "type": "#minecraft:skeletons"
+            "minecraft:entity_type": "#minecraft:skeletons"
           }
         },
         {
@@ -72,5 +72,6 @@
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "minecraft:entities/creeper"
 }
