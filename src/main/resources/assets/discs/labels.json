@@ -4,7 +4,9 @@
     "scrapped":    { "text": "This song is scrapped.", "color": "#777777", "italic": true },
     "removed":     { "text": "This song was removed.", "color": "#777777", "italic": true },
     "ai":          { "text": "This song is AI generated.", "color": "#777777", "italic": true },
-    "placeholder": { "text": "This song is a placeholder.", "color": "#777777", "italic": true }
+    "placeholder": { "text": "This song is a placeholder.", "color": "#777777", "italic": true },
+    "no_author":   { "text": "This song does not have a specified author.", "color": "#777777", "italic": true },
+    "no_name":     { "text": "This song does not have a specified name.", "color": "#777777", "italic": true }
   },
   "discs": {
     "demo3/solitude": ["removed", "ai"],
