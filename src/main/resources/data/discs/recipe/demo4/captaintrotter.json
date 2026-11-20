@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    "afa",
+    "ede",
+    "smb"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/scorched_template"
+    ],
+    "a": [
+      "minecraft:red_sand"
+    ],
+    "e": [
+      "minecraft:chiseled_red_sandstone"
+    ],
+    "f": [
+      "minecraft:lava_bucket"
+    ],
+    "s": [
+      "minecraft:golden_sword"
+    ],
+    "m": [
+      "map"
+    ],
+    "b": [
+      "minecraft:crossbow"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/captaintrotter",
+    "count": 1
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    "sac",
+    "rif",
+    "1ce"
+  ],
+  "key": {
+    "s": [
+      "minecraft:chiseled_red_sandstone"
+    ],
+    "a": [
+      "discs:demo4/captaintrotter"
+    ],
+    "c": [
+      "minecraft:chiseled_red_sandstone"
+    ],
+    "r": [
+      "minecraft:lava_bucket"
+    ],
+    "i": [
+      "discs:materials/scorched_template"
+    ],
+    "f": [
+      "minecraft:lava_bucket"
+    ],
+    "1": [
+      "minecraft:copper_sword"
+    ],
+    "e": [
+      "minecraft:copper_sword"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/theancients",
+    "count": 1
+  }
+}

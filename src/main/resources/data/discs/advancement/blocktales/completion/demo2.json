@@ -1,154 +1,154 @@
 {
-  "parent": "discs:completion/root",
+  "parent": "discs:blocktales/root",
   "display": {
     "icon": {
-      "id": "discs:demo1/caves",
+      "id": "discs:demo2/plainstown",
       "count": 1
     },
-    "title": "Dethroned",
-    "description": "Collect every music disc from Demo 1.",
+    "title": "Overgrown",
+    "description": "Collect every music disc from Demo 2.",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
-    "caves": {
+    "plainstown": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/caves"
+            "items": "discs:demo2/plainstown"
           }
         ]
       }
     },
-    "icycaves": {
+    "junglebattle": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/icycaves"
+            "items": "discs:demo2/junglebattle"
           }
         ]
       }
     },
-    "supremeant": {
+    "anthill": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/supremeant"
+            "items": "discs:demo2/anthill"
           }
         ]
       }
     },
-    "roadtown": {
+    "turitopulis": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/roadtown"
+            "items": "discs:demo2/turitopulis"
           }
         ]
       }
     },
-    "penguinland": {
+    "hotelturitopulis": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/penguinland"
+            "items": "discs:demo2/hotelturitopulis"
           }
         ]
       }
     },
-    "mtblackrock": {
+    "mudroads": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/mtblackrock"
+            "items": "discs:demo2/mudroads"
           }
         ]
       }
     },
-    "mobilebattle": {
+    "ruggedrainforest": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/mobilebattle"
+            "items": "discs:demo2/ruggedrainforest"
           }
         ]
       }
     },
-    "snowythicket": {
+    "komododragon": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/snowythicket"
+            "items": "discs:demo2/komododragon"
           }
         ]
       }
     },
-    "blackrockcastle": {
+    "bigfoot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/blackrockcastle"
+            "items": "discs:demo2/bigfoot"
           }
         ]
       }
     },
-    "sentientstatue": {
+    "suprememosquito": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/sentientstatue"
+            "items": "discs:demo2/suprememosquito"
           }
         ]
       }
     },
-    "cruelking": {
+    "sacredhollow": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/cruelking"
+            "items": "discs:demo2/sacredhollow"
           }
         ]
       }
     },
-    "thepit": {
+    "griefer": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/thepit"
+            "items": "discs:demo2/griefer"
           }
         ]
       }
     },
-    "inthecards": {
+    "bubonicplant": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/inthecards"
+            "items": "discs:demo2/bubonicplant"
           }
         ]
       }
     },
-    "nirvana": {
+    "panacea": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo1/nirvana"
+            "items": "discs:demo2/panacea"
           }
         ]
       }
@@ -156,46 +156,46 @@
   },
   "requirements": [
     [
-      "caves"
+      "plainstown"
     ],
     [
-      "icycaves"
+      "junglebattle"
     ],
     [
-      "supremeant"
+      "anthill"
     ],
     [
-      "roadtown"
+      "turitopulis"
     ],
     [
-      "penguinland"
+      "hotelturitopulis"
     ],
     [
-      "mtblackrock"
+      "mudroads"
     ],
     [
-      "mobilebattle"
+      "ruggedrainforest"
     ],
     [
-      "snowythicket"
+      "komododragon"
     ],
     [
-      "blackrockcastle"
+      "bigfoot"
     ],
     [
-      "sentientstatue"
+      "suprememosquito"
     ],
     [
-      "cruelking"
+      "sacredhollow"
     ],
     [
-      "thepit"
+      "griefer"
     ],
     [
-      "inthecards"
+      "bubonicplant"
     ],
     [
-      "nirvana"
+      "panacea"
     ]
   ]
 }

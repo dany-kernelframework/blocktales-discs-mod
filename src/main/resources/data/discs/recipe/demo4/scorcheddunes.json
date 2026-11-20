@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    "svs",
+    "ldl",
+    "lvl"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/scorched_template"
+    ],
+    "l": [
+      "minecraft:red_sand"
+    ],
+    "s": [
+      "minecraft:sand"
+    ],
+    "v": [
+      "minecraft:dead_bush"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/scorcheddunes",
+    "count": 1
+  }
+}

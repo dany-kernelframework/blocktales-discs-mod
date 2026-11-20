@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    "ata",
+    "ldl",
+    "ala"
+  ],
+  "key": {
+    "a": [
+      "minecraft:red_sandstone"
+    ],
+    "l": [
+      "minecraft:acacia_log"
+    ],
+    "d": [
+      "discs:materials/scorched_template"
+    ],
+    "t": [
+      "minecraft:dead_bush"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/vermillionvillage",
+    "count": 1
+  }
+}

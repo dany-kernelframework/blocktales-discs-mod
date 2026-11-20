@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "ldl",
+    "aba"
+  ],
+  "key": {
+    "a": [
+      "minecraft:red_sandstone"
+    ],
+    "b": [
+      "oak_boat"
+    ],
+    "l": [
+      "minecraft:soul_lantern"
+    ],
+    "d": [
+      "discs:materials/scorched_template"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/thegreatfloccinaucinihilipilification",
+    "count": 1
+  }
+}
