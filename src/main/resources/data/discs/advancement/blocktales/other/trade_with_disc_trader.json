@@ -17,7 +17,11 @@
       "trigger": "minecraft:villager_trade",
       "conditions": {
         "villager": {
-          "type": "discs:disc_trader"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "discs:disc_trader"
+          }
         }
       }
     }
