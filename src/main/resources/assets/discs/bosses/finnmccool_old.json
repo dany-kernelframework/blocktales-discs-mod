@@ -1,0 +1,44 @@
+{
+  "disc": "demo4/finnmccool_old",
+  "name": [
+    "#9522FD",
+    "#42B349"
+
+  ],
+  "outer": {
+    "top": "#42B349",
+    "bottom": "#9867C3",
+    "speed": 0.15
+  },
+  "frame": {
+    "first": "#143916",
+    "second": "#370067",
+    "softness": 0.4
+  },
+  "phrases": {
+    "gradient": [
+      "#42B349",
+      "#9867C3"
+    ],
+    "timing": {
+      "original_stays": 36000,
+      "original_scrambles": 2400,
+      "phrase_appears": 1200,
+      "phrase_stays": 2600,
+      "phrase_scrambles": 1200,
+      "original_returns": 1800
+    },
+    "glitch": {
+      "tick": 100,
+      "burst_chance": 0.24,
+      "letter_chance": 0.2,
+      "flicker": 0.2
+    },
+    "list": [
+      "Heard you're the one messin with time!",
+      "Let's kick their shins in, gang!",
+      "Try a lil' harder next time, kid!",
+      "Go HOME! Cry to your momma, KID!"
+    ]
+  }
+}

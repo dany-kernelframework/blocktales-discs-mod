@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discsMts",
+  "category": "misc",
+  "pattern": [
+    "cic",
+    "idi",
+    "hch"
+  ],
+  "key": {
+    "i": [
+      "minecraft:gold_ingot"
+    ],
+    "h": [
+      "minecraft:coal"
+    ],
+    "c": [
+      "minecraft:red_sandstone"
+    ],
+    "d": [
+      "discs:materials/scorched_template"
+    ]
+  },
+  "result": {
+    "id": "discs:materials/scorched_template",
+    "count": 2
+  }
+}

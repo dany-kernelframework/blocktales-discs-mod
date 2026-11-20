@@ -6,10 +6,17 @@
       "conditions": {
         "items": [
           {
-            "items": "discs:materials/band_of_tix"
-          },
-          {
             "items": "discs:materials/tix"
+          }
+        ]
+      }
+    },
+    "has_band_of_tix": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:materials/band_of_tix"
           }
         ]
       }
@@ -17,7 +24,8 @@
   },
   "requirements": [
     [
-      "has_tix"
+      "has_tix",
+      "has_band_of_tix"
     ]
   ],
   "rewards": {

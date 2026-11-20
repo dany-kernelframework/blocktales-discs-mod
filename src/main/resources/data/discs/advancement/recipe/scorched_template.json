@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_template_disc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:materials/scorched_template"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_template_disc"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "discs:materials/scorched_template",
+
+      "discs:demo4/bizvilledocks",
+      "discs:demo4/scorcheddunes",
+      "discs:demo4/desertbattle",
+      "discs:demo4/ancienttomb",
+      "discs:demo4/thegreatfloccinaucinihilipilification",
+      "discs:demo4/piratecamp",
+      "discs:demo4/vermillionvillage",
+      "discs:demo4/thetempleoftheredsun",
+      "discs:demo4/templeguardian",
+      "discs:demo4/captaintrotter",
+      "discs:demo4/theancients",
+      "discs:demo4/remorse",
+      "discs:demo4/finnmccool_old",
+      "discs:demo4/finnmccool_placeholder"
+    ]
+  }
+}

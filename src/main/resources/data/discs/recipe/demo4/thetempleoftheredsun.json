@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    "ata",
+    "ldl",
+    "ala"
+  ],
+  "key": {
+    "a": [
+      "minecraft:red_sandstone"
+    ],
+    "l": [
+      "minecraft:chiseled_red_sandstone"
+    ],
+    "d": [
+      "discs:materials/scorched_template"
+    ],
+    "t": [
+      "minecraft:tripwire_hook"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/thetempleoftheredsun",
+    "count": 1
+  }
+}

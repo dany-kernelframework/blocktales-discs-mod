@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    " s ",
+    "ldl",
+    "   "
+  ],
+  "key": {
+    "d": [
+      "discs:materials/scorched_template"
+    ],
+    "l": [
+      "minecraft:lava_bucket"
+    ],
+    "s": [
+      "minecraft:copper_sword"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/remorse",
+    "count": 1
+  }
+}

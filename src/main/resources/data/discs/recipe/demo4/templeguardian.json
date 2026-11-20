@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    "scs",
+    "tdt",
+    "lvl"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/scorched_template"
+    ],
+    "l": [
+      "minecraft:red_sandstone"
+    ],
+    "s": [
+      "minecraft:sand"
+    ],
+    "v": [
+      "minecraft:chiseled_red_sandstone"
+    ],
+    "c": [
+      "copper_helmet"
+    ],
+    "t": [
+      "copper_block"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/templeguardian",
+    "count": 1
+  }
+}

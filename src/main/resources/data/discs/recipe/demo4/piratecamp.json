@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    "afa",
+    "sds",
+    "aaa"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/scorched_template"
+    ],
+    "s": [
+      "minecraft:black_banner"
+    ],
+    "f": [
+      "minecraft:goat_horn"
+    ],
+    "a": [
+      "red_sand"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/piratecamp",
+    "count": 1
+  }
+}

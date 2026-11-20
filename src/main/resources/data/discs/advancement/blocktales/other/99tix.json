@@ -1,24 +1,27 @@
 {
-  "parent": "discs:completion/root",
+  "parent": "discs:blocktales/root",
   "display": {
     "icon": {
-      "id": "discs:demo4/theancients",
+      "id": "discs:materials/band_of_tix",
       "count": 1
     },
-    "title": "Ancient History",
-    "description": "Collect every music disc from Demo 4.",
+    "title": "Skyler? Where is the money?!",
+    "description": "Hold 99 TIX in your inventory at once.",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
-    "theancients": {
+    "hold_99_tix": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo4/theancients"
+            "items": "discs:materials/tix",
+            "count": {
+              "min": 99
+            }
           }
         ]
       }
@@ -26,7 +29,7 @@
   },
   "requirements": [
     [
-      "theancients"
+      "hold_99_tix"
     ]
   ]
 }
