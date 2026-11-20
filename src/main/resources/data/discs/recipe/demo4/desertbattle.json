@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    "ava",
+    "sds",
+    "ava"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/scorched_template"
+    ],
+    "a": [
+      "minecraft:sand"
+    ],
+    "s": [
+      "minecraft:golden_sword"
+    ],
+    "v": [
+      "minecraft:dead_bush"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/desertbattle",
+    "count": 1
+  }
+}

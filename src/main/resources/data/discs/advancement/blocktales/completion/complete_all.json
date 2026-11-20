@@ -1,5 +1,5 @@
 {
-  "parent": "discs:completion/root",
+  "parent": "discs:blocktales/root",
   "display": {
     "icon": {
       "id": "discs:demo4/theancients",
@@ -583,12 +583,142 @@
         ]
       }
     },
+    "demo4_bizvilledocks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/bizvilledocks"
+          }
+        ]
+      }
+    },
+    "demo4_scorcheddunes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/scorcheddunes"
+          }
+        ]
+      }
+    },
+    "demo4_desertbattle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/desertbattle"
+          }
+        ]
+      }
+    },
+    "demo4_ancienttomb": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/ancienttomb"
+          }
+        ]
+      }
+    },
+    "demo4_thegreatfloccinaucinihilipilification": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/thegreatfloccinaucinihilipilification"
+          }
+        ]
+      }
+    },
+    "demo4_piratecamp": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/piratecamp"
+          }
+        ]
+      }
+    },
+    "demo4_vermillionvillage": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/vermillionvillage"
+          }
+        ]
+      }
+    },
+    "demo4_thetempleoftheredsun": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/thetempleoftheredsun"
+          }
+        ]
+      }
+    },
+    "demo4_templeguardian": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/templeguardian"
+          }
+        ]
+      }
+    },
+    "demo4_captaintrotter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/captaintrotter"
+          }
+        ]
+      }
+    },
     "demo4_theancients": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": "discs:demo4/theancients"
+          }
+        ]
+      }
+    },
+    "demo4_remorse": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/remorse"
+          }
+        ]
+      }
+    },
+    "demo4_finnmccool_old": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/finnmccool_old"
+          }
+        ]
+      }
+    },
+    "demo4_finnmccool_placeholder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:demo4/finnmccool_placeholder"
           }
         ]
       }
@@ -767,7 +897,46 @@
       "demo3_weirdbattle"
     ],
     [
+      "demo4_bizvilledocks"
+    ],
+    [
+      "demo4_scorcheddunes"
+    ],
+    [
+      "demo4_desertbattle"
+    ],
+    [
+      "demo4_ancienttomb"
+    ],
+    [
+      "demo4_thegreatfloccinaucinihilipilification"
+    ],
+    [
+      "demo4_piratecamp"
+    ],
+    [
+      "demo4_vermillionvillage"
+    ],
+    [
+      "demo4_thetempleoftheredsun"
+    ],
+    [
+      "demo4_templeguardian"
+    ],
+    [
+      "demo4_captaintrotter"
+    ],
+    [
       "demo4_theancients"
+    ],
+    [
+      "demo4_remorse"
+    ],
+    [
+      "demo4_finnmccool_old"
+    ],
+    [
+      "demo4_finnmccool_placeholder"
     ]
   ]
 }

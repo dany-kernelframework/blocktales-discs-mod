@@ -1,184 +1,154 @@
 {
-  "parent": "discs:completion/root",
+  "parent": "discs:blocktales/root",
   "display": {
     "icon": {
-      "id": "discs:demo3/bizvillerailways",
+      "id": "discs:demo4/theancients",
       "count": 1
     },
-    "title": "Dead Air",
-    "description": "Collect every music disc from Demo 3.",
+    "title": "Ancient History",
+    "description": "Collect every music disc from Demo 4.",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
-    "bizvillerailways": {
+    "bizvilledocks": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/bizvillerailways"
+            "items": "discs:demo4/bizvilledocks"
           }
         ]
       }
     },
-    "catacombs": {
+    "scorcheddunes": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/catacombs"
+            "items": "discs:demo4/scorcheddunes"
           }
         ]
       }
     },
-    "cemetery": {
+    "desertbattle": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/cemetery"
+            "items": "discs:demo4/desertbattle"
           }
         ]
       }
     },
-    "crypt": {
+    "ancienttomb": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/crypt"
+            "items": "discs:demo4/ancienttomb"
           }
         ]
       }
     },
-    "fear": {
+    "thegreatfloccinaucinihilipilification": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/fear"
+            "items": "discs:demo4/thegreatfloccinaucinihilipilification"
           }
         ]
       }
     },
-    "funkybattle": {
+    "piratecamp": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/funkybattle"
+            "items": "discs:demo4/piratecamp"
           }
         ]
       }
     },
-    "greed": {
+    "vermillionvillage": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/greed"
+            "items": "discs:demo4/vermillionvillage"
           }
         ]
       }
     },
-    "greenandpurplenoobs": {
+    "thetempleoftheredsun": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/greenandpurplenoobs"
+            "items": "discs:demo4/thetempleoftheredsun"
           }
         ]
       }
     },
-    "hatred": {
+    "templeguardian": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/hatred"
+            "items": "discs:demo4/templeguardian"
           }
         ]
       }
     },
-    "redemption": {
+    "captaintrotter": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/redemption"
+            "items": "discs:demo4/captaintrotter"
           }
         ]
       }
     },
-    "slasher": {
+    "theancients": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/slasher"
+            "items": "discs:demo4/theancients"
           }
         ]
       }
     },
-    "solitude": {
+    "remorse": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/solitude"
+            "items": "discs:demo4/remorse"
           }
         ]
       }
     },
-    "spookybattle": {
+    "finnmccool_old": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/spookybattle"
+            "items": "discs:demo4/finnmccool_old"
           }
         ]
       }
     },
-    "telamonsmanor": {
+    "finnmccool_placeholder": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "discs:demo3/telamonsmanor"
-          }
-        ]
-      }
-    },
-    "trainbattle": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": "discs:demo3/trainbattle"
-          }
-        ]
-      }
-    },
-    "turkey": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": "discs:demo3/turkey"
-          }
-        ]
-      }
-    },
-    "weirdbattle": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": "discs:demo3/weirdbattle"
+            "items": "discs:demo4/finnmccool_placeholder"
           }
         ]
       }
@@ -186,55 +156,46 @@
   },
   "requirements": [
     [
-      "bizvillerailways"
+      "bizvilledocks"
     ],
     [
-      "catacombs"
+      "scorcheddunes"
     ],
     [
-      "cemetery"
+      "desertbattle"
     ],
     [
-      "crypt"
+      "ancienttomb"
     ],
     [
-      "fear"
+      "thegreatfloccinaucinihilipilification"
     ],
     [
-      "funkybattle"
+      "piratecamp"
     ],
     [
-      "greed"
+      "vermillionvillage"
     ],
     [
-      "greenandpurplenoobs"
+      "thetempleoftheredsun"
     ],
     [
-      "hatred"
+      "templeguardian"
     ],
     [
-      "redemption"
+      "captaintrotter"
     ],
     [
-      "slasher"
+      "theancients"
     ],
     [
-      "solitude"
+      "remorse"
     ],
     [
-      "spookybattle"
+      "finnmccool_old"
     ],
     [
-      "telamonsmanor"
-    ],
-    [
-      "trainbattle"
-    ],
-    [
-      "turkey"
-    ],
-    [
-      "weirdbattle"
+      "finnmccool_placeholder"
     ]
   ]
 }

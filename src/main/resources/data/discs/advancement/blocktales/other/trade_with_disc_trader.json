@@ -1,0 +1,30 @@
+{
+  "parent": "discs:blocktales/root",
+  "display": {
+    "icon": {
+      "id": "discs:materials/tix",
+      "count": 1
+    },
+    "title": "Licensed Music",
+    "description": "Trade with a Disc Trader.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "trade_with_disc_trader": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "type": "discs:disc_trader"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "trade_with_disc_trader"
+    ]
+  ]
+}

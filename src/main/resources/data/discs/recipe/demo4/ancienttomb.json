@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    "afa",
+    "ede",
+    "fff"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/scorched_template"
+    ],
+    "a": [
+      "minecraft:sand"
+    ],
+    "e": [
+      "minecraft:chiseled_sandstone"
+    ],
+    "f": [
+      "minecraft:cobbled_deepslate"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/ancienttomb",
+    "count": 1
+  }
+}

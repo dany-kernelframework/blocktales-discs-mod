@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "discs4",
+  "category": "misc",
+  "pattern": [
+    "afa",
+    "ede",
+    "rrr"
+  ],
+  "key": {
+    "d": [
+      "discs:materials/scorched_template"
+    ],
+    "a": [
+      "minecraft:sand"
+    ],
+    "e": [
+      "minecraft:oak_boat"
+    ],
+    "r": [
+      "minecraft:spruce_planks"
+    ],
+    "f": [
+      "minecraft:water_bucket"
+    ]
+  },
+  "result": {
+    "id": "discs:demo4/bizvilledocks",
+    "count": 1
+  }
+}
