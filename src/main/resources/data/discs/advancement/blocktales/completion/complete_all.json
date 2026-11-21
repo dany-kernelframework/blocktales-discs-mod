@@ -938,5 +938,10 @@
     [
       "demo4_finnmccool_placeholder"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_10"
+    ]
+  }
 }

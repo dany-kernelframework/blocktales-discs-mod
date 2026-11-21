@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/buried_treasure",
+  "entries": [
+    {
+      "disc": "discs:demo4/thegreatfloccinaucinihilipilification",
+      "chance": 5
+    }
+  ]
+}

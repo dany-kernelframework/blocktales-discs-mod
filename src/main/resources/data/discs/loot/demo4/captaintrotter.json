@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/bastion_treasure",
+  "entries": [
+    {
+      "disc": "discs:demo4/captaintrotter",
+      "chance": 7.111
+    }
+  ]
+}

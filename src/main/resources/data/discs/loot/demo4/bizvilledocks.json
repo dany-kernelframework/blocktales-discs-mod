@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/village/village_fisher",
+  "entries": [
+    {
+      "disc": "discs:demo4/bizvilledocks",
+      "chance": 5
+    }
+  ]
+}

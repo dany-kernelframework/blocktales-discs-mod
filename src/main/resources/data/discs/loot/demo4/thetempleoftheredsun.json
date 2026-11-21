@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/bastion_other",
+  "entries": [
+    {
+      "disc": "discs:demo4/thetempleoftheredsun",
+      "chance": 5
+    }
+  ]
+}

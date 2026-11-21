@@ -31,5 +31,11 @@
     [
       "hold_99_tix"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_1"
+    ],
+    "recipes": []
+  }
 }
