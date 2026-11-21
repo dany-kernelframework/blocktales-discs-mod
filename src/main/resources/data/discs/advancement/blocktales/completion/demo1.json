@@ -197,5 +197,10 @@
     [
       "nirvana"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_2"
+    ]
+  }
 }

@@ -123,16 +123,6 @@
         ]
       }
     },
-    "solitude": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": "discs:demo3/solitude"
-          }
-        ]
-      }
-    },
     "spookybattle": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -219,9 +209,6 @@
       "slasher"
     ],
     [
-      "solitude"
-    ],
-    [
       "spookybattle"
     ],
     [
@@ -236,5 +223,10 @@
     [
       "weirdbattle"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_3"
+    ]
+  }
 }

@@ -26,5 +26,10 @@
     [
       "trade_with_disc_trader"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_1"
+    ]
+  }
 }

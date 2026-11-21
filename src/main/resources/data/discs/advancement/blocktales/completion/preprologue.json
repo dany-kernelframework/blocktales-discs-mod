@@ -41,5 +41,10 @@
     [
       "mysteriousfigure"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_1"
+    ]
+  }
 }

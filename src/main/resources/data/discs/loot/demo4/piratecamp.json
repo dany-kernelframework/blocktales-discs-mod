@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/shipwreck_treasure",
+  "entries": [
+    {
+      "disc": "discs:demo4/piratecamp",
+      "chance": 5.77
+    }
+  ]
+}
