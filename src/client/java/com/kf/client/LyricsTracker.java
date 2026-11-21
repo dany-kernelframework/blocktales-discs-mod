@@ -1,7 +1,7 @@
 package com.kf.client;
 
-import com.kf.Discs;
 import com.kf.DiscLyrics;
+import com.kf.Discs;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
@@ -9,113 +9,127 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.JukeboxSong;
 import org.jspecify.annotations.Nullable;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class LyricsTracker {
 
-    private static @Nullable BlockPos trackedPos;
-    private static @Nullable String trackedKey;
-    private static long ticksSinceStart;
-    private static @Nullable String currentLine;
-    private static @Nullable Integer currentLineColor;
+    private static final double dist = 64.0;
+    private static final double fade_dist = 48.0;
 
-    private static long ticksSinceLineChanged;
-    private static boolean currentLineIsLast;
-    private static long ticksUntilNextLine;
+    private static final Map<BlockPos, Track> TRACKS = new HashMap<>();
+    private static long lastNanos = System.nanoTime();
+
+    private static final class Track {
+        final String key;
+        final BlockPos pos;
+        final long startNanos;
+        long pausedNanos;
+
+        Track(String key, BlockPos pos, long startNanos) {
+            this.key = key;
+            this.pos = pos;
+            this.startNanos = startNanos;
+        }
+    }
+
+    public record View(String key, double elapsed, float distanceAlpha,
+                       DiscLyrics.@Nullable Song song,
+                       DiscLyrics.@Nullable LyricLine line,
+                       DiscLyrics.@Nullable LyricLine next) {}
 
     public static void onJukeboxSongStarted(BlockPos pos, JukeboxSong song) {
-        String combinedKey = resolveLyricsKey(song);
+        BlockPos key = pos.immutable();
+        String songKey = resolveKey(song);
 
-        if (combinedKey == null) {
-            if (java.util.Objects.equals(trackedPos, pos)) {
-                clear();
-            }
+        if (songKey == null) {
+            TRACKS.remove(key);
             return;
         }
-
-        trackedPos = pos;
-        trackedKey = combinedKey;
-        ticksSinceStart = 0;
-        ticksSinceLineChanged = 0;
-        ticksUntilNextLine = -1;
-        currentLineIsLast = false;
-
-        updateLineState();
+        TRACKS.put(key, new Track(songKey, key, System.nanoTime()));
     }
 
     public static void onJukeboxSongStopped(BlockPos pos) {
-        if (java.util.Objects.equals(trackedPos, pos)) {
-            clear();
-        }
-    }
-
-    private static void clear() {
-        trackedPos = null;
-        trackedKey = null;
-        currentLine = null;
-        currentLineColor = null;
-        ticksSinceLineChanged = 0;
-        currentLineIsLast = false;
-        ticksUntilNextLine = -1;
+        TRACKS.remove(pos);
     }
 
     public static void tick() {
-        if (trackedKey == null) {
+        if (TRACKS.isEmpty()) {
+            lastNanos = System.nanoTime();
             return;
         }
+        advance(Minecraft.getInstance());
+    }
 
-        Minecraft client = Minecraft.getInstance();
+    // za warudo type shit
+    private static void advance(Minecraft client) {
+        long now = System.nanoTime();
         if (client.isPaused()) {
-            return;
-        }
-
-        ticksSinceStart++;
-        updateLineState();
-    }
-
-    private static void updateLineState() {
-        if (trackedKey == null) return;
-
-        List<DiscLyrics.LyricLine> lines = DiscLyrics.get(trackedKey);
-        if (lines.isEmpty()) {
-            currentLineIsLast = false;
-            currentLine = null;
-            currentLineColor = null;
-            ticksUntilNextLine = -1;
-            return;
-        }
-
-        float elapsedSeconds = ticksSinceStart / 20.0f;
-
-        String newResult = null;
-        Integer newColor = null;
-        boolean isLast = false;
-        long nextLineTicks = -1;
-
-        for (int i = 0; i < lines.size(); i++) {
-            DiscLyrics.LyricLine line = lines.get(i);
-            if (line.time() > elapsedSeconds) {
-                nextLineTicks = (long) (line.time() * 20.0f);
-                break;
+            long delta = now - lastNanos;
+            for (Track track : TRACKS.values()) {
+                track.pausedNanos += delta;
             }
-            newResult = line.text();
-            newColor = line.color();
-            isLast = (i == lines.size() - 1);
         }
-
-        if (!java.util.Objects.equals(newResult, currentLine)) {
-            currentLine = newResult;
-            currentLineColor = newColor;
-            ticksSinceLineChanged = 0;
-        } else {
-            ticksSinceLineChanged++;
-        }
-
-        currentLineIsLast = isLast;
-        ticksUntilNextLine = nextLineTicks != -1 ? (nextLineTicks - ticksSinceStart) : -1;
+        lastNanos = now;
     }
 
-    private static @Nullable String resolveLyricsKey(JukeboxSong song) {
+    public static @Nullable View view() {
+        Minecraft client = Minecraft.getInstance();
+        if (client.level == null || client.player == null) {
+            TRACKS.clear();
+            return null;
+        }
+        if (TRACKS.isEmpty()) {
+            return null;
+        }
+
+        advance(client);
+
+        Track nearest = null;
+        double bestDistSq = dist * dist;
+        for (Track track : TRACKS.values()) {
+            double distSq = client.player.distanceToSqr(track.pos.getX() + 0.5, track.pos.getY() + 0.5, track.pos.getZ() + 0.5);
+            if (distSq <= bestDistSq) {
+                bestDistSq = distSq;
+                nearest = track;
+            }
+        }
+        if (nearest == null) {
+            return null;
+        }
+
+        double dist = Math.sqrt(bestDistSq);
+        float distanceAlpha = dist > fade_dist
+                ? (float) (1.0 - (dist - fade_dist) / (LyricsTracker.dist - fade_dist))
+                : 1.0f;
+
+        DiscLyrics.Song song = DiscLyrics.song(nearest.key);
+        double elapsed = (System.nanoTime() - nearest.startNanos - nearest.pausedNanos) / 1.0e9;
+        if (song != null) {
+            elapsed += song.offset();
+        }
+
+        DiscLyrics.LyricLine line = null;
+        DiscLyrics.LyricLine next = null;
+        if (song != null) {
+            List<DiscLyrics.LyricLine> lines = song.lines();
+            int index = -1;
+            for (int i = 0; i < lines.size(); i++) {
+                if (lines.get(i).time() <= elapsed) {
+                    index = i;
+                } else {
+                    break;
+                }
+            }
+            line = index >= 0 ? lines.get(index) : null;
+            next = index + 1 < lines.size() ? lines.get(index + 1) : null;
+        }
+
+        return new View(nearest.key, elapsed, distanceAlpha, song, line, next);
+    }
+
+    private static @Nullable String resolveKey(JukeboxSong song) {
         Minecraft client = Minecraft.getInstance();
         if (client.level == null) {
             return null;
@@ -128,17 +142,6 @@ public class LyricsTracker {
         if (id == null || !id.getNamespace().equals(Discs.MOD_ID)) {
             return null;
         }
-
-        String combinedKey = id.getPath();
-        boolean hasLyrics = DiscLyrics.hasLyrics(combinedKey);
-
-        return hasLyrics ? combinedKey : null;
+        return id.getPath();
     }
-
-    public static @Nullable String getCurrentLine() { return currentLine; }
-    public static @Nullable Integer getCurrentLineColor() { return currentLineColor; }
-    public static long getTicksSinceLineChanged() { return ticksSinceLineChanged; }
-    public static boolean isCurrentLineLast() { return currentLineIsLast; }
-    public static long getTicksUntilNextLine() { return ticksUntilNextLine; }
-    public static @Nullable BlockPos getTrackedPos() { return trackedPos; }
-}// again, quite unorthodox but it is what it is
+}

@@ -187,7 +187,6 @@ public class Discs implements ModInitializer {
 		TixLoot.register();
 		ModSounds.register();
 		DiscLoot.register();
-		DiscLyrics.register();
 	}
 
 	private static int getMaterialSortIndex(Item item) {
@@ -198,11 +197,12 @@ public class Discs implements ModInitializer {
 			return 100;
 		}
 
-		if (name.contains("modern")) return 1;
+		if (name.contains("modern")) return 1; //preprologue
 		if (name.contains("old")) return 2;
 		if (name.contains("cold")) return 3;
 		if (name.contains("toxic")) return 4;
 		if (name.contains("ghost")) return 5;
+		if (name.contains("scorched")) return 6;
 		// nts: remember to add here when releasing new demos
 		return 50;
 	}

@@ -1,0 +1,834 @@
+{
+  "track": "demo4/theancients",
+  "lines": [
+    {
+      "time": 0.2,
+      "text": "♫"
+    },
+    {
+      "time": 41.92,
+      "words": [
+        {
+          "time": 42.22,
+          "text": "Feel "
+        },
+        {
+          "time": 43.32,
+          "text": "the "
+        },
+        {
+          "time": 43.58,
+          "text": "sting "
+        },
+        {
+          "time": 44.02,
+          "text": "of "
+        },
+        {
+          "time": 44.38,
+          "text": "betrayal"
+        }
+      ]
+    },
+    {
+      "time": 44.98,
+      "words": [
+        {
+          "time": 45.28,
+          "text": "Deadly "
+        },
+        {
+          "time": 46.24,
+          "text": "sin "
+        },
+        {
+          "time": 46.64,
+          "text": "like "
+        },
+        {
+          "time": 47.04,
+          "text": "a "
+        },
+        {
+          "time": 47.34,
+          "text": "weapon"
+        }
+      ]
+    },
+    {
+      "time": 47.84,
+      "words": [
+        {
+          "time": 47.23,
+          "text": "As "
+        },
+        {
+          "time": 48.48,
+          "text": "cruel "
+        },
+        {
+          "time": 48.98,
+          "text": "as "
+        },
+        {
+          "time": 49.32,
+          "text": "steel "
+        },
+        {
+          "time": 49.6,
+          "text": "and "
+        },
+        {
+          "time": 49.98,
+          "text": "bullets"
+        }
+      ]
+    },
+    {
+      "time": 50.48,
+      "words": [
+        {
+          "time": 50.0,
+          "text": "Corrupted "
+        },
+        {
+          "time": 52.02,
+          "text": "absolutely"
+        }
+      ]
+    },
+    {
+      "time": 52.52,
+      "words": [
+        {
+          "time": 51.1,
+          "text": "It's "
+        },
+        {
+          "time": 52.38,
+          "text": "too "
+        },
+        {
+          "time": 52.7,
+          "text": "late "
+        },
+        {
+          "time": 54.28,
+          "text": "now "
+        },
+        {
+          "time": 54.64,
+          "text": "for "
+        },
+        {
+          "time": 54.94,
+          "text": "forgiveness"
+        }
+      ]
+    },
+    {
+      "time": 55.44,
+      "words": [
+        {
+          "time": 55.48,
+          "text": "Down "
+        },
+        {
+          "time": 56.58,
+          "text": "with "
+        },
+        {
+          "time": 56.86,
+          "text": "abuse "
+        },
+        {
+          "time": 57.5,
+          "text": "of "
+        },
+        {
+          "time": 57.88,
+          "text": "power"
+        }
+      ]
+    },
+    {
+      "time": 58.44,
+      "words": [
+        {
+          "time": 58.74,
+          "text": "Can't "
+        },
+        {
+          "time": 59.42,
+          "text": "you "
+        },
+        {
+          "time": 59.58,
+          "text": "just "
+        },
+        {
+          "time": 60.0,
+          "text": "taste "
+        },
+        {
+          "time": 60.28,
+          "text": "the "
+        },
+        {
+          "time": 60.54,
+          "text": "danger"
+        }
+      ]
+    },
+    {
+      "time": 61.04,
+      "words": [
+        {
+          "time": 59.67,
+          "text": "The "
+        },
+        {
+          "time": 61.82,
+          "text": "fire's "
+        },
+        {
+          "time": 62.68,
+          "text": "calling "
+        },
+        {
+          "time": 63.22,
+          "text": "your "
+        },
+        {
+          "time": 67.26,
+          "text": "name"
+        }
+      ]
+    },
+    {
+      "time": 67.1,
+      "words": [
+        {
+          "time": 66.23,
+          "text": "Don't "
+        },
+        {
+          "time": 67.38,
+          "text": "stand "
+        },
+        {
+          "time": 67.58,
+          "text": "too "
+        },
+        {
+          "time": 67.94,
+          "text": "close "
+        },
+        {
+          "time": 68.42,
+          "text": "to "
+        },
+        {
+          "time": 68.88,
+          "text": "the "
+        },
+        {
+          "time": 69.34,
+          "text": "edge"
+        }
+      ]
+    },
+    {
+      "time": 69.84,
+      "words": [
+        {
+          "time": 69.8,
+          "text": "The "
+        },
+        {
+          "time": 72.56,
+          "text": "fire's "
+        },
+        {
+          "time": 73.36,
+          "text": "calling "
+        },
+        {
+          "time": 73.94,
+          "text": "you"
+        }
+      ]
+    },
+    {
+      "time": 76.8,
+      "words": [
+        {
+          "time": 77.1,
+          "text": "Don't "
+        },
+        {
+          "time": 78.02,
+          "text": "stand "
+        },
+        {
+          "time": 78.24,
+          "text": "too "
+        },
+        {
+          "time": 78.6,
+          "text": "close "
+        },
+        {
+          "time": 79.08,
+          "text": "to "
+        },
+        {
+          "time": 79.58,
+          "text": "the "
+        },
+        {
+          "time": 80.02,
+          "text": "edge"
+        }
+      ]
+    },
+    {
+      "time": 80.9,
+      "words": [
+        {
+          "time": 81.2,
+          "text": "The "
+        },
+        {
+          "time": 83.2,
+          "text": "fire's "
+        },
+        {
+          "time": 84.0,
+          "text": "calling"
+        }
+      ]
+    },
+    {
+      "time": 85.0,
+      "text": "♫"
+    },
+    {
+      "time": 93.38,
+      "color": "FFA500",
+      "words": [
+        {
+          "time": 93.68,
+          "text": "This "
+        },
+        {
+          "time": 96.66,
+          "text": "is "
+        },
+        {
+          "time": 97.26,
+          "text": "mutiny"
+        }
+      ],
+      "effect": "shake"
+    },
+    {
+      "time": 98.94,
+      "words": [
+        {
+          "time": 99.24,
+          "text": "Burned "
+        },
+        {
+          "time": 102.16,
+          "text": "from "
+        },
+        {
+          "time": 102.42,
+          "text": "inside "
+        },
+        {
+          "time": 103.72,
+          "text": "out"
+        }
+      ]
+    },
+    {
+      "time": 105.64,
+      "words": [
+        {
+          "time": 105.94,
+          "text": "There's "
+        },
+        {
+          "time": 107.36,
+          "text": "no "
+        },
+        {
+          "time": 107.82,
+          "text": "need "
+        },
+        {
+          "time": 108.52,
+          "text": "for "
+        },
+        {
+          "time": 109.02,
+          "text": "kings"
+        }
+      ]
+    },
+    {
+      "time": 109.52,
+      "color": "FFA500",
+      "words": [
+        {
+          "time": 109.41,
+          "text": "'Cause "
+        },
+        {
+          "time": 111.86,
+          "text": "I'm "
+        },
+        {
+          "time": 112.66,
+          "text": "your "
+        },
+        {
+          "time": 113.08,
+          "text": "captain "
+        },
+        {
+          "time": 114.06,
+          "text": "now"
+        }
+      ],
+      "effect": "shake"
+    },
+    {
+      "time": 117.38,
+      "words": [
+        {
+          "time": 117.68,
+          "text": "Loyalty "
+        },
+        {
+          "time": 119.48,
+          "text": "is "
+        },
+        {
+          "time": 119.9,
+          "text": "lost"
+        }
+      ]
+    },
+    {
+      "time": 120.4,
+      "words": [
+        {
+          "time": 118.9,
+          "text": "(Loyalty "
+        },
+        {
+          "time": 119.5,
+          "text": "is "
+        },
+        {
+          "time": 119.88,
+          "text": "lost)"
+        }
+      ]
+    },
+    {
+      "time": 120.98,
+      "words": [
+        {
+          "time": 121.28,
+          "text": "Echoes "
+        },
+        {
+          "time": 122.66,
+          "text": "of "
+        },
+        {
+          "time": 123.22,
+          "text": "trust "
+        },
+        {
+          "time": 123.96,
+          "text": "fade "
+        },
+        {
+          "time": 124.56,
+          "text": "into "
+        },
+        {
+          "time": 125.04,
+          "text": "silence"
+        }
+      ]
+    },
+    {
+      "time": 128.32,
+      "words": [
+        {
+          "time": 128.62,
+          "text": "But "
+        },
+        {
+          "time": 129.38,
+          "text": "not "
+        },
+        {
+          "time": 129.58,
+          "text": "all "
+        },
+        {
+          "time": 129.82,
+          "text": "hope "
+        },
+        {
+          "time": 130.2,
+          "text": "is "
+        },
+        {
+          "time": 130.46,
+          "text": "gone"
+        }
+      ]
+    },
+    {
+      "time": 130.8,
+      "words": [
+        {
+          "time": 129.54,
+          "text": "(Not "
+        },
+        {
+          "time": 129.66,
+          "text": "all "
+        },
+        {
+          "time": 129.76,
+          "text": "hope "
+        },
+        {
+          "time": 130.2,
+          "text": "is "
+        },
+        {
+          "time": 130.48,
+          "text": "gone)"
+        }
+      ]
+    },
+    {
+      "time": 131.18,
+      "words": [
+        {
+          "time": 131.48,
+          "text": "'Cause "
+        },
+        {
+          "time": 132.88,
+          "text": "the "
+        },
+        {
+          "time": 133.08,
+          "text": "new "
+        },
+        {
+          "time": 133.64,
+          "text": "guard "
+        },
+        {
+          "time": 134.34,
+          "text": "is "
+        },
+        {
+          "time": 134.68,
+          "text": "stepping "
+        },
+        {
+          "time": 135.16,
+          "text": "in"
+        }
+      ]
+    },
+    {
+      "time": 135.66,
+      "words": [
+        {
+          "time": 133.74,
+          "text": "(The "
+        },
+        {
+          "time": 134.26,
+          "text": "new "
+        },
+        {
+          "time": 134.59,
+          "text": "guard's "
+        },
+        {
+          "time": 139.48,
+          "text": "stepping "
+        },
+        {
+          "time": 141.14,
+          "text": "in)"
+        }
+      ]
+    },
+    {
+      "time": 141.64,
+      "text": "♫"
+    },
+    {
+      "time": 160.2,
+      "words": [
+        {
+          "time": 160.5,
+          "text": "This "
+        },
+        {
+          "time": 163.32,
+          "text": "is "
+        },
+        {
+          "time": 163.72,
+          "text": "mutiny"
+        }
+      ],
+      "effect": "shake"
+    },
+    {
+      "time": 166.6,
+      "words": [
+        {
+          "time": 166.9,
+          "text": "There's "
+        },
+        {
+          "time": 168.6,
+          "text": "no "
+        },
+        {
+          "time": 168.98,
+          "text": "need "
+        },
+        {
+          "time": 169.82,
+          "text": "for "
+        },
+        {
+          "time": 170.38,
+          "text": "kings"
+        }
+      ]
+    },
+    {
+      "time": 170.88,
+      "color": "FFA500",
+      "words": [
+        {
+          "time": 171.02,
+          "text": "This "
+        },
+        {
+          "time": 174.0,
+          "text": "is "
+        },
+        {
+          "time": 174.54,
+          "text": "mutiny"
+        }
+      ],
+      "effect": "shake"
+    },
+    {
+      "time": 175.04,
+      "color": "FFA500",
+      "words": [
+        {
+          "time": 174.06,
+          "text": "(This "
+        },
+        {
+          "time": 174.73,
+          "text": "is "
+        },
+        {
+          "time": 177.88,
+          "text": "a "
+        },
+        {
+          "time": 178.16,
+          "text": "mutiny)"
+        }
+      ]
+    },
+    {
+      "time": 178.5,
+      "color": "FFA500",
+      "words": [
+        {
+          "time": 177.5,
+          "text": "Burned "
+        },
+        {
+          "time": 179.42,
+          "text": "from "
+        },
+        {
+          "time": 179.82,
+          "text": "inside "
+        },
+        {
+          "time": 181.12,
+          "text": "out"
+        }
+      ]
+    },
+    {
+      "time": 181.4,
+      "color": "FFA500",
+      "words": [
+        {
+          "time": 180.08,
+          "text": "(You're "
+        },
+        {
+          "time": 182.08,
+          "text": "burning "
+        },
+        {
+          "time": 182.36,
+          "text": "inside "
+        },
+        {
+          "time": 182.72,
+          "text": "out)"
+        }
+      ]
+    },
+    {
+      "time": 183.22,
+      "color": "FFA500",
+      "words": [
+        {
+          "time": 183.18,
+          "text": "There's "
+        },
+        {
+          "time": 184.68,
+          "text": "no "
+        },
+        {
+          "time": 185.1,
+          "text": "need "
+        },
+        {
+          "time": 185.72,
+          "text": "for "
+        },
+        {
+          "time": 186.32,
+          "text": "kings"
+        }
+      ]
+    },
+    {
+      "time": 186.82,
+      "color": "FFA500",
+      "words": [
+        {
+          "time": 184.66,
+          "text": "(There's "
+        },
+        {
+          "time": 185.76,
+          "text": "never "
+        },
+        {
+          "time": 186.41,
+          "text": "been "
+        },
+        {
+          "time": 186.95,
+          "text": "a "
+        },
+        {
+          "time": 187.17,
+          "text": "need "
+        },
+        {
+          "time": 187.71,
+          "text": "for "
+        },
+        {
+          "time": 188.14,
+          "text": "kings)"
+        }
+      ]
+    },
+    {
+      "time": 188.64,
+      "color": "CC5500",
+      "words": [
+        {
+          "time": 187.0,
+          "text": "'Cause "
+        },
+        {
+          "time": 189.22,
+          "text": "I'm "
+        },
+        {
+          "time": 190.0,
+          "text": "your "
+        },
+        {
+          "time": 190.32,
+          "text": "captain "
+        },
+        {
+          "time": 191.38,
+          "text": "now"
+        }
+      ],
+      "effect": "shake"
+    },
+    {
+      "time": 191.88,
+      "color": "FFA500",
+      "words": [
+        {
+          "time": 190.38,
+          "text": "(I "
+        },
+        {
+          "time": 190.79,
+          "text": "am "
+        },
+        {
+          "time": 191.2,
+          "text": "your "
+        },
+        {
+          "time": 193.28,
+          "text": "captain "
+        },
+        {
+          "time": 194.02,
+          "text": "now)"
+        }
+      ],
+      "effect": "glitch"
+    },
+    {
+      "time": 196.0,
+      "text": "♫"
+    }
+  ]
+}
