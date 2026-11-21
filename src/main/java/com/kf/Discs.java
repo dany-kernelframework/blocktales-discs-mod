@@ -45,7 +45,8 @@ public class Discs implements ModInitializer {
 	};
 
 	public static final Set<String> CHAPTER_SET = Set.of(CHAPTER_ORDER);
-	public static final Set<String> BIG_STACKS = Set.of("tix", "band_of_tix");
+	public static final Set<String> BIG_STACKS = Set.of("tix", "band_of_tix", "bux");
+	public static final Set<Item> buxDiscs = new HashSet<>(32);
 
 	private static final Component PLAIN_NAME = Component.literal("Music Disc");
 
@@ -78,6 +79,8 @@ public class Discs implements ModInitializer {
 	public void onInitialize() {
 		FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(mod -> {
 			mod.findPath("assets/" + MOD_ID + "/bosses").ifPresent(BossData::loadFromJar);
+			mod.findPath("assets/" + MOD_ID + "/bosses").ifPresent(BossData::loadFromJar);
+			mod.findPath("assets/" + MOD_ID + "/labels.json").ifPresent(LabelData::loadFromJar);
 
 			Path itemAssets = mod.findPath("assets/" + MOD_ID + "/items").orElse(null);
 
@@ -215,6 +218,9 @@ public class Discs implements ModInitializer {
 		if (BIG_STACKS.contains(itemName)) {
 			properties = properties.stacksTo(99);
 		}
+		if ("bux".equals(itemName)) {
+			properties = properties.fireResistant();
+		}
 
 		Item materialItem = new Item(properties);
 
@@ -225,7 +231,6 @@ public class Discs implements ModInitializer {
 		if (itemName.endsWith("template")) {
 			TEMPLATES.add(materialItem);
 		}
-
 		discPrices.put(materialItem, DiscPricing.getPrice("materials", itemName));
 	}
 
@@ -261,6 +266,10 @@ public class Discs implements ModInitializer {
 				return boss == null ? PLAIN_NAME : boss.displayName(System.currentTimeMillis());
 			}
 		};
+
+		if (LabelData.isBuxDisc(registryPath)) {
+			buxDiscs.add(vinyl);
+		}
 
 		Registry.register(BuiltInRegistries.ITEM, discKey, vinyl);
 

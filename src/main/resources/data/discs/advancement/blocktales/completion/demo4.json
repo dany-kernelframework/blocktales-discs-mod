@@ -132,26 +132,6 @@
           }
         ]
       }
-    },
-    "finnmccool_old": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": "discs:demo4/finnmccool_old"
-          }
-        ]
-      }
-    },
-    "finnmccool_placeholder": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": "discs:demo4/finnmccool_placeholder"
-          }
-        ]
-      }
     }
   },
   "requirements": [
@@ -190,12 +170,11 @@
     ],
     [
       "remorse"
-    ],
-    [
-      "finnmccool_old"
-    ],
-    [
-      "finnmccool_placeholder"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_4"
+    ]
+  }
 }

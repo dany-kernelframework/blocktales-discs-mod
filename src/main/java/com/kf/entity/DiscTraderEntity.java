@@ -55,13 +55,30 @@ public class DiscTraderEntity extends WanderingTrader {
             ));
         }
 
+        Item buxItem = Discs.REGISTERED_MATERIALS.get("bux");
+        Item bandOfTixItem = Discs.REGISTERED_MATERIALS.get("band_of_tix");
+        if (buxItem != null && bandOfTixItem != null) {
+            int buxStock = 1 + this.random.nextInt(3);
+
+            offers.add(new MerchantOffer(
+                    new ItemCost(bandOfTixItem, 3),
+                    new ItemStack(buxItem, 1),
+                    buxStock,
+                    4,
+                    0.0f
+            ));
+        }
+
         List<Item> normalDiscs = new ArrayList<>();
         List<Item> bossDiscs = new ArrayList<>();
+        List<Item> buxDiscs = new ArrayList<>();
         List<Item> templateItems = new ArrayList<>(Discs.TEMPLATES);
 
         Discs.discsPerChapter.values().forEach(chapterDiscs -> {
             for (Item disc : chapterDiscs) {
-                if (Discs.bossDiscs.contains(disc)) {
+                if (Discs.buxDiscs.contains(disc)) {
+                    buxDiscs.add(disc);
+                } else if (Discs.bossDiscs.contains(disc)) {
                     bossDiscs.add(disc);
                 } else {
                     normalDiscs.add(disc);
@@ -95,6 +112,19 @@ public class DiscTraderEntity extends WanderingTrader {
                     new ItemStack(item),
                     1,
                     2,
+                    0.0f
+            ));
+        }
+
+        if (buxItem != null && !buxDiscs.isEmpty()) {
+            Item buxDisc = buxDiscs.get(this.random.nextInt(buxDiscs.size()));
+            int buxPrice = Discs.discPrices.getOrDefault(buxDisc, 1);
+
+            offers.add(new MerchantOffer(
+                    new ItemCost(buxItem, buxPrice),
+                    new ItemStack(buxDisc),
+                    1,
+                    5,
                     0.0f
             ));
         }

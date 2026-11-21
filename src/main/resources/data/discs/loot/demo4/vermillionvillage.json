@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:chests/village/village_desert_house",
+  "entries": [
+    {
+      "disc": "discs:demo4/vermillionvillage",
+      "chance": 5
+    }
+  ]
+}

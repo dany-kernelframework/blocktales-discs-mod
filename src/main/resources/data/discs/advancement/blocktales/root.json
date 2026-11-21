@@ -28,5 +28,10 @@
     [
       "has_disc"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_1"
+    ]
+  }
 }

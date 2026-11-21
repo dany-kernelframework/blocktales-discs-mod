@@ -1,0 +1,9 @@
+{
+  "loot_table": "minecraft:entities/warden",
+  "entries": [
+    {
+      "disc": "discs:demo4/finnmccool_old",
+      "chance": 3.325
+    }
+  ]
+}
