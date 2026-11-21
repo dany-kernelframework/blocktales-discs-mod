@@ -1,0 +1,1885 @@
+{
+  "track": "demo2/bubonicplant",
+  "lines": [
+    {
+      "time": 0.0,
+      "words": [
+        {
+          "time": 0.0,
+          "text": "Got "
+        },
+        {
+          "time": 0.15,
+          "text": "this "
+        },
+        {
+          "time": 0.33,
+          "text": "place "
+        },
+        {
+          "time": 0.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 1.0,
+      "words": [
+        {
+          "time": 1.0,
+          "text": "I'm "
+        },
+        {
+          "time": 1.14,
+          "text": "on "
+        },
+        {
+          "time": 1.25,
+          "text": "the "
+        },
+        {
+          "time": 1.39,
+          "text": "bass "
+        },
+        {
+          "time": 1.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 2.0,
+      "words": [
+        {
+          "time": 2.0,
+          "text": "Now "
+        },
+        {
+          "time": 2.14,
+          "text": "I've "
+        },
+        {
+          "time": 2.31,
+          "text": "taken "
+        },
+        {
+          "time": 2.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 3.0,
+      "words": [
+        {
+          "time": 3.0,
+          "text": "But "
+        },
+        {
+          "time": 3.13,
+          "text": "I "
+        },
+        {
+          "time": 3.2,
+          "text": "don't "
+        },
+        {
+          "time": 3.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 3.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 4.0,
+      "words": [
+        {
+          "time": 4.0,
+          "text": "Got "
+        },
+        {
+          "time": 4.15,
+          "text": "this "
+        },
+        {
+          "time": 4.33,
+          "text": "place "
+        },
+        {
+          "time": 4.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 5.0,
+      "words": [
+        {
+          "time": 5.0,
+          "text": "I'm "
+        },
+        {
+          "time": 5.14,
+          "text": "on "
+        },
+        {
+          "time": 5.25,
+          "text": "the "
+        },
+        {
+          "time": 5.39,
+          "text": "bass "
+        },
+        {
+          "time": 5.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 6.0,
+      "words": [
+        {
+          "time": 6.0,
+          "text": "Now "
+        },
+        {
+          "time": 6.14,
+          "text": "I've "
+        },
+        {
+          "time": 6.31,
+          "text": "taken "
+        },
+        {
+          "time": 6.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 7.0,
+      "words": [
+        {
+          "time": 7.0,
+          "text": "But "
+        },
+        {
+          "time": 7.13,
+          "text": "I "
+        },
+        {
+          "time": 7.2,
+          "text": "don't "
+        },
+        {
+          "time": 7.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 7.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 8.0,
+      "text": "♫"
+    },
+    {
+      "time": 16.0,
+      "words": [
+        {
+          "time": 16.0,
+          "text": "Got "
+        },
+        {
+          "time": 16.15,
+          "text": "this "
+        },
+        {
+          "time": 16.33,
+          "text": "place "
+        },
+        {
+          "time": 16.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 17.0,
+      "words": [
+        {
+          "time": 17.0,
+          "text": "I'm "
+        },
+        {
+          "time": 17.14,
+          "text": "on "
+        },
+        {
+          "time": 17.25,
+          "text": "the "
+        },
+        {
+          "time": 17.39,
+          "text": "bass "
+        },
+        {
+          "time": 17.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 18.0,
+      "words": [
+        {
+          "time": 18.0,
+          "text": "Now "
+        },
+        {
+          "time": 18.14,
+          "text": "I've "
+        },
+        {
+          "time": 18.31,
+          "text": "taken "
+        },
+        {
+          "time": 18.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 19.0,
+      "words": [
+        {
+          "time": 19.0,
+          "text": "But "
+        },
+        {
+          "time": 19.13,
+          "text": "I "
+        },
+        {
+          "time": 19.2,
+          "text": "don't "
+        },
+        {
+          "time": 19.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 19.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 20.0,
+      "words": [
+        {
+          "time": 20.0,
+          "text": "Got "
+        },
+        {
+          "time": 20.15,
+          "text": "this "
+        },
+        {
+          "time": 20.33,
+          "text": "place "
+        },
+        {
+          "time": 20.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 21.0,
+      "words": [
+        {
+          "time": 21.0,
+          "text": "I'm "
+        },
+        {
+          "time": 21.14,
+          "text": "on "
+        },
+        {
+          "time": 21.25,
+          "text": "the "
+        },
+        {
+          "time": 21.39,
+          "text": "bass "
+        },
+        {
+          "time": 21.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 22.0,
+      "words": [
+        {
+          "time": 22.0,
+          "text": "Now "
+        },
+        {
+          "time": 22.14,
+          "text": "I've "
+        },
+        {
+          "time": 22.31,
+          "text": "taken "
+        },
+        {
+          "time": 22.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 23.0,
+      "words": [
+        {
+          "time": 23.0,
+          "text": "But "
+        },
+        {
+          "time": 23.13,
+          "text": "I "
+        },
+        {
+          "time": 23.2,
+          "text": "don't "
+        },
+        {
+          "time": 23.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 23.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 24.0,
+      "text": "♫"
+    },
+    {
+      "time": 32.0,
+      "words": [
+        {
+          "time": 32.0,
+          "text": "Got "
+        },
+        {
+          "time": 32.15,
+          "text": "this "
+        },
+        {
+          "time": 32.33,
+          "text": "place "
+        },
+        {
+          "time": 32.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 33.0,
+      "words": [
+        {
+          "time": 33.0,
+          "text": "I'm "
+        },
+        {
+          "time": 33.14,
+          "text": "on "
+        },
+        {
+          "time": 33.25,
+          "text": "the "
+        },
+        {
+          "time": 33.39,
+          "text": "bass "
+        },
+        {
+          "time": 33.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 34.0,
+      "words": [
+        {
+          "time": 34.0,
+          "text": "Now "
+        },
+        {
+          "time": 34.14,
+          "text": "I've "
+        },
+        {
+          "time": 34.31,
+          "text": "taken "
+        },
+        {
+          "time": 34.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 35.0,
+      "words": [
+        {
+          "time": 35.0,
+          "text": "But "
+        },
+        {
+          "time": 35.13,
+          "text": "I "
+        },
+        {
+          "time": 35.2,
+          "text": "don't "
+        },
+        {
+          "time": 35.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 35.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 36.0,
+      "words": [
+        {
+          "time": 36.0,
+          "text": "Got "
+        },
+        {
+          "time": 36.15,
+          "text": "this "
+        },
+        {
+          "time": 36.33,
+          "text": "place "
+        },
+        {
+          "time": 36.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 37.0,
+      "words": [
+        {
+          "time": 37.0,
+          "text": "I'm "
+        },
+        {
+          "time": 37.14,
+          "text": "on "
+        },
+        {
+          "time": 37.25,
+          "text": "the "
+        },
+        {
+          "time": 37.39,
+          "text": "bass "
+        },
+        {
+          "time": 37.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 38.0,
+      "words": [
+        {
+          "time": 38.0,
+          "text": "Now "
+        },
+        {
+          "time": 38.14,
+          "text": "I've "
+        },
+        {
+          "time": 38.31,
+          "text": "taken "
+        },
+        {
+          "time": 38.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 39.0,
+      "words": [
+        {
+          "time": 39.0,
+          "text": "But "
+        },
+        {
+          "time": 39.13,
+          "text": "I "
+        },
+        {
+          "time": 39.2,
+          "text": "don't "
+        },
+        {
+          "time": 39.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 39.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 40.0,
+      "text": "♫"
+    },
+    {
+      "time": 48.0,
+      "words": [
+        {
+          "time": 48.0,
+          "text": "Got "
+        },
+        {
+          "time": 48.15,
+          "text": "this "
+        },
+        {
+          "time": 48.33,
+          "text": "place "
+        },
+        {
+          "time": 48.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 49.0,
+      "words": [
+        {
+          "time": 49.0,
+          "text": "I'm "
+        },
+        {
+          "time": 49.14,
+          "text": "on "
+        },
+        {
+          "time": 49.25,
+          "text": "the "
+        },
+        {
+          "time": 49.39,
+          "text": "bass "
+        },
+        {
+          "time": 49.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 50.0,
+      "words": [
+        {
+          "time": 50.0,
+          "text": "Now "
+        },
+        {
+          "time": 50.14,
+          "text": "I've "
+        },
+        {
+          "time": 50.31,
+          "text": "taken "
+        },
+        {
+          "time": 50.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 51.0,
+      "words": [
+        {
+          "time": 51.0,
+          "text": "But "
+        },
+        {
+          "time": 51.13,
+          "text": "I "
+        },
+        {
+          "time": 51.2,
+          "text": "don't "
+        },
+        {
+          "time": 51.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 51.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 52.0,
+      "words": [
+        {
+          "time": 52.0,
+          "text": "Got "
+        },
+        {
+          "time": 52.15,
+          "text": "this "
+        },
+        {
+          "time": 52.33,
+          "text": "place "
+        },
+        {
+          "time": 52.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 53.0,
+      "words": [
+        {
+          "time": 53.0,
+          "text": "I'm "
+        },
+        {
+          "time": 53.14,
+          "text": "on "
+        },
+        {
+          "time": 53.25,
+          "text": "the "
+        },
+        {
+          "time": 53.39,
+          "text": "bass "
+        },
+        {
+          "time": 53.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 54.0,
+      "words": [
+        {
+          "time": 54.0,
+          "text": "Now "
+        },
+        {
+          "time": 54.14,
+          "text": "I've "
+        },
+        {
+          "time": 54.31,
+          "text": "taken "
+        },
+        {
+          "time": 54.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 55.0,
+      "words": [
+        {
+          "time": 55.0,
+          "text": "But "
+        },
+        {
+          "time": 55.13,
+          "text": "I "
+        },
+        {
+          "time": 55.2,
+          "text": "don't "
+        },
+        {
+          "time": 55.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 55.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 56.0,
+      "text": "♫"
+    },
+    {
+      "time": 64.0,
+      "words": [
+        {
+          "time": 64.0,
+          "text": "Got "
+        },
+        {
+          "time": 64.15,
+          "text": "this "
+        },
+        {
+          "time": 64.33,
+          "text": "place "
+        },
+        {
+          "time": 64.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 65.0,
+      "words": [
+        {
+          "time": 65.0,
+          "text": "I'm "
+        },
+        {
+          "time": 65.14,
+          "text": "on "
+        },
+        {
+          "time": 65.25,
+          "text": "the "
+        },
+        {
+          "time": 65.39,
+          "text": "bass "
+        },
+        {
+          "time": 65.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 66.0,
+      "words": [
+        {
+          "time": 66.0,
+          "text": "Now "
+        },
+        {
+          "time": 66.14,
+          "text": "I've "
+        },
+        {
+          "time": 66.31,
+          "text": "taken "
+        },
+        {
+          "time": 66.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 67.0,
+      "words": [
+        {
+          "time": 67.0,
+          "text": "But "
+        },
+        {
+          "time": 67.13,
+          "text": "I "
+        },
+        {
+          "time": 67.2,
+          "text": "don't "
+        },
+        {
+          "time": 67.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 67.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 68.0,
+      "words": [
+        {
+          "time": 68.0,
+          "text": "Got "
+        },
+        {
+          "time": 68.15,
+          "text": "this "
+        },
+        {
+          "time": 68.33,
+          "text": "place "
+        },
+        {
+          "time": 68.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 69.0,
+      "words": [
+        {
+          "time": 69.0,
+          "text": "I'm "
+        },
+        {
+          "time": 69.14,
+          "text": "on "
+        },
+        {
+          "time": 69.25,
+          "text": "the "
+        },
+        {
+          "time": 69.39,
+          "text": "bass "
+        },
+        {
+          "time": 69.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 70.0,
+      "words": [
+        {
+          "time": 70.0,
+          "text": "Now "
+        },
+        {
+          "time": 70.14,
+          "text": "I've "
+        },
+        {
+          "time": 70.31,
+          "text": "taken "
+        },
+        {
+          "time": 70.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 71.0,
+      "words": [
+        {
+          "time": 71.0,
+          "text": "But "
+        },
+        {
+          "time": 71.13,
+          "text": "I "
+        },
+        {
+          "time": 71.2,
+          "text": "don't "
+        },
+        {
+          "time": 71.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 71.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 72.0,
+      "text": "♫"
+    },
+    {
+      "time": 80.0,
+      "words": [
+        {
+          "time": 80.0,
+          "text": "Got "
+        },
+        {
+          "time": 80.15,
+          "text": "this "
+        },
+        {
+          "time": 80.33,
+          "text": "place "
+        },
+        {
+          "time": 80.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 81.0,
+      "words": [
+        {
+          "time": 81.0,
+          "text": "I'm "
+        },
+        {
+          "time": 81.14,
+          "text": "on "
+        },
+        {
+          "time": 81.25,
+          "text": "the "
+        },
+        {
+          "time": 81.39,
+          "text": "bass "
+        },
+        {
+          "time": 81.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 82.0,
+      "words": [
+        {
+          "time": 82.0,
+          "text": "Now "
+        },
+        {
+          "time": 82.14,
+          "text": "I've "
+        },
+        {
+          "time": 82.31,
+          "text": "taken "
+        },
+        {
+          "time": 82.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 83.0,
+      "words": [
+        {
+          "time": 83.0,
+          "text": "But "
+        },
+        {
+          "time": 83.13,
+          "text": "I "
+        },
+        {
+          "time": 83.2,
+          "text": "don't "
+        },
+        {
+          "time": 83.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 83.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 84.0,
+      "words": [
+        {
+          "time": 84.0,
+          "text": "Got "
+        },
+        {
+          "time": 84.15,
+          "text": "this "
+        },
+        {
+          "time": 84.33,
+          "text": "place "
+        },
+        {
+          "time": 84.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 85.0,
+      "words": [
+        {
+          "time": 85.0,
+          "text": "I'm "
+        },
+        {
+          "time": 85.14,
+          "text": "on "
+        },
+        {
+          "time": 85.25,
+          "text": "the "
+        },
+        {
+          "time": 85.39,
+          "text": "bass "
+        },
+        {
+          "time": 85.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 86.0,
+      "words": [
+        {
+          "time": 86.0,
+          "text": "Now "
+        },
+        {
+          "time": 86.14,
+          "text": "I've "
+        },
+        {
+          "time": 86.31,
+          "text": "taken "
+        },
+        {
+          "time": 86.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 87.0,
+      "words": [
+        {
+          "time": 87.0,
+          "text": "But "
+        },
+        {
+          "time": 87.13,
+          "text": "I "
+        },
+        {
+          "time": 87.2,
+          "text": "don't "
+        },
+        {
+          "time": 87.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 87.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 88.0,
+      "text": "♫"
+    },
+    {
+      "time": 96.0,
+      "words": [
+        {
+          "time": 96.0,
+          "text": "Got "
+        },
+        {
+          "time": 96.15,
+          "text": "this "
+        },
+        {
+          "time": 96.33,
+          "text": "place "
+        },
+        {
+          "time": 96.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 97.0,
+      "words": [
+        {
+          "time": 97.0,
+          "text": "I'm "
+        },
+        {
+          "time": 97.14,
+          "text": "on "
+        },
+        {
+          "time": 97.25,
+          "text": "the "
+        },
+        {
+          "time": 97.39,
+          "text": "bass "
+        },
+        {
+          "time": 97.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 98.0,
+      "words": [
+        {
+          "time": 98.0,
+          "text": "Now "
+        },
+        {
+          "time": 98.14,
+          "text": "I've "
+        },
+        {
+          "time": 98.31,
+          "text": "taken "
+        },
+        {
+          "time": 98.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 99.0,
+      "words": [
+        {
+          "time": 99.0,
+          "text": "But "
+        },
+        {
+          "time": 99.13,
+          "text": "I "
+        },
+        {
+          "time": 99.2,
+          "text": "don't "
+        },
+        {
+          "time": 99.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 99.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 100.0,
+      "words": [
+        {
+          "time": 100.0,
+          "text": "Got "
+        },
+        {
+          "time": 100.15,
+          "text": "this "
+        },
+        {
+          "time": 100.33,
+          "text": "place "
+        },
+        {
+          "time": 100.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 101.0,
+      "words": [
+        {
+          "time": 101.0,
+          "text": "I'm "
+        },
+        {
+          "time": 101.14,
+          "text": "on "
+        },
+        {
+          "time": 101.25,
+          "text": "the "
+        },
+        {
+          "time": 101.39,
+          "text": "bass "
+        },
+        {
+          "time": 101.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 102.0,
+      "words": [
+        {
+          "time": 102.0,
+          "text": "Now "
+        },
+        {
+          "time": 102.14,
+          "text": "I've "
+        },
+        {
+          "time": 102.31,
+          "text": "taken "
+        },
+        {
+          "time": 102.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 103.0,
+      "words": [
+        {
+          "time": 103.0,
+          "text": "But "
+        },
+        {
+          "time": 103.13,
+          "text": "I "
+        },
+        {
+          "time": 103.2,
+          "text": "don't "
+        },
+        {
+          "time": 103.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 103.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 104.0,
+      "text": "♫"
+    },
+    {
+      "time": 112.0,
+      "words": [
+        {
+          "time": 112.0,
+          "text": "Got "
+        },
+        {
+          "time": 112.15,
+          "text": "this "
+        },
+        {
+          "time": 112.33,
+          "text": "place "
+        },
+        {
+          "time": 112.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 113.0,
+      "words": [
+        {
+          "time": 113.0,
+          "text": "I'm "
+        },
+        {
+          "time": 113.14,
+          "text": "on "
+        },
+        {
+          "time": 113.25,
+          "text": "the "
+        },
+        {
+          "time": 113.39,
+          "text": "bass "
+        },
+        {
+          "time": 113.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 114.0,
+      "words": [
+        {
+          "time": 114.0,
+          "text": "Now "
+        },
+        {
+          "time": 114.14,
+          "text": "I've "
+        },
+        {
+          "time": 114.31,
+          "text": "taken "
+        },
+        {
+          "time": 114.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 115.0,
+      "words": [
+        {
+          "time": 115.0,
+          "text": "But "
+        },
+        {
+          "time": 115.13,
+          "text": "I "
+        },
+        {
+          "time": 115.2,
+          "text": "don't "
+        },
+        {
+          "time": 115.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 115.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 116.0,
+      "words": [
+        {
+          "time": 116.0,
+          "text": "Got "
+        },
+        {
+          "time": 116.15,
+          "text": "this "
+        },
+        {
+          "time": 116.33,
+          "text": "place "
+        },
+        {
+          "time": 116.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 117.0,
+      "words": [
+        {
+          "time": 117.0,
+          "text": "I'm "
+        },
+        {
+          "time": 117.14,
+          "text": "on "
+        },
+        {
+          "time": 117.25,
+          "text": "the "
+        },
+        {
+          "time": 117.39,
+          "text": "bass "
+        },
+        {
+          "time": 117.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 118.0,
+      "words": [
+        {
+          "time": 118.0,
+          "text": "Now "
+        },
+        {
+          "time": 118.14,
+          "text": "I've "
+        },
+        {
+          "time": 118.31,
+          "text": "taken "
+        },
+        {
+          "time": 118.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 119.0,
+      "words": [
+        {
+          "time": 119.0,
+          "text": "But "
+        },
+        {
+          "time": 119.13,
+          "text": "I "
+        },
+        {
+          "time": 119.2,
+          "text": "don't "
+        },
+        {
+          "time": 119.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 119.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 120.0,
+      "text": "♫"
+    },
+    {
+      "time": 128.0,
+      "words": [
+        {
+          "time": 128.0,
+          "text": "Got "
+        },
+        {
+          "time": 128.15,
+          "text": "this "
+        },
+        {
+          "time": 128.33,
+          "text": "place "
+        },
+        {
+          "time": 128.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 129.0,
+      "words": [
+        {
+          "time": 129.0,
+          "text": "I'm "
+        },
+        {
+          "time": 129.14,
+          "text": "on "
+        },
+        {
+          "time": 129.25,
+          "text": "the "
+        },
+        {
+          "time": 129.39,
+          "text": "bass "
+        },
+        {
+          "time": 129.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 130.0,
+      "words": [
+        {
+          "time": 130.0,
+          "text": "Now "
+        },
+        {
+          "time": 130.14,
+          "text": "I've "
+        },
+        {
+          "time": 130.31,
+          "text": "taken "
+        },
+        {
+          "time": 130.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 131.0,
+      "words": [
+        {
+          "time": 131.0,
+          "text": "But "
+        },
+        {
+          "time": 131.13,
+          "text": "I "
+        },
+        {
+          "time": 131.2,
+          "text": "don't "
+        },
+        {
+          "time": 131.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 131.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 132.0,
+      "words": [
+        {
+          "time": 132.0,
+          "text": "Got "
+        },
+        {
+          "time": 132.15,
+          "text": "this "
+        },
+        {
+          "time": 132.33,
+          "text": "place "
+        },
+        {
+          "time": 132.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 133.0,
+      "words": [
+        {
+          "time": 133.0,
+          "text": "I'm "
+        },
+        {
+          "time": 133.14,
+          "text": "on "
+        },
+        {
+          "time": 133.25,
+          "text": "the "
+        },
+        {
+          "time": 133.39,
+          "text": "bass "
+        },
+        {
+          "time": 133.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 134.0,
+      "words": [
+        {
+          "time": 134.0,
+          "text": "Now "
+        },
+        {
+          "time": 134.14,
+          "text": "I've "
+        },
+        {
+          "time": 134.31,
+          "text": "taken "
+        },
+        {
+          "time": 134.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 135.0,
+      "words": [
+        {
+          "time": 135.0,
+          "text": "But "
+        },
+        {
+          "time": 135.13,
+          "text": "I "
+        },
+        {
+          "time": 135.2,
+          "text": "don't "
+        },
+        {
+          "time": 135.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 135.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 136.0,
+      "text": "♫"
+    },
+    {
+      "time": 144.0,
+      "words": [
+        {
+          "time": 144.0,
+          "text": "Got "
+        },
+        {
+          "time": 144.15,
+          "text": "this "
+        },
+        {
+          "time": 144.33,
+          "text": "place "
+        },
+        {
+          "time": 144.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 145.0,
+      "words": [
+        {
+          "time": 145.0,
+          "text": "I'm "
+        },
+        {
+          "time": 145.14,
+          "text": "on "
+        },
+        {
+          "time": 145.25,
+          "text": "the "
+        },
+        {
+          "time": 145.39,
+          "text": "bass "
+        },
+        {
+          "time": 145.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 146.0,
+      "words": [
+        {
+          "time": 146.0,
+          "text": "Now "
+        },
+        {
+          "time": 146.14,
+          "text": "I've "
+        },
+        {
+          "time": 146.31,
+          "text": "taken "
+        },
+        {
+          "time": 146.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 147.0,
+      "words": [
+        {
+          "time": 147.0,
+          "text": "But "
+        },
+        {
+          "time": 147.13,
+          "text": "I "
+        },
+        {
+          "time": 147.2,
+          "text": "don't "
+        },
+        {
+          "time": 147.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 147.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 148.0,
+      "words": [
+        {
+          "time": 148.0,
+          "text": "Got "
+        },
+        {
+          "time": 148.15,
+          "text": "this "
+        },
+        {
+          "time": 148.33,
+          "text": "place "
+        },
+        {
+          "time": 148.55,
+          "text": "jumpin'"
+        }
+      ]
+    },
+    {
+      "time": 149.0,
+      "words": [
+        {
+          "time": 149.0,
+          "text": "I'm "
+        },
+        {
+          "time": 149.14,
+          "text": "on "
+        },
+        {
+          "time": 149.25,
+          "text": "the "
+        },
+        {
+          "time": 149.39,
+          "text": "bass "
+        },
+        {
+          "time": 149.57,
+          "text": "bumpin'"
+        }
+      ]
+    },
+    {
+      "time": 150.0,
+      "words": [
+        {
+          "time": 150.0,
+          "text": "Now "
+        },
+        {
+          "time": 150.14,
+          "text": "I've "
+        },
+        {
+          "time": 150.31,
+          "text": "taken "
+        },
+        {
+          "time": 150.51,
+          "text": "somethin'"
+        }
+      ]
+    },
+    {
+      "time": 151.0,
+      "words": [
+        {
+          "time": 151.0,
+          "text": "But "
+        },
+        {
+          "time": 151.13,
+          "text": "I "
+        },
+        {
+          "time": 151.2,
+          "text": "don't "
+        },
+        {
+          "time": 151.39,
+          "text": "wanna-want "
+        },
+        {
+          "time": 151.75,
+          "text": "it"
+        }
+      ]
+    },
+    {
+      "time": 152.0,
+      "text": "♫"
+    }
+  ]
+}
