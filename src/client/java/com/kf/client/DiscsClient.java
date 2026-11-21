@@ -23,6 +23,11 @@ public class DiscsClient implements ClientModInitializer {
 				new LyricsHud()
 		);
 
+		ResourceLoader.get(PackType.CLIENT_RESOURCES).registerReloadListener(
+				Identifier.fromNamespaceAndPath(Discs.MOD_ID, "lyrics"),
+				new LyricsReloadListener()
+		);
+
 		// boss visuals (name gradient, frame, outer, phrases) live in assets/discs/bosses/*.json
 		ResourceLoader.get(PackType.CLIENT_RESOURCES).registerReloadListener(
 				Identifier.fromNamespaceAndPath(Discs.MOD_ID, "labels"),

@@ -1,24 +1,23 @@
 {
   "disc": "demo4/finnmccool_old",
   "name": [
-    "#9522FD",
-    "#42B349"
-
+    "#F0C814",
+    "#A64DFF"
   ],
   "outer": {
-    "top": "#42B349",
-    "bottom": "#9867C3",
+    "top": "#F0C814",
+    "bottom": "#A64DFF",
     "speed": 0.15
   },
   "frame": {
-    "first": "#143916",
-    "second": "#370067",
-    "softness": 0.4
+    "first": "#2A2006",
+    "second": "#1A0933",
+    "softness": 0.25
   },
   "phrases": {
     "gradient": [
-      "#42B349",
-      "#9867C3"
+      "#F0C814",
+      "#A64DFF"
     ],
     "timing": {
       "original_stays": 36000,
