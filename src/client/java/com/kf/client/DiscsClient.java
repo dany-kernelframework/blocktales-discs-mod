@@ -34,6 +34,11 @@ public class DiscsClient implements ClientModInitializer {
 				new DiscLabelsReloadListener()
 		);
 
+		ResourceLoader.get(PackType.CLIENT_RESOURCES).registerReloadListener(
+				Identifier.fromNamespaceAndPath(Discs.MOD_ID, "tab_style"),
+				new DiscTabStyleReloadListener()
+		);
+
 		DiscLabels.init();
 		AnimatedDiscText.init();
 	}
