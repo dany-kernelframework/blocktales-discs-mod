@@ -6,7 +6,7 @@
       "count": 1
     },
     "title": "Big BUX",
-    "description": "Hold 30 TIX in your inventory at once.",
+    "description": "Hold 30 BUX in your inventory at once.",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
