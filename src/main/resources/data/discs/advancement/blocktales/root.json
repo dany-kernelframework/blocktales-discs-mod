@@ -22,11 +22,35 @@
           }
         ]
       }
+    },
+    "has_currency": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "discs:materials/tix",
+              "discs:materials/band_of_tix",
+              "discs:materials/bux"
+            ]
+          }
+        ]
+      }
+    },
+    "traded_with_trader": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "minecraft:entity_type": "discs:disc_trader"
+        }
+      }
     }
   },
   "requirements": [
     [
-      "has_disc"
+      "has_disc",
+      "has_currency",
+      "traded_with_trader"
     ]
   ],
   "rewards": {

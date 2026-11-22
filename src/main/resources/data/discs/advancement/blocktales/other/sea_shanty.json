@@ -1,0 +1,53 @@
+{
+  "parent": "discs:blocktales/completion/first/demo4",
+  "display": {
+    "icon": {
+      "id": "discs:demo4/piratecamp",
+      "count": 1
+    },
+    "title": "Sea Shanty",
+    "description": "Play Pirate Camp in a Jukebox while riding in a Boat.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pirate_boat_jukebox": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": {
+          "minecraft:vehicle": {
+            "minecraft:entity_type": "#minecraft:boat"
+          }
+        },
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "discs:demo4/piratecamp"
+            }
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "minecraft:jukebox"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "pirate_boat_jukebox"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_1"
+    ]
+  }
+}
