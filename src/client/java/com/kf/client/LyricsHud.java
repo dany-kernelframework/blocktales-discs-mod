@@ -56,7 +56,7 @@ public class LyricsHud implements HudElement {
                 int offsetX = 0;
                 int offsetY = 0;
                 if (fx && effect == DiscLyrics.Effect.shake) {
-                    int[] shake = LyricsText.shake(line, nowMs);
+                    int[] shake = LyricsText.shake(line, nowMs, cfg.shakeStrength);
                     offsetX = shake[0];
                     offsetY = shake[1];
                 }

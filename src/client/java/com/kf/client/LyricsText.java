@@ -57,12 +57,12 @@ final class LyricsText {
         return (rgb >> 1) & 0x7F7F7F;
     }
 
-    // this is bullshittery
-    static int[] shake(DiscLyrics.LyricLine line, long nowMs) {
+    static int[] shake(DiscLyrics.LyricLine line, long nowMs, int strength) {
         long seed = seedOf(line);
         long tick = nowMs / 60;
-        int dx = (int) (noise(seed * 3 + tick) * 3) - 1;
-        int dy = (int) (noise(seed * 5 + tick) * 3) - 1;
+        int range = strength * 2 + 1;
+        int dx = (int) (noise(seed * 3 + tick) * range) - strength;
+        int dy = (int) (noise(seed * 5 + tick) * range) - strength;
         return new int[]{dx, dy};
     }
 
