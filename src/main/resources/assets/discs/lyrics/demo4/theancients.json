@@ -6,22 +6,22 @@
       "text": "♫"
     },
     {
-      "time": 41.92,
+      "time": 42.7,
       "words": [
         {
-          "time": 42.22,
+          "time": 43.0,
           "text": "Feel "
         },
         {
-          "time": 43.32,
+          "time": 43.46,
           "text": "the "
         },
         {
-          "time": 43.58,
+          "time": 43.68,
           "text": "sting "
         },
         {
-          "time": 44.02,
+          "time": 44.04,
           "text": "of "
         },
         {
@@ -31,10 +31,10 @@
       ]
     },
     {
-      "time": 44.98,
+      "time": 45.3,
       "words": [
         {
-          "time": 45.28,
+          "time": 45.6,
           "text": "Deadly "
         },
         {
@@ -56,14 +56,14 @@
       ]
     },
     {
-      "time": 47.84,
+      "time": 47.9,
       "words": [
         {
-          "time": 47.23,
+          "time": 48.2,
           "text": "As "
         },
         {
-          "time": 48.48,
+          "time": 48.54,
           "text": "cruel "
         },
         {
@@ -75,7 +75,7 @@
           "text": "steel "
         },
         {
-          "time": 49.6,
+          "time": 49.62,
           "text": "and "
         },
         {
@@ -85,10 +85,10 @@
       ]
     },
     {
-      "time": 50.48,
+      "time": 50.5,
       "words": [
         {
-          "time": 50.0,
+          "time": 50.8,
           "text": "Corrupted "
         },
         {
@@ -98,18 +98,18 @@
       ]
     },
     {
-      "time": 52.52,
+      "time": 53.15,
       "words": [
         {
-          "time": 51.1,
+          "time": 53.45,
           "text": "It's "
         },
         {
-          "time": 52.38,
+          "time": 53.76,
           "text": "too "
         },
         {
-          "time": 52.7,
+          "time": 54.02,
           "text": "late "
         },
         {
@@ -127,10 +127,10 @@
       ]
     },
     {
-      "time": 55.44,
+      "time": 55.8,
       "words": [
         {
-          "time": 55.48,
+          "time": 56.1,
           "text": "Down "
         },
         {
@@ -181,10 +181,10 @@
       ]
     },
     {
-      "time": 61.04,
+      "time": 61.05,
       "words": [
         {
-          "time": 59.67,
+          "time": 61.35,
           "text": "The "
         },
         {
@@ -200,16 +200,16 @@
           "text": "your "
         },
         {
-          "time": 67.26,
+          "time": 63.8,
           "text": "name"
         }
       ]
     },
     {
-      "time": 67.1,
+      "time": 66.8,
       "words": [
         {
-          "time": 66.23,
+          "time": 67.1,
           "text": "Don't "
         },
         {
@@ -239,10 +239,10 @@
       ]
     },
     {
-      "time": 69.84,
+      "time": 71.8,
       "words": [
         {
-          "time": 69.8,
+          "time": 72.1,
           "text": "The "
         },
         {
@@ -293,10 +293,10 @@
       ]
     },
     {
-      "time": 80.9,
+      "time": 82.5,
       "words": [
         {
-          "time": 81.2,
+          "time": 82.8,
           "text": "The "
         },
         {
@@ -314,29 +314,28 @@
       "text": "♫"
     },
     {
-      "time": 93.38,
+      "time": 95.85,
       "color": "FFA500",
       "words": [
         {
-          "time": 93.68,
+          "time": 96.15,
           "text": "This "
         },
         {
-          "time": 96.66,
+          "time": 96.68,
           "text": "is "
         },
         {
           "time": 97.26,
           "text": "mutiny"
         }
-      ],
-      "effect": "shake"
+      ]
     },
     {
-      "time": 98.94,
+      "time": 101.05,
       "words": [
         {
-          "time": 99.24,
+          "time": 101.35,
           "text": "Burned "
         },
         {
@@ -354,10 +353,10 @@
       ]
     },
     {
-      "time": 105.64,
+      "time": 106.25,
       "words": [
         {
-          "time": 105.94,
+          "time": 106.55,
           "text": "There's "
         },
         {
@@ -379,15 +378,15 @@
       ]
     },
     {
-      "time": 109.52,
+      "time": 111.25,
       "color": "FFA500",
       "words": [
         {
-          "time": 109.41,
+          "time": 111.55,
           "text": "'Cause "
         },
         {
-          "time": 111.86,
+          "time": 111.88,
           "text": "I'm "
         },
         {
@@ -402,14 +401,13 @@
           "time": 114.06,
           "text": "now"
         }
-      ],
-      "effect": "shake"
+      ]
     },
     {
-      "time": 117.38,
+      "time": 118.1,
       "words": [
         {
-          "time": 117.68,
+          "time": 118.4,
           "text": "Loyalty "
         },
         {
@@ -423,27 +421,27 @@
       ]
     },
     {
-      "time": 120.4,
+      "time": 120.2,
       "words": [
         {
-          "time": 118.9,
+          "time": 120.5,
           "text": "(Loyalty "
         },
         {
-          "time": 119.5,
+          "time": 121.3,
           "text": "is "
         },
         {
-          "time": 119.88,
+          "time": 121.7,
           "text": "lost)"
         }
       ]
     },
     {
-      "time": 120.98,
+      "time": 121.8,
       "words": [
         {
-          "time": 121.28,
+          "time": 122.1,
           "text": "Echoes "
         },
         {
@@ -498,35 +496,35 @@
       ]
     },
     {
-      "time": 130.8,
+      "time": 130.6,
       "words": [
         {
-          "time": 129.54,
+          "time": 130.8,
           "text": "(Not "
         },
         {
-          "time": 129.66,
+          "time": 131.2,
           "text": "all "
         },
         {
-          "time": 129.76,
+          "time": 131.5,
           "text": "hope "
         },
         {
-          "time": 130.2,
+          "time": 131.95,
           "text": "is "
         },
         {
-          "time": 130.48,
+          "time": 132.3,
           "text": "gone)"
         }
       ]
     },
     {
-      "time": 131.18,
+      "time": 132.4,
       "words": [
         {
-          "time": 131.48,
+          "time": 132.55,
           "text": "'Cause "
         },
         {
@@ -556,18 +554,18 @@
       ]
     },
     {
-      "time": 135.66,
+      "time": 135.5,
       "words": [
         {
-          "time": 133.74,
+          "time": 135.8,
           "text": "(The "
         },
         {
-          "time": 134.26,
+          "time": 136.3,
           "text": "new "
         },
         {
-          "time": 134.59,
+          "time": 136.85,
           "text": "guard's "
         },
         {
@@ -585,28 +583,27 @@
       "text": "♫"
     },
     {
-      "time": 160.2,
+      "time": 162.7,
       "words": [
         {
-          "time": 160.5,
+          "time": 163.0,
           "text": "This "
         },
         {
-          "time": 163.32,
+          "time": 163.34,
           "text": "is "
         },
         {
-          "time": 163.72,
+          "time": 163.74,
           "text": "mutiny"
         }
-      ],
-      "effect": "shake"
+      ]
     },
     {
-      "time": 166.6,
+      "time": 167.9,
       "words": [
         {
-          "time": 166.9,
+          "time": 168.2,
           "text": "There's "
         },
         {
@@ -628,11 +625,11 @@
       ]
     },
     {
-      "time": 170.88,
+      "time": 173.05,
       "color": "FFA500",
       "words": [
         {
-          "time": 171.02,
+          "time": 173.35,
           "text": "This "
         },
         {
@@ -643,37 +640,36 @@
           "time": 174.54,
           "text": "mutiny"
         }
-      ],
-      "effect": "shake"
+      ]
     },
     {
-      "time": 175.04,
+      "time": 176.0,
       "color": "FFA500",
       "words": [
         {
-          "time": 174.06,
+          "time": 176.3,
           "text": "(This "
         },
         {
-          "time": 174.73,
+          "time": 176.95,
           "text": "is "
         },
         {
-          "time": 177.88,
+          "time": 177.5,
           "text": "a "
         },
         {
-          "time": 178.16,
+          "time": 178.1,
           "text": "mutiny)"
         }
       ]
     },
     {
-      "time": 178.5,
+      "time": 178.35,
       "color": "FFA500",
       "words": [
         {
-          "time": 177.5,
+          "time": 178.55,
           "text": "Burned "
         },
         {
@@ -691,11 +687,11 @@
       ]
     },
     {
-      "time": 181.4,
+      "time": 181.25,
       "color": "FFA500",
       "words": [
         {
-          "time": 180.08,
+          "time": 181.4,
           "text": "(You're "
         },
         {
@@ -713,11 +709,11 @@
       ]
     },
     {
-      "time": 183.22,
+      "time": 183.8,
       "color": "FFA500",
       "words": [
         {
-          "time": 183.18,
+          "time": 184.1,
           "text": "There's "
         },
         {
@@ -739,45 +735,45 @@
       ]
     },
     {
-      "time": 186.82,
+      "time": 186.45,
       "color": "FFA500",
       "words": [
         {
-          "time": 184.66,
+          "time": 186.6,
           "text": "(There's "
         },
         {
-          "time": 185.76,
+          "time": 186.9,
           "text": "never "
         },
         {
-          "time": 186.41,
+          "time": 187.15,
           "text": "been "
         },
         {
-          "time": 186.95,
+          "time": 187.4,
           "text": "a "
         },
         {
-          "time": 187.17,
+          "time": 187.65,
           "text": "need "
         },
         {
-          "time": 187.71,
+          "time": 187.9,
           "text": "for "
         },
         {
-          "time": 188.14,
+          "time": 188.2,
           "text": "kings)"
         }
       ]
     },
     {
-      "time": 188.64,
+      "time": 188.6,
       "color": "CC5500",
       "words": [
         {
-          "time": 187.0,
+          "time": 188.9,
           "text": "'Cause "
         },
         {
@@ -796,35 +792,33 @@
           "time": 191.38,
           "text": "now"
         }
-      ],
-      "effect": "shake"
+      ]
     },
     {
-      "time": 191.88,
+      "time": 191.9,
       "color": "FFA500",
       "words": [
         {
-          "time": 190.38,
+          "time": 192.2,
           "text": "(I "
         },
         {
-          "time": 190.79,
+          "time": 192.55,
           "text": "am "
         },
         {
-          "time": 191.2,
+          "time": 192.9,
           "text": "your "
         },
         {
-          "time": 193.28,
+          "time": 193.3,
           "text": "captain "
         },
         {
           "time": 194.02,
           "text": "now)"
         }
-      ],
-      "effect": "glitch"
+      ]
     },
     {
       "time": 196.0,
