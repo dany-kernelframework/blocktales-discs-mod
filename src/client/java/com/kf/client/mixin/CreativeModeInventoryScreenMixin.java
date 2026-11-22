@@ -2,6 +2,7 @@ package com.kf.client.mixin;
 
 import com.kf.Discs;
 import com.kf.client.DiscTabLayout;
+import com.kf.client.DiscTabStyle;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -41,13 +42,6 @@ public abstract class CreativeModeInventoryScreenMixin extends AbstractContainer
     private static final int discs$rowHeight = 18;
     @Unique
     private static final int discs$visibleRows = 5;
-
-    @Unique
-    private static final int discs$panelColor = 0xFFC6C6C6;
-    @Unique
-    private static final int discs$lineColor = 0xFF8B8B8B;
-    @Unique
-    private static final int discs$textColor = 0xFF404040;
 
     public CreativeModeInventoryScreenMixin(CreativeModeInventoryScreen.ItemPickerMenu menu, Inventory playerInventory, Component title) {
         super(menu, playerInventory, title, 195, 136);
@@ -118,6 +112,9 @@ public abstract class CreativeModeInventoryScreenMixin extends AbstractContainer
             return;
         }
 
+        // colors come from assets/discs/tab_style.json
+        DiscTabStyle.Style style = DiscTabStyle.get();
+
         int totalRows = DiscTabLayout.rowCount();
         int rowsToScroll = Math.max(0, totalRows - discs$visibleRows);
         int firstRow = Math.max((int) (scrollOffs * rowsToScroll + 0.5), 0);
@@ -132,15 +129,15 @@ public abstract class CreativeModeInventoryScreenMixin extends AbstractContainer
             int top = discs$firstRowTop + visibleRow * discs$rowHeight;
             int titleRight = discs$gridLeft + header.slots() * discs$rowHeight;
 
-            graphics.fill(discs$gridLeft, top, titleRight, top + discs$rowHeight, discs$panelColor);
+            graphics.fill(discs$gridLeft, top, titleRight, top + discs$rowHeight, style.panel());
             if (row > 0) {
-                graphics.fill(discs$gridLeft, top, discs$gridRight, top + 1, discs$lineColor);
+                graphics.fill(discs$gridLeft, top, discs$gridRight, top + 1, style.line());
             }
             float textY = top + (discs$rowHeight - 9 * DiscTabLayout.TITLE_SCALE) / 2f;
             graphics.pose().pushMatrix();
             graphics.pose().translate(discs$gridLeft + 2, textY);
             graphics.pose().scale(DiscTabLayout.TITLE_SCALE, DiscTabLayout.TITLE_SCALE);
-            graphics.text(Minecraft.getInstance().font, header.title(), 0, 0, discs$textColor, false);
+            graphics.text(Minecraft.getInstance().font, header.title(), 0, 0, style.text(), style.shadow());
             graphics.pose().popMatrix();
         }
     }
