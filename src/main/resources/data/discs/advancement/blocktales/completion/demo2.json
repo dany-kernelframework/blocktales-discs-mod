@@ -1,5 +1,5 @@
 {
-  "parent": "discs:blocktales/root",
+  "parent": "discs:blocktales/completion/first/demo2",
   "display": {
     "icon": {
       "id": "discs:demo2/plainstown",

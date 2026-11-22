@@ -1,0 +1,55 @@
+{
+  "parent": "discs:blocktales/other/99tix",
+  "display": {
+    "icon": {
+      "id": "minecraft:decorated_pot",
+      "count": 1
+    },
+    "title": "Tax Evasion",
+    "description": "Hide TIX or BUX inside a Decorated Pot.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hide_money": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:match_tool",
+              "predicate": {
+                "items": [
+                  "discs:materials/tix",
+                  "discs:materials/band_of_tix",
+                  "discs:materials/bux"
+                ]
+              }
+            },
+            {
+              "type": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "blocks": "minecraft:decorated_pot"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hide_money"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_1"
+    ]
+  }
+}

@@ -2,7 +2,7 @@
   "parent": "discs:blocktales/root",
   "display": {
     "icon": {
-      "id": "discs:materials/tix",
+      "id": "minecraft:emerald",
       "count": 1
     },
     "title": "Licensed Music",

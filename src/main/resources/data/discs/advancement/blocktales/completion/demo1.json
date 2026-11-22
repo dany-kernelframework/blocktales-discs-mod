@@ -1,5 +1,5 @@
 {
-  "parent": "discs:blocktales/root",
+  "parent": "discs:blocktales/completion/first/demo1",
   "display": {
     "icon": {
       "id": "discs:demo1/caves",

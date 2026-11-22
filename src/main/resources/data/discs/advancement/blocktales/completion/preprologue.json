@@ -1,5 +1,5 @@
 {
-  "parent": "discs:blocktales/root",
+  "parent": "discs:blocktales/completion/first/preprologue",
   "display": {
     "icon": {
       "id": "discs:preprologue/modernbizville",

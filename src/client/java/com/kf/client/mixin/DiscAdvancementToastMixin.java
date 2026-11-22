@@ -25,6 +25,11 @@ public abstract class DiscAdvancementToastMixin {
             return;
         }
 
+        String path = advancement.id().getPath();
+        if (!path.startsWith("blocktales/completion/") || path.startsWith("blocktales/completion/first/")) { // only comp gets played not first
+            return;
+        }
+
         boolean challenge = advancement.value().display()
                 .map(display -> display.type() == AdvancementType.CHALLENGE)
                 .orElse(false);

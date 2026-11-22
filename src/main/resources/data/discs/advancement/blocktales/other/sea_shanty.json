@@ -17,26 +17,33 @@
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
         "player": {
-          "minecraft:vehicle": {
-            "minecraft:entity_type": "#minecraft:boat"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:vehicle": {
+              "minecraft:entity_type": "#minecraft:boat"
+            }
           }
         },
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "discs:demo4/piratecamp"
-            }
-          },
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": "minecraft:jukebox"
+        "location": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:match_tool",
+              "predicate": {
+                "items": "discs:demo4/piratecamp"
+              }
+            },
+            {
+              "type": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "blocks": "minecraft:jukebox"
+                }
               }
             }
-          }
-        ]
+          ]
+        }
       }
     }
   },
