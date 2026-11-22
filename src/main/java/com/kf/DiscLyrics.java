@@ -12,7 +12,6 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 
@@ -23,12 +22,14 @@ public class DiscLyrics {
 
         static Effect parse(@Nullable String name, Effect fallback) { // fuck you
             if (name == null) return fallback;
-            try {
-                return valueOf(name.trim().toUpperCase(Locale.ROOT));
-            } catch (IllegalArgumentException e) {
-                System.err.println("[Discs] unknown lyric effect '" + name + "'");
-                return fallback;
+            String wanted = name.trim();
+            for (Effect effect : values()) {
+                if (effect.name().equalsIgnoreCase(wanted)) {
+                    return effect;
+                }
             }
+            System.err.println("[Discs] unknown lyric effect '" + name + "'");
+            return fallback;
         }
     }
 
@@ -55,7 +56,6 @@ public class DiscLyrics {
         return song == null ? List.of() : song.lines();
     }
 
-    // reload step 1 (off-thread)
     public static Map<String, Song> parseAll(ResourceManager manager) {
         FileToIdConverter converter = FileToIdConverter.json("lyrics");
         Map<String, Song> parsed = new HashMap<>();
@@ -72,7 +72,6 @@ public class DiscLyrics {
         return parsed;
     }
 
-    // reload step 2
     public static void install(Map<String, Song> parsed) {
         songs = Map.copyOf(parsed);
     }
@@ -115,7 +114,16 @@ public class DiscLyrics {
         }
         lines.sort((a, b) -> Float.compare(a.time(), b.time()));
 
+        if (out.containsKey(track)) {
+            System.err.println("[Discs] warn: more than one lyrics file for '" + track + "', "
+                    + fileName + " replaces the earlier one. Delete the extra file.");
+        }
         out.put(track, new Song(songEffect, songColor, offset, List.copyOf(lines)));
+
+        long withWords = lines.stream().filter(l -> !l.words().isEmpty()).count();
+        long withEffects = lines.stream().filter(l -> l.effect() != null && l.effect() != Effect.none).count();
+        System.out.println("[Discs] lyrics '" + track + "' from " + fileName + ": " + lines.size() + " lines, "
+                + withWords + " with words, " + withEffects + " with effects, song effect " + songEffect); // tryna figure out why it wont work
     }
 
     private static @Nullable String str(JsonObject obj, String key) {

@@ -20,6 +20,7 @@ public final class LyricsConfig {
         public boolean background = false;
         public boolean showNextLine = true;
         public boolean effects = true;
+        public int shakeStrength = 2;
         public String instrumental = "dim";
     }
 
@@ -45,6 +46,7 @@ public final class LyricsConfig {
 
         loaded.scale = Math.clamp(loaded.scale, 0.5f, 3.0f);
         loaded.opacity = Math.clamp(loaded.opacity, 0.0f, 1.0f);
+        loaded.shakeStrength = Math.clamp(loaded.shakeStrength, 1, 8);
         current = loaded;
 
         // tries to write the file itself
