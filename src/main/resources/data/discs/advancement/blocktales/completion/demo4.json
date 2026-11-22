@@ -1,5 +1,5 @@
 {
-  "parent": "discs:blocktales/root",
+  "parent": "discs:blocktales/completion/first/demo4",
   "display": {
     "icon": {
       "id": "discs:demo4/theancients",

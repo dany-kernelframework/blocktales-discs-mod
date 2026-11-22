@@ -1,0 +1,41 @@
+{
+  "parent": "discs:blocktales/other/99tix",
+  "display": {
+    "icon": {
+      "id": "discs:materials/bux",
+      "count": 1
+    },
+    "title": "Big BUX",
+    "description": "Hold 30 TIX in your inventory at once.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hold_bux": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "discs:materials/bux",
+            "count": {
+              "min": 30
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hold_bux"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_1"
+    ],
+    "recipes": []
+  }
+}
