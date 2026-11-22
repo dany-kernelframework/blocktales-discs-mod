@@ -1,0 +1,52 @@
+{
+  "parent": "discs:blocktales/root",
+  "display": {
+    "icon": {
+      "id": "discs:demo4/scorcheddunes",
+      "count": 1
+    },
+    "title": "Excavation Exploration",
+    "description": "Collect any music disc from Demo 4.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "any_disc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "discs:demo4/bizvilledocks",
+              "discs:demo4/scorcheddunes",
+              "discs:demo4/desertbattle",
+              "discs:demo4/ancienttomb",
+              "discs:demo4/thegreatfloccinaucinihilipilification",
+              "discs:demo4/piratecamp",
+              "discs:demo4/vermillionvillage",
+              "discs:demo4/thetempleoftheredsun",
+              "discs:demo4/templeguardian",
+              "discs:demo4/captaintrotter",
+              "discs:demo4/theancients",
+              "discs:demo4/remorse",
+              "discs:demo4/finnmccool_old",
+              "discs:demo4/finnmccool_placeholder"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "any_disc"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_1"
+    ]
+  }
+}

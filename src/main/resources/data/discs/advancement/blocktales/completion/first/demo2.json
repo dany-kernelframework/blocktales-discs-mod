@@ -1,0 +1,52 @@
+{
+  "parent": "discs:blocktales/root",
+  "display": {
+    "icon": {
+      "id": "discs:demo2/turitopulis",
+      "count": 1
+    },
+    "title": "A Toxic Time",
+    "description": "Collect any music disc from Demo 2.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "any_disc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "discs:demo2/plainstown",
+              "discs:demo2/junglebattle",
+              "discs:demo2/anthill",
+              "discs:demo2/turitopulis",
+              "discs:demo2/hotelturitopulis",
+              "discs:demo2/mudroads",
+              "discs:demo2/ruggedrainforest",
+              "discs:demo2/komododragon",
+              "discs:demo2/bigfoot",
+              "discs:demo2/suprememosquito",
+              "discs:demo2/sacredhollow",
+              "discs:demo2/griefer",
+              "discs:demo2/bubonicplant",
+              "discs:demo2/panacea"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "any_disc"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_1"
+    ]
+  }
+}

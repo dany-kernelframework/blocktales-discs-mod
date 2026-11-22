@@ -1,5 +1,5 @@
 {
-  "parent": "discs:blocktales/root",
+  "parent": "discs:blocktales/completion/first/demo3",
   "display": {
     "icon": {
       "id": "discs:demo3/bizvillerailways",

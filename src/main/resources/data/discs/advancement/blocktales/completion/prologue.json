@@ -1,5 +1,5 @@
 {
-  "parent": "discs:blocktales/root",
+  "parent": "discs:blocktales/completion/first/prologue",
   "display": {
     "icon": {
       "id": "discs:prologue/tutorialterry",

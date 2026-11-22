@@ -1,0 +1,40 @@
+{
+  "parent": "discs:blocktales/root",
+  "display": {
+    "icon": {
+      "id": "discs:preprologue/modernbizville",
+      "count": 1
+    },
+    "title": "Just in Time",
+    "description": "Collect any music disc from the Preprologue.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "any_disc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "discs:preprologue/modernbizville",
+              "discs:preprologue/mysteriousfigure"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "any_disc"
+    ]
+  ],
+  "rewards": {
+    "loot": [
+      "discs:rewards/bux_1"
+    ]
+  }
+}
