@@ -7,6 +7,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
@@ -112,7 +113,6 @@ public abstract class CreativeModeInventoryScreenMixin extends AbstractContainer
             return;
         }
 
-        // colors come from assets/discs/tab_style.json
         DiscTabStyle.Style style = DiscTabStyle.get();
 
         int totalRows = DiscTabLayout.rowCount();
@@ -127,9 +127,16 @@ public abstract class CreativeModeInventoryScreenMixin extends AbstractContainer
             }
 
             int top = discs$firstRowTop + visibleRow * discs$rowHeight;
-            int titleRight = discs$gridLeft + header.slots() * discs$rowHeight;
+            int titleWidth = header.slots() * discs$rowHeight;
 
-            graphics.fill(discs$gridLeft, top, titleRight, top + discs$rowHeight, style.panel());
+            if (style.custom()) {
+                graphics.fill(discs$gridLeft, top, discs$gridLeft + titleWidth, top + discs$rowHeight, style.panel());
+            } else {
+                graphics.blit(RenderPipelines.GUI_TEXTURED, DiscTabStyle.ctt_texture,
+                        discs$gridLeft, top, (float) discs$gridLeft, 5.0F, titleWidth, 9, 256, 256);
+                graphics.blit(RenderPipelines.GUI_TEXTURED, DiscTabStyle.ctt_texture,
+                        discs$gridLeft, top + 9, (float) discs$gridLeft, 5.0F, titleWidth, 9, 256, 256);
+            }
             if (row > 0) {
                 graphics.fill(discs$gridLeft, top, discs$gridRight, top + 1, style.line());
             }
